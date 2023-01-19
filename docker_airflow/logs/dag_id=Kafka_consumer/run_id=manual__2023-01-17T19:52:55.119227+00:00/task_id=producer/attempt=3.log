@@ -1,0 +1,32 @@
+[2023-01-17T20:13:57.852+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Kafka_consumer.producer manual__2023-01-17T19:52:55.119227+00:00 [queued]>
+[2023-01-17T20:13:57.859+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Kafka_consumer.producer manual__2023-01-17T19:52:55.119227+00:00 [queued]>
+[2023-01-17T20:13:57.860+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-17T20:13:57.860+0000] {taskinstance.py:1284} INFO - Starting attempt 3 of 7
+[2023-01-17T20:13:57.860+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-17T20:13:57.873+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): producer> on 2023-01-17 19:52:55.119227+00:00
+[2023-01-17T20:13:57.877+0000] {standard_task_runner.py:55} INFO - Started process 5007 to run task
+[2023-01-17T20:13:57.879+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Kafka_consumer', 'producer', 'manual__2023-01-17T19:52:55.119227+00:00', '--job-id', '6', '--raw', '--subdir', 'DAGS_FOLDER/producer_dag.py', '--cfg-path', '/tmp/tmp1a8jukhs']
+[2023-01-17T20:13:57.880+0000] {standard_task_runner.py:83} INFO - Job 6: Subtask producer
+[2023-01-17T20:13:57.939+0000] {task_command.py:389} INFO - Running <TaskInstance: Kafka_consumer.producer manual__2023-01-17T19:52:55.119227+00:00 [running]> on host ecc0273d1d42
+[2023-01-17T20:13:57.999+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Kafka_consumer
+AIRFLOW_CTX_TASK_ID=producer
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-17T19:52:55.119227+00:00
+AIRFLOW_CTX_TRY_NUMBER=3
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-17T19:52:55.119227+00:00
+[2023-01-17T20:13:58.000+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/producer_dag.py", line 25, in runKafkaProducer
+    import kafka
+ModuleNotFoundError: No module named 'kafka'
+[2023-01-17T20:13:58.006+0000] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=Kafka_consumer, task_id=producer, execution_date=20230117T195255, start_date=20230117T201357, end_date=20230117T201358
+[2023-01-17T20:13:58.015+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 6 for task producer (No module named 'kafka'; 5007)
+[2023-01-17T20:13:58.051+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-01-17T20:13:58.068+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

@@ -1,0 +1,20 @@
+[2023-01-18T22:24:34.730+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Kafka_consumer.producer manual__2023-01-18T21:35:11.718856+00:00 [queued]>
+[2023-01-18T22:24:34.739+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Kafka_consumer.producer manual__2023-01-18T21:35:11.718856+00:00 [queued]>
+[2023-01-18T22:24:34.739+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-18T22:24:34.739+0000] {taskinstance.py:1284} INFO - Starting attempt 22 of 27
+[2023-01-18T22:24:34.739+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-18T22:24:34.751+0000] {taskinstance.py:1304} INFO - Executing <Task(ProduceToTopicOperator): producer> on 2023-01-18 21:35:11.718856+00:00
+[2023-01-18T22:24:34.757+0000] {standard_task_runner.py:55} INFO - Started process 4400 to run task
+[2023-01-18T22:24:34.759+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Kafka_consumer', 'producer', 'manual__2023-01-18T21:35:11.718856+00:00', '--job-id', '91', '--raw', '--subdir', 'DAGS_FOLDER/producer_dag.py', '--cfg-path', '/tmp/tmpzd7_efki']
+[2023-01-18T22:24:34.760+0000] {standard_task_runner.py:83} INFO - Job 91: Subtask producer
+[2023-01-18T22:24:34.812+0000] {task_command.py:389} INFO - Running <TaskInstance: Kafka_consumer.producer manual__2023-01-18T21:35:11.718856+00:00 [running]> on host f2df97c6ee42
+[2023-01-18T22:24:34.873+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Kafka_consumer
+AIRFLOW_CTX_TASK_ID=producer
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-18T21:35:11.718856+00:00
+AIRFLOW_CTX_TRY_NUMBER=22
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-18T21:35:11.718856+00:00
+[2023-01-18T22:24:34.876+0000] {producer.py:55} INFO - Producer <cimpl.Producer object at 0x7f55204f4c00>

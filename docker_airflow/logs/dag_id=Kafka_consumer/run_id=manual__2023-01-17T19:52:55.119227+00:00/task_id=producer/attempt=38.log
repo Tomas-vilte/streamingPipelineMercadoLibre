@@ -1,0 +1,188 @@
+[2023-01-18T20:53:39.367+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Kafka_consumer.producer manual__2023-01-17T19:52:55.119227+00:00 [queued]>
+[2023-01-18T20:53:39.378+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Kafka_consumer.producer manual__2023-01-17T19:52:55.119227+00:00 [queued]>
+[2023-01-18T20:53:39.378+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-18T20:53:39.378+0000] {taskinstance.py:1284} INFO - Starting attempt 38 of 43
+[2023-01-18T20:53:39.378+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-18T20:53:39.391+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): producer> on 2023-01-17 19:52:55.119227+00:00
+[2023-01-18T20:53:39.395+0000] {standard_task_runner.py:55} INFO - Started process 2964 to run task
+[2023-01-18T20:53:39.397+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Kafka_consumer', 'producer', 'manual__2023-01-17T19:52:55.119227+00:00', '--job-id', '50', '--raw', '--subdir', 'DAGS_FOLDER/producer_dag.py', '--cfg-path', '/tmp/tmpwuv_1osw']
+[2023-01-18T20:53:39.398+0000] {standard_task_runner.py:83} INFO - Job 50: Subtask producer
+[2023-01-18T20:53:39.450+0000] {task_command.py:389} INFO - Running <TaskInstance: Kafka_consumer.producer manual__2023-01-17T19:52:55.119227+00:00 [running]> on host 7a3ca62d008e
+[2023-01-18T20:53:39.509+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Kafka_consumer
+AIRFLOW_CTX_TASK_ID=producer
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-17T19:52:55.119227+00:00
+AIRFLOW_CTX_TRY_NUMBER=38
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-17T19:52:55.119227+00:00
+[2023-01-18T20:53:39.544+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:39.544+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:39.544+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:39.575+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:39.575+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:39.607+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:39.608+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:39.609+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:39.644+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:39.644+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:39.679+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:39.680+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:39.681+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:39.712+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:39.713+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:39.744+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:39.745+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:39.745+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:39.776+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:39.777+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:39.809+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:39.810+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:39.810+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:39.843+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:39.844+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:39.875+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:39.875+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:39.876+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:39.907+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:39.907+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:39.940+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:39.941+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:39.941+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:39.972+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:39.973+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.006+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.007+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.008+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:40.040+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.040+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.081+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.082+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.083+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:40.115+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.116+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.149+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.149+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.150+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:40.182+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.183+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.215+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.216+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.216+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:40.249+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.249+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.283+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.283+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.284+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:40.317+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.318+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.354+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.355+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.355+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:40.387+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.387+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.418+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.418+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.418+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:40.451+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.451+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.484+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.485+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.485+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:40.520+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.521+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.552+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.553+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.553+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:40.584+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.585+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.619+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.620+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.620+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:40.653+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.654+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.687+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.688+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.689+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:40.724+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.724+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.760+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.761+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.761+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:40.792+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.793+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.825+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.826+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.826+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:40.858+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.859+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.891+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.892+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.892+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:40.923+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.924+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.961+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.961+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:40.962+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:40.998+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:40.999+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:41.032+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:41.033+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:41.034+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:41.073+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:41.073+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:41.105+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:41.106+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:41.107+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:41.138+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:41.138+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:41.178+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:41.179+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:41.180+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:41.214+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:41.215+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:41.249+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:41.249+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:41.250+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:41.284+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:41.285+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:41.322+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:41.323+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:41.323+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:41.355+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:41.356+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:41.386+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:41.387+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:41.388+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:41.421+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:41.421+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:41.454+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:41.454+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:41.454+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:41.484+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:41.484+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:41.513+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:41.513+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:41.513+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T20:53:41.542+0000] {conn.py:1532} WARNING - DNS lookup failed for a312c79a4565:9092, exception was [Errno -3] Temporary failure in name resolution. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T20:53:41.543+0000] {conn.py:316} ERROR - DNS lookup failed for a312c79a4565:9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T20:53:41.544+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/producer_dag.py", line 10, in runKafkaProducer
+    value_serializer=lambda x: json.dumps(x).encode('utf-8'))
+  File "/home/airflow/.local/lib/python3.7/site-packages/kafka/producer/kafka.py", line 383, in __init__
+    **self.config)
+  File "/home/airflow/.local/lib/python3.7/site-packages/kafka/client_async.py", line 244, in __init__
+    self.config['api_version'] = self.check_version(timeout=check_timeout)
+  File "/home/airflow/.local/lib/python3.7/site-packages/kafka/client_async.py", line 927, in check_version
+    raise Errors.NoBrokersAvailable()
+kafka.errors.NoBrokersAvailable: NoBrokersAvailable
+[2023-01-18T20:53:41.571+0000] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=Kafka_consumer, task_id=producer, execution_date=20230117T195255, start_date=20230118T205339, end_date=20230118T205341
+[2023-01-18T20:53:42.597+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 50 for task producer (NoBrokersAvailable; 2964)
+[2023-01-18T20:53:42.630+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-01-18T20:53:42.653+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

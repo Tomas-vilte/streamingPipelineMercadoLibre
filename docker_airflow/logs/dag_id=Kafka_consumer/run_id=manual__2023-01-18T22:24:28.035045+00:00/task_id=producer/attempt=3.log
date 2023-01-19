@@ -1,0 +1,49 @@
+[2023-01-18T22:30:47.161+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Kafka_consumer.producer manual__2023-01-18T22:24:28.035045+00:00 [queued]>
+[2023-01-18T22:30:47.170+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Kafka_consumer.producer manual__2023-01-18T22:24:28.035045+00:00 [queued]>
+[2023-01-18T22:30:47.170+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-18T22:30:47.170+0000] {taskinstance.py:1284} INFO - Starting attempt 3 of 8
+[2023-01-18T22:30:47.170+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-18T22:30:47.182+0000] {taskinstance.py:1304} INFO - Executing <Task(ProduceToTopicOperator): producer> on 2023-01-18 22:24:28.035045+00:00
+[2023-01-18T22:30:47.186+0000] {standard_task_runner.py:55} INFO - Started process 236 to run task
+[2023-01-18T22:30:47.189+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Kafka_consumer', 'producer', 'manual__2023-01-18T22:24:28.035045+00:00', '--job-id', '95', '--raw', '--subdir', 'DAGS_FOLDER/producer_dag.py', '--cfg-path', '/tmp/tmpiqfa86tu']
+[2023-01-18T22:30:47.189+0000] {standard_task_runner.py:83} INFO - Job 95: Subtask producer
+[2023-01-18T22:30:47.238+0000] {task_command.py:389} INFO - Running <TaskInstance: Kafka_consumer.producer manual__2023-01-18T22:24:28.035045+00:00 [running]> on host 8a5dd0629494
+[2023-01-18T22:30:47.294+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Kafka_consumer
+AIRFLOW_CTX_TASK_ID=producer
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-18T22:24:28.035045+00:00
+AIRFLOW_CTX_TRY_NUMBER=3
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-18T22:24:28.035045+00:00
+[2023-01-18T22:30:47.297+0000] {producer.py:55} INFO - Producer <cimpl.Producer object at 0x7f72d07c29f0>
+[2023-01-18T22:32:58.383+0000] {local_task_job.py:224} WARNING - State of this instance has been externally set to None. Terminating instance.
+[2023-01-18T22:32:58.384+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 236. PIDs of all processes in the group: [236]
+[2023-01-18T22:32:58.384+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 236
+[2023-01-18T22:32:58.385+0000] {taskinstance.py:1483} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-01-18T22:32:58.393+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow_provider_kafka/operators/produce_to_topic.py", line 114, in execute
+    for k, v in producer_callable():
+  File "/opt/airflow/dags/producer_dag.py", line 27, in runKafkaProducer
+    results = response.json()["results"]
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.7/json/decoder.py", line 353, in raw_decode
+    obj, end = self.scan_once(s, idx)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1485, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2023-01-18T22:32:58.396+0000] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=Kafka_consumer, task_id=producer, execution_date=20230118T222428, start_date=20230118T223047, end_date=20230118T223258
+[2023-01-18T22:32:58.407+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 95 for task producer ((psycopg2.errors.ForeignKeyViolation) insert or update on table "task_fail" violates foreign key constraint "task_fail_ti_fkey"
+DETAIL:  Key (dag_id, task_id, run_id, map_index)=(Kafka_consumer, producer, manual__2023-01-18T22:24:28.035045+00:00, -1) is not present in table "task_instance".
+
+[SQL: INSERT INTO task_fail (task_id, dag_id, run_id, map_index, start_date, end_date, duration) VALUES (%(task_id)s, %(dag_id)s, %(run_id)s, %(map_index)s, %(start_date)s, %(end_date)s, %(duration)s) RETURNING task_fail.id]
+[parameters: {'task_id': 'producer', 'dag_id': 'Kafka_consumer', 'run_id': 'manual__2023-01-18T22:24:28.035045+00:00', 'map_index': -1, 'start_date': datetime.datetime(2023, 1, 18, 22, 30, 47, 162332, tzinfo=Timezone('UTC')), 'end_date': datetime.datetime(2023, 1, 18, 22, 32, 58, 395852, tzinfo=Timezone('UTC')), 'duration': 131}]
+(Background on this error at: https://sqlalche.me/e/14/gkpj); 236)
+[2023-01-18T22:32:58.437+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=236, status='terminated', exitcode=1, started='22:30:46') (236) terminated with exit code 1

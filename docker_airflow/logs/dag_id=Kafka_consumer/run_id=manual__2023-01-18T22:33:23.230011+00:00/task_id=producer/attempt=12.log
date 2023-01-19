@@ -1,0 +1,43 @@
+[2023-01-18T22:53:45.666+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Kafka_consumer.producer manual__2023-01-18T22:33:23.230011+00:00 [queued]>
+[2023-01-18T22:53:45.673+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Kafka_consumer.producer manual__2023-01-18T22:33:23.230011+00:00 [queued]>
+[2023-01-18T22:53:45.673+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-18T22:53:45.673+0000] {taskinstance.py:1284} INFO - Starting attempt 12 of 17
+[2023-01-18T22:53:45.674+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-18T22:53:45.685+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): producer> on 2023-01-18 22:33:23.230011+00:00
+[2023-01-18T22:53:45.690+0000] {standard_task_runner.py:55} INFO - Started process 1657 to run task
+[2023-01-18T22:53:45.692+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Kafka_consumer', 'producer', 'manual__2023-01-18T22:33:23.230011+00:00', '--job-id', '106', '--raw', '--subdir', 'DAGS_FOLDER/producer_dag.py', '--cfg-path', '/tmp/tmphg2tnkz5']
+[2023-01-18T22:53:45.693+0000] {standard_task_runner.py:83} INFO - Job 106: Subtask producer
+[2023-01-18T22:53:45.739+0000] {task_command.py:389} INFO - Running <TaskInstance: Kafka_consumer.producer manual__2023-01-18T22:33:23.230011+00:00 [running]> on host 8a5dd0629494
+[2023-01-18T22:53:45.849+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Kafka_consumer
+AIRFLOW_CTX_TASK_ID=producer
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-18T22:33:23.230011+00:00
+AIRFLOW_CTX_TRY_NUMBER=12
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-18T22:33:23.230011+00:00
+[2023-01-18T22:53:45.905+0000] {conn.py:381} INFO - <BrokerConnection node_id=bootstrap-0 host=172.24.0.3:9092 <connecting> [IPv4 ('172.24.0.3', 9092)]>: connecting to 172.24.0.3:9092 [('172.24.0.3', 9092) IPv4]
+[2023-01-18T22:54:15.920+0000] {conn.py:455} ERROR - Connection attempt to <BrokerConnection node_id=bootstrap-0 host=172.24.0.3:9092 <connecting> [IPv4 ('172.24.0.3', 9092)]> timed out
+[2023-01-18T22:54:15.921+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=172.24.0.3:9092 <connecting> [IPv4 ('172.24.0.3', 9092)]>: Closing connection. KafkaConnectionError: timeout
+[2023-01-18T22:54:15.973+0000] {conn.py:381} INFO - <BrokerConnection node_id=bootstrap-0 host=172.24.0.3:9092 <connecting> [IPv4 ('172.24.0.3', 9092)]>: connecting to 172.24.0.3:9092 [('172.24.0.3', 9092) IPv4]
+[2023-01-18T22:54:46.018+0000] {conn.py:455} ERROR - Connection attempt to <BrokerConnection node_id=bootstrap-0 host=172.24.0.3:9092 <connecting> [IPv4 ('172.24.0.3', 9092)]> timed out
+[2023-01-18T22:54:46.019+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=172.24.0.3:9092 <connecting> [IPv4 ('172.24.0.3', 9092)]>: Closing connection. KafkaConnectionError: timeout
+[2023-01-18T22:54:46.071+0000] {conn.py:381} INFO - <BrokerConnection node_id=bootstrap-0 host=172.24.0.3:9092 <connecting> [IPv4 ('172.24.0.3', 9092)]>: connecting to 172.24.0.3:9092 [('172.24.0.3', 9092) IPv4]
+[2023-01-18T22:54:47.020+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/producer_dag.py", line 41, in runKafkaProducer
+    producer.send('myTopic', data)
+  File "/home/airflow/.local/lib/python3.7/site-packages/kafka/producer/kafka.py", line 576, in send
+    self._wait_on_metadata(topic, self.config['max_block_ms'] / 1000.0)
+  File "/home/airflow/.local/lib/python3.7/site-packages/kafka/producer/kafka.py", line 703, in _wait_on_metadata
+    "Failed to update metadata after %.1f secs." % (max_wait,))
+kafka.errors.KafkaTimeoutError: KafkaTimeoutError: Failed to update metadata after 60.0 secs.
+[2023-01-18T22:54:47.026+0000] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=Kafka_consumer, task_id=producer, execution_date=20230118T223323, start_date=20230118T225345, end_date=20230118T225447
+[2023-01-18T22:54:47.038+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 106 for task producer (KafkaTimeoutError: Failed to update metadata after 60.0 secs.; 1657)
+[2023-01-18T22:54:47.083+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-01-18T22:54:47.097+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

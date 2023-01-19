@@ -1,0 +1,45 @@
+[2023-01-18T22:04:28.497+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Kafka_consumer.producer manual__2023-01-18T21:35:11.718856+00:00 [queued]>
+[2023-01-18T22:04:28.505+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Kafka_consumer.producer manual__2023-01-18T21:35:11.718856+00:00 [queued]>
+[2023-01-18T22:04:28.505+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-18T22:04:28.505+0000] {taskinstance.py:1284} INFO - Starting attempt 14 of 19
+[2023-01-18T22:04:28.505+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-18T22:04:28.517+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): producer> on 2023-01-18 21:35:11.718856+00:00
+[2023-01-18T22:04:28.522+0000] {standard_task_runner.py:55} INFO - Started process 3153 to run task
+[2023-01-18T22:04:28.524+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Kafka_consumer', 'producer', 'manual__2023-01-18T21:35:11.718856+00:00', '--job-id', '82', '--raw', '--subdir', 'DAGS_FOLDER/producer_dag.py', '--cfg-path', '/tmp/tmp19xk6c_w']
+[2023-01-18T22:04:28.525+0000] {standard_task_runner.py:83} INFO - Job 82: Subtask producer
+[2023-01-18T22:04:28.573+0000] {task_command.py:389} INFO - Running <TaskInstance: Kafka_consumer.producer manual__2023-01-18T21:35:11.718856+00:00 [running]> on host f2df97c6ee42
+[2023-01-18T22:04:28.628+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Kafka_consumer
+AIRFLOW_CTX_TASK_ID=producer
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-18T21:35:11.718856+00:00
+AIRFLOW_CTX_TRY_NUMBER=14
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-18T21:35:11.718856+00:00
+[2023-01-18T22:04:28.630+0000] {conn.py:381} INFO - <BrokerConnection node_id=bootstrap-0 host=172.22.0.7:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: connecting to 172.22.0.7:9092 [('172.22.0.7', 9092) IPv4]
+[2023-01-18T22:04:28.630+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T22:04:28.631+0000] {conn.py:419} ERROR - Connect attempt to <BrokerConnection node_id=bootstrap-0 host=172.22.0.7:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]> returned error 111. Disconnecting.
+[2023-01-18T22:04:28.631+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=172.22.0.7:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2023-01-18T22:04:28.680+0000] {conn.py:381} INFO - <BrokerConnection node_id=bootstrap-0 host=172.22.0.7:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: connecting to 172.22.0.7:9092 [('172.22.0.7', 9092) IPv4]
+[2023-01-18T22:04:28.680+0000] {conn.py:419} ERROR - Connect attempt to <BrokerConnection node_id=bootstrap-0 host=172.22.0.7:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]> returned error 111. Disconnecting.
+[2023-01-18T22:04:28.680+0000] {conn.py:919} INFO - <BrokerConnection node_id=bootstrap-0 host=172.22.0.7:9092 <connecting> [IPv4 ('172.22.0.7', 9092)]>: Closing connection. KafkaConnectionError: 111 ECONNREFUSED
+[2023-01-18T22:04:28.681+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/producer_dag.py", line 12, in runKafkaProducer
+    value_serializer=lambda x: json.dumps(x).encode('utf-8'))
+  File "/home/airflow/.local/lib/python3.7/site-packages/kafka/producer/kafka.py", line 383, in __init__
+    **self.config)
+  File "/home/airflow/.local/lib/python3.7/site-packages/kafka/client_async.py", line 244, in __init__
+    self.config['api_version'] = self.check_version(timeout=check_timeout)
+  File "/home/airflow/.local/lib/python3.7/site-packages/kafka/client_async.py", line 900, in check_version
+    raise Errors.NoBrokersAvailable()
+kafka.errors.NoBrokersAvailable: NoBrokersAvailable
+[2023-01-18T22:04:28.687+0000] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=Kafka_consumer, task_id=producer, execution_date=20230118T213511, start_date=20230118T220428, end_date=20230118T220428
+[2023-01-18T22:04:28.696+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 82 for task producer (NoBrokersAvailable; 3153)
+[2023-01-18T22:04:28.736+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-01-18T22:04:28.753+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

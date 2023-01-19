@@ -1,0 +1,43 @@
+[2023-01-18T22:45:49.823+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Kafka_consumer.producer manual__2023-01-18T22:33:23.230011+00:00 [queued]>
+[2023-01-18T22:45:49.832+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Kafka_consumer.producer manual__2023-01-18T22:33:23.230011+00:00 [queued]>
+[2023-01-18T22:45:49.832+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-18T22:45:49.832+0000] {taskinstance.py:1284} INFO - Starting attempt 8 of 13
+[2023-01-18T22:45:49.832+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-18T22:45:49.845+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): producer> on 2023-01-18 22:33:23.230011+00:00
+[2023-01-18T22:45:49.850+0000] {standard_task_runner.py:55} INFO - Started process 1171 to run task
+[2023-01-18T22:45:49.852+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Kafka_consumer', 'producer', 'manual__2023-01-18T22:33:23.230011+00:00', '--job-id', '102', '--raw', '--subdir', 'DAGS_FOLDER/producer_dag.py', '--cfg-path', '/tmp/tmpyzw45xsx']
+[2023-01-18T22:45:49.852+0000] {standard_task_runner.py:83} INFO - Job 102: Subtask producer
+[2023-01-18T22:45:49.900+0000] {task_command.py:389} INFO - Running <TaskInstance: Kafka_consumer.producer manual__2023-01-18T22:33:23.230011+00:00 [running]> on host 8a5dd0629494
+[2023-01-18T22:45:49.956+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Kafka_consumer
+AIRFLOW_CTX_TASK_ID=producer
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-18T22:33:23.230011+00:00
+AIRFLOW_CTX_TRY_NUMBER=8
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-18T22:33:23.230011+00:00
+[2023-01-18T22:45:49.958+0000] {conn.py:1532} WARNING - DNS lookup failed for :9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T22:45:49.958+0000] {conn.py:316} ERROR - DNS lookup failed for :9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T22:45:49.958+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-18T22:45:49.958+0000] {conn.py:1532} WARNING - DNS lookup failed for :9092, exception was [Errno -2] Name or service not known. Is your advertised.listeners (called advertised.host.name before Kafka 9) correct and resolvable?
+[2023-01-18T22:45:49.958+0000] {conn.py:316} ERROR - DNS lookup failed for :9092 (AddressFamily.AF_UNSPEC)
+[2023-01-18T22:45:49.959+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/producer_dag.py", line 11, in runKafkaProducer
+    producer = KafkaProducer(bootstrap_servers=[''])
+  File "/home/airflow/.local/lib/python3.7/site-packages/kafka/producer/kafka.py", line 383, in __init__
+    **self.config)
+  File "/home/airflow/.local/lib/python3.7/site-packages/kafka/client_async.py", line 244, in __init__
+    self.config['api_version'] = self.check_version(timeout=check_timeout)
+  File "/home/airflow/.local/lib/python3.7/site-packages/kafka/client_async.py", line 900, in check_version
+    raise Errors.NoBrokersAvailable()
+kafka.errors.NoBrokersAvailable: NoBrokersAvailable
+[2023-01-18T22:45:49.965+0000] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=Kafka_consumer, task_id=producer, execution_date=20230118T223323, start_date=20230118T224549, end_date=20230118T224549
+[2023-01-18T22:45:49.975+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 102 for task producer (NoBrokersAvailable; 1171)
+[2023-01-18T22:45:49.984+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-01-18T22:45:49.998+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
