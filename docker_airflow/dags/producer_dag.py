@@ -1,16 +1,21 @@
 import json
 from datetime import timedelta, datetime
-from airflow_provider_kafka.operators.produce_to_topic import ProduceToTopicOperator
 import requests
 from airflow import DAG
 from airflow.operators.python import PythonOperator
+from airflow.operators.empty import EmptyOperator
 from kafka import KafkaProducer
+from loggin import log
 
 
 def runKafkaProducer():
-    producer = KafkaProducer(security_protocol='PLAINTEXT',api_version=(0, 10, 1), bootstrap_servers=['localhost:9092'])
-                             #value_serializer=lambda x: json.dumps(x).encode('utf-8'))
-
+    try:
+        producer = KafkaProducer(bootstrap_servers='172.17.0.1:9092',
+                                 value_serializer=lambda x:
+                                 json.dumps(x).encode('utf-8'))
+        log.info(f'Conexion exitosa a kafka: {producer}')
+    except Exception as e:
+        log.error(f'Hubo un error al conectarse a kafka: {e}')
     # Hace la solicitud HTTP a la API de Meli para obtener el número total de resultados
     api_url = 'https://api.mercadolibre.com/sites/MLA/search?category=MLA3794'
     response = requests.get(api_url)
@@ -39,16 +44,19 @@ def runKafkaProducer():
                 "QuantityAvailable": item["available_quantity"],
             }
             producer.send('myTopic', data)
+            print(data)
 
         # Incrementa el contador de resultados en la cantidad de resultados obtenidos
         results_count += len(results)
 
         # Si se han obtenido todos los resultados, sale del bucle
-        if results_count >= 1000:
+        if results_count >= 50:
             break
 
-    #Cierra el productor de Kafka
+    # Cierra el productor de Kafka
     producer.close()
+    log.info(f'Producer cerrado: {producer}')
+
 
 default_args = {
     'owner': 'airflow',
@@ -60,17 +68,22 @@ default_args = {
 }
 
 with DAG(
-    dag_id='Kafka_consumer',
-    default_args=default_args,
-    description='Ejeccucion de producer',
-    start_date=datetime(2023, 1, 17),
-    schedule=None,
-    catchup=False
+        dag_id='Kafka_consumer',
+        default_args=default_args,
+        description='Ejeccucion de producer',
+        start_date=datetime(2023, 1, 17),
+        schedule=None,
+        catchup=False
 ) as dag:
+    task = EmptyOperator(
+        task_id='starting_task',
+        dag=dag
+    )
+
     producer_task = PythonOperator(
-        task_id='producer',
+        task_id='submit_data_to_kafka',
         python_callable=runKafkaProducer,
         dag=dag
     )
 
-producer_task
+task >> producer_task
