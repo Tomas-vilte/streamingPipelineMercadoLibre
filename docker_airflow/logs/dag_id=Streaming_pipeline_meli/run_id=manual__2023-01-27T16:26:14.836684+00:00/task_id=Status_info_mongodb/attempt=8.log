@@ -1,0 +1,24 @@
+[2023-01-27T16:53:55.652+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Streaming_pipeline_meli.Status_info_mongodb manual__2023-01-27T16:26:14.836684+00:00 [queued]>
+[2023-01-27T16:53:55.660+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Streaming_pipeline_meli.Status_info_mongodb manual__2023-01-27T16:26:14.836684+00:00 [queued]>
+[2023-01-27T16:53:55.660+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-27T16:53:55.660+0000] {taskinstance.py:1284} INFO - Starting attempt 8 of 13
+[2023-01-27T16:53:55.660+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-27T16:53:55.673+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): Status_info_mongodb> on 2023-01-27 16:26:14.836684+00:00
+[2023-01-27T16:53:55.676+0000] {standard_task_runner.py:55} INFO - Started process 2662 to run task
+[2023-01-27T16:53:55.679+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Streaming_pipeline_meli', 'Status_info_mongodb', 'manual__2023-01-27T16:26:14.836684+00:00', '--job-id', '1106', '--raw', '--subdir', 'DAGS_FOLDER/producer_dag.py', '--cfg-path', '/tmp/tmpl2wxavkg']
+[2023-01-27T16:53:55.679+0000] {standard_task_runner.py:83} INFO - Job 1106: Subtask Status_info_mongodb
+[2023-01-27T16:53:55.727+0000] {task_command.py:389} INFO - Running <TaskInstance: Streaming_pipeline_meli.Status_info_mongodb manual__2023-01-27T16:26:14.836684+00:00 [running]> on host 502660defd2e
+[2023-01-27T16:53:55.786+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Streaming_pipeline_meli
+AIRFLOW_CTX_TASK_ID=Status_info_mongodb
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-27T16:26:14.836684+00:00
+AIRFLOW_CTX_TRY_NUMBER=8
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-27T16:26:14.836684+00:00
+[2023-01-27T16:53:56.296+0000] {producer_dag.py:70} ERROR - Error al conectar a mongoDB: 127.0.0.1:27017: [Errno 111] Connection refused, Timeout: 0.001s, Topology Description: <TopologyDescription id: 63d401a38e6b4b412cc9dba9, topology_type: Single, servers: [<ServerDescription ('127.0.0.1', 27017) server_type: Unknown, rtt: None, error=AutoReconnect('127.0.0.1:27017: [Errno 111] Connection refused')>]>
+[2023-01-27T16:53:56.297+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-27T16:53:56.333+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=Streaming_pipeline_meli, task_id=Status_info_mongodb, execution_date=20230127T162614, start_date=20230127T165355, end_date=20230127T165356
+[2023-01-27T16:53:56.412+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-27T16:53:56.440+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

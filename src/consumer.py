@@ -7,20 +7,22 @@ logger = logging.getLogger(__name__)
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(name)s - %(levelname)s - %(message)s')
 
 # Configurar tópico de Kafka y servidores de inicio
-kafka_topic_name = "myTopic"
-kakfa_bootstrap_servers = "localhost:9092"
+kafka_topic_name = "myTopic" # Nombre del topic de kafka
+kakfa_bootstrap_servers = "localhost:9092" # Esta url la podes cambiar por la ip del container de kafka o dejarla
+                                            # localhost si tenes kafka levantado en tu local.
 
 
 def writeToMongo(df, bacthId):
     """
        La función writeToMongo toma un DataFrame de Spark y una identificación de lote como argumentos y escribe el DataFrame a MongoDB.
     """
+    # Aca estoy la ip local de mongodb sin docker
     try:
         df.write \
             .format("mongo") \
-            .option("uri", "mongodb://127.0.0.1:27017") \
-            .option("database", "mercadolibreDB") \
-            .option("collection", "meliProduct") \
+            .option("uri", "mongodb://root:secret@127.0.0.1:27017") \
+            .option("database", "mercadolibredb") \
+            .option("collection", "meliproduct") \
             .mode("append") \
             .save()
     except Exception as e:
@@ -31,8 +33,8 @@ def writeToMongo(df, bacthId):
 spark = SparkSession \
     .builder \
     .master("local[*]") \
-    .config("spark.mongodb.input.uri", "mongodb://127.0.0.1/mercadolibreDB.meliProduct") \
-    .config("spark.mongodb.output.uri", "mongodb://127.0.0.1/mercadolibreDB.meliProduct") \
+    .config("spark.mongodb.input.uri", "mongodb://root:secret@127.0.0.1/mercadolibredb.meliproduct") \
+    .config("spark.mongodb.output.uri", "mongodb://root:secret@127.0.0.1/mercadolibredb.meliproduct") \
     .getOrCreate()
 
 # Configurar nivel de registro para mostrar solo errores
