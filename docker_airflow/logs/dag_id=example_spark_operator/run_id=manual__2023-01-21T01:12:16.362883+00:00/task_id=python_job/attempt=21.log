@@ -1,0 +1,73 @@
+[2023-01-21T03:36:05.659+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: example_spark_operator.python_job manual__2023-01-21T01:12:16.362883+00:00 [queued]>
+[2023-01-21T03:36:05.669+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: example_spark_operator.python_job manual__2023-01-21T01:12:16.362883+00:00 [queued]>
+[2023-01-21T03:36:05.669+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-21T03:36:05.670+0000] {taskinstance.py:1284} INFO - Starting attempt 21 of 21
+[2023-01-21T03:36:05.670+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-21T03:36:05.682+0000] {taskinstance.py:1304} INFO - Executing <Task(SparkSubmitOperator): python_job> on 2023-01-21 01:12:16.362883+00:00
+[2023-01-21T03:36:05.687+0000] {standard_task_runner.py:55} INFO - Started process 3360 to run task
+[2023-01-21T03:36:05.690+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'example_spark_operator', 'python_job', 'manual__2023-01-21T01:12:16.362883+00:00', '--job-id', '284', '--raw', '--subdir', 'DAGS_FOLDER/spark_dag.py', '--cfg-path', '/tmp/tmp77q9_1wj']
+[2023-01-21T03:36:05.690+0000] {standard_task_runner.py:83} INFO - Job 284: Subtask python_job
+[2023-01-21T03:36:05.738+0000] {task_command.py:389} INFO - Running <TaskInstance: example_spark_operator.python_job manual__2023-01-21T01:12:16.362883+00:00 [running]> on host 3cc77177a430
+[2023-01-21T03:36:05.797+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=Airflow
+AIRFLOW_CTX_DAG_ID=example_spark_operator
+AIRFLOW_CTX_TASK_ID=python_job
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-21T01:12:16.362883+00:00
+AIRFLOW_CTX_TRY_NUMBER=21
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-21T01:12:16.362883+00:00
+[2023-01-21T03:36:05.803+0000] {base.py:73} INFO - Using connection ID 'spark_default' for task execution.
+[2023-01-21T03:36:05.805+0000] {spark_submit.py:344} INFO - Spark-Submit cmd: spark-submit --master spark://tomi-H310:7077 --name arrow-spark --queue root.default /opt/***/dags/pi.py spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.3,org.mongodb.spark:mongo-spark-connector_2.12:3.0.1 spark_dag.py
+[2023-01-21T03:36:05.924+0000] {spark_submit.py:495} INFO - /home/***/.local/lib/python3.7/site-packages/pyspark/bin/load-spark-env.sh: line 68: ps: command not found
+[2023-01-21T03:36:08.877+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:08 INFO SparkContext: Running Spark version 3.3.1
+[2023-01-21T03:36:08.924+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:08 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2023-01-21T03:36:09.007+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO ResourceUtils: ==============================================================
+[2023-01-21T03:36:09.008+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2023-01-21T03:36:09.008+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO ResourceUtils: ==============================================================
+[2023-01-21T03:36:09.008+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO SparkContext: Submitted application: arrow-spark
+[2023-01-21T03:36:09.023+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2023-01-21T03:36:09.035+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO ResourceProfile: Limiting resource is cpu
+[2023-01-21T03:36:09.036+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2023-01-21T03:36:09.071+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO SecurityManager: Changing view acls to: default
+[2023-01-21T03:36:09.071+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO SecurityManager: Changing modify acls to: default
+[2023-01-21T03:36:09.071+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO SecurityManager: Changing view acls groups to:
+[2023-01-21T03:36:09.083+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO SecurityManager: Changing modify acls groups to:
+[2023-01-21T03:36:09.083+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(default); groups with view permissions: Set(); users  with modify permissions: Set(default); groups with modify permissions: Set()
+[2023-01-21T03:36:09.245+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO Utils: Successfully started service 'sparkDriver' on port 45013.
+[2023-01-21T03:36:09.267+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO SparkEnv: Registering MapOutputTracker
+[2023-01-21T03:36:09.293+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO SparkEnv: Registering BlockManagerMaster
+[2023-01-21T03:36:09.306+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2023-01-21T03:36:09.306+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2023-01-21T03:36:09.309+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2023-01-21T03:36:09.326+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-5f4c8630-53da-40eb-a926-c519608c201f
+[2023-01-21T03:36:09.338+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2023-01-21T03:36:09.349+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO SparkEnv: Registering OutputCommitCoordinator
+[2023-01-21T03:36:09.550+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2023-01-21T03:36:09.622+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO Executor: Starting executor ID driver on host 3cc77177a430
+[2023-01-21T03:36:09.627+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2023-01-21T03:36:09.641+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 40919.
+[2023-01-21T03:36:09.641+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO NettyBlockTransferService: Server created on 3cc77177a430:40919
+[2023-01-21T03:36:09.644+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2023-01-21T03:36:09.648+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 3cc77177a430, 40919, None)
+[2023-01-21T03:36:09.650+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO BlockManagerMasterEndpoint: Registering block manager 3cc77177a430:40919 with 434.4 MiB RAM, BlockManagerId(driver, 3cc77177a430, 40919, None)
+[2023-01-21T03:36:09.652+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 3cc77177a430, 40919, None)
+[2023-01-21T03:36:09.653+0000] {spark_submit.py:495} INFO - 23/01/21 03:36:09 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 3cc77177a430, 40919, None)
+[2023-01-21T03:36:10.648+0000] {spark_submit.py:495} INFO - Traceback (most recent call last):
+[2023-01-21T03:36:10.648+0000] {spark_submit.py:495} INFO - File "/opt/***/dags/pi.py", line 46, in <module>
+[2023-01-21T03:36:10.648+0000] {spark_submit.py:495} INFO - .option("subscribe", kafka_topic_name) \
+[2023-01-21T03:36:10.648+0000] {spark_submit.py:495} INFO - File "/home/***/.local/lib/python3.7/site-packages/pyspark/python/lib/pyspark.zip/pyspark/sql/streaming.py", line 469, in load
+[2023-01-21T03:36:10.648+0000] {spark_submit.py:495} INFO - File "/home/***/.local/lib/python3.7/site-packages/pyspark/python/lib/py4j-0.10.9.5-src.zip/py4j/java_gateway.py", line 1322, in __call__
+[2023-01-21T03:36:10.648+0000] {spark_submit.py:495} INFO - File "/home/***/.local/lib/python3.7/site-packages/pyspark/python/lib/pyspark.zip/pyspark/sql/utils.py", line 196, in deco
+[2023-01-21T03:36:10.653+0000] {spark_submit.py:495} INFO - pyspark.sql.utils.AnalysisException:  Failed to find data source: kafka. Please deploy the application as per the deployment section of "Structured Streaming + Kafka Integration Guide".
+[2023-01-21T03:36:10.785+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 157, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 427, in submit
+    f"Cannot execute: {self._mask_cmd(spark_submit_cmd)}. Error code is: {returncode}."
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark://tomi-H310:7077 --name arrow-spark --queue root.default /opt/***/dags/pi.py spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.3,org.mongodb.spark:mongo-spark-connector_2.12:3.0.1 spark_dag.py. Error code is: 1.
+[2023-01-21T03:36:10.787+0000] {taskinstance.py:1327} INFO - Marking task as FAILED. dag_id=example_spark_operator, task_id=python_job, execution_date=20230121T011216, start_date=20230121T033605, end_date=20230121T033610
+[2023-01-21T03:36:10.799+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 284 for task python_job (Cannot execute: spark-submit --master spark://tomi-H310:7077 --name arrow-spark --queue root.default /opt/***/dags/pi.py spark-submit --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.3,org.mongodb.spark:mongo-spark-connector_2.12:3.0.1 spark_dag.py. Error code is: 1.; 3360)
+[2023-01-21T03:36:10.826+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-01-21T03:36:10.839+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

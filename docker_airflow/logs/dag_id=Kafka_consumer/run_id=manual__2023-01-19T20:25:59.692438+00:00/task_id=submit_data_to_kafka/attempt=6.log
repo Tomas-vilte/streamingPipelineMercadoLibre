@@ -1,0 +1,53 @@
+[2023-01-19T22:08:27.181+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Kafka_consumer.submit_data_to_kafka manual__2023-01-19T20:25:59.692438+00:00 [queued]>
+[2023-01-19T22:08:27.189+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Kafka_consumer.submit_data_to_kafka manual__2023-01-19T20:25:59.692438+00:00 [queued]>
+[2023-01-19T22:08:27.189+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-19T22:08:27.189+0000] {taskinstance.py:1284} INFO - Starting attempt 6 of 11
+[2023-01-19T22:08:27.189+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-19T22:08:27.201+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): submit_data_to_kafka> on 2023-01-19 20:25:59.692438+00:00
+[2023-01-19T22:08:27.205+0000] {standard_task_runner.py:55} INFO - Started process 7431 to run task
+[2023-01-19T22:08:27.207+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Kafka_consumer', 'submit_data_to_kafka', 'manual__2023-01-19T20:25:59.692438+00:00', '--job-id', '225', '--raw', '--subdir', 'DAGS_FOLDER/producer_dag.py', '--cfg-path', '/tmp/tmpfegj91ax']
+[2023-01-19T22:08:27.208+0000] {standard_task_runner.py:83} INFO - Job 225: Subtask submit_data_to_kafka
+[2023-01-19T22:08:27.256+0000] {task_command.py:389} INFO - Running <TaskInstance: Kafka_consumer.submit_data_to_kafka manual__2023-01-19T20:25:59.692438+00:00 [running]> on host 7f3905773743
+[2023-01-19T22:08:27.313+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Kafka_consumer
+AIRFLOW_CTX_TASK_ID=submit_data_to_kafka
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-19T20:25:59.692438+00:00
+AIRFLOW_CTX_TRY_NUMBER=6
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-19T20:25:59.692438+00:00
+[2023-01-19T22:08:27.314+0000] {conn.py:381} INFO - <BrokerConnection node_id=bootstrap-0 host=172.17.0.1:9092 <connecting> [IPv4 ('172.17.0.1', 9092)]>: connecting to 172.17.0.1:9092 [('172.17.0.1', 9092) IPv4]
+[2023-01-19T22:08:27.314+0000] {conn.py:1205} INFO - Probing node bootstrap-0 broker version
+[2023-01-19T22:08:27.315+0000] {conn.py:410} INFO - <BrokerConnection node_id=bootstrap-0 host=172.17.0.1:9092 <connecting> [IPv4 ('172.17.0.1', 9092)]>: Connection complete.
+[2023-01-19T22:08:27.420+0000] {conn.py:1267} INFO - Broker version identified as 2.5.0
+[2023-01-19T22:08:27.421+0000] {conn.py:1269} INFO - Set configuration api_version=(2, 5, 0) to skip auto check_version requests on startup
+[2023-01-19T22:08:27.426+0000] {producer_dag.py:17} INFO - Conexion exitosa a kafka: <kafka.producer.kafka.KafkaProducer object at 0x7f58fe1a7390>
+[2023-01-19T22:08:30.271+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/models.py", line 971, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "/usr/local/lib/python3.7/json/__init__.py", line 348, in loads
+    return _default_decoder.decode(s)
+  File "/usr/local/lib/python3.7/json/decoder.py", line 337, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "/usr/local/lib/python3.7/json/decoder.py", line 355, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/producer_dag.py", line 33, in runKafkaProducer
+    results = response.json()["results"]
+  File "/home/airflow/.local/lib/python3.7/site-packages/requests/models.py", line 975, in json
+    raise RequestsJSONDecodeError(e.msg, e.doc, e.pos)
+requests.exceptions.JSONDecodeError: Expecting value: line 1 column 1 (char 0)
+[2023-01-19T22:08:30.279+0000] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=Kafka_consumer, task_id=submit_data_to_kafka, execution_date=20230119T202559, start_date=20230119T220827, end_date=20230119T220830
+[2023-01-19T22:08:30.289+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 225 for task submit_data_to_kafka (Expecting value: line 1 column 1 (char 0); 7431)
+[2023-01-19T22:08:30.309+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-01-19T22:08:30.341+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

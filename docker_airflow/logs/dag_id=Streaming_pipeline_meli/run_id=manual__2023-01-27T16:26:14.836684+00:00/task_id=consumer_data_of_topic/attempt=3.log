@@ -1,0 +1,2 @@
+[2023-01-27T18:34:02.552+0000] {taskinstance.py:1081} INFO - Dependencies not met for <TaskInstance: Streaming_pipeline_meli.consumer_data_of_topic manual__2023-01-27T16:26:14.836684+00:00 [up_for_retry]>, dependency 'Not In Retry Period' FAILED: Task is not ready for retry yet but will be retried automatically. Current date is 2023-01-27T18:34:02.552225+00:00 and task will be retried at 2023-01-27T18:39:02.525887+00:00.
+[2023-01-27T18:34:02.555+0000] {local_task_job.py:98} INFO - Task is not able to be run

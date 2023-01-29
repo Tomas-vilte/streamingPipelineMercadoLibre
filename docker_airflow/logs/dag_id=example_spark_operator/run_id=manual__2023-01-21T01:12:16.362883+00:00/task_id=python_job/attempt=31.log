@@ -1,0 +1,2 @@
+[2023-01-23T15:47:16.424+0000] {taskinstance.py:1081} INFO - Dependencies not met for <TaskInstance: example_spark_operator.python_job manual__2023-01-21T01:12:16.362883+00:00 [failed]>, dependency 'Task Instance State' FAILED: Task is in the 'failed' state.
+[2023-01-23T15:47:16.484+0000] {local_task_job.py:98} INFO - Task is not able to be run
