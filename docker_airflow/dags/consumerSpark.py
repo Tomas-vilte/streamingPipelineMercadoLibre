@@ -1,3 +1,4 @@
+import time
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
 import logging
@@ -15,7 +16,6 @@ def writeToMongo(df, bacthId):
     """
        La función writeToMongo toma un DataFrame de Spark y una identificación de lote como argumentos y escribe el DataFrame a MongoDB.
     """
-    try:
         # Si queres ejecutar esto en airflow en tu local sin usar docker, pero tener mongodb en un contenedor docker,
         # tenes que cambiar las configuraciones de mongo dentro del contenedor dentro del path, /etc/mongod.conf y en la
         # seccion de 'net', donde dice 'bindIp': 127.0.0.1 lo tenes que cambiar a 'bindIp': 172.29.0.2 que es la direccion
@@ -25,9 +25,10 @@ def writeToMongo(df, bacthId):
         # acordate que una vez que modificaste el file mongod.conf tenes que reiniciar el container para que se aplique los cambios
         # !otra cosa importante! es que si vas a usar mongodb en tu local sin usar docker, tenes que cambiar la direccion
         # ip a 127.0.0.1 y te va quedar asi la url: mongodb://127.0.0.1:27017
+    try:
         df.write \
             .format("mongo") \
-            .option("uri", "mongodb://root:secret@172.20.0.8:27017") \
+            .option("uri", "mongodb://root:secret@172.20.0.2:27017") \
             .option("database", "mercadolibredb") \
             .option("collection", "meliproduct") \
             .mode("append") \
@@ -35,12 +36,39 @@ def writeToMongo(df, bacthId):
     except Exception as e:
         logger.error(f'Error al escribir en Mongo: {e}')
 
+def stop_stream_query(query, wait_time):
+    """
+    Detiene una consulta de transmisión en ejecución en Apache Spark.
+
+    Parameters:
+    query (spark.sql.streaming.StreamingQuery): La consulta de transmisión a detener.
+    wait_time (int): El tiempo de espera para la terminación de la consulta (en segundos).
+
+    Returns:
+    None
+    """
+    # Mientras la consulta esté activa
+    while query.isActive:
+        msg = query.status['message']
+        data_avail = query.status['isDataAvailable']
+        trigger_active = query.status['isTriggerActive']
+        # Si no hay datos disponibles y el trigger no está activo y el mensaje no es "Inicializando fuentes"
+        if not data_avail and not trigger_active and msg != "Initializing sources":
+            print('Stopping query...')
+            query.stop() # Detener la consulta
+        time.sleep(0.5) # Esperar 0.5 segundos
+
+    # Esperar la terminación de la consulta
+    print('Awaiting termination...')
+    query.awaitTermination(wait_time) # Esperar wait_time segundos para la terminación
+
+
 # Crear sesión de Spark
 spark = SparkSession \
     .builder \
     .master("local[*]") \
-    .config("spark.mongodb.input.uri", "mongodb://root:secret@172.20.0.8:27017/mercadolibredb.meliproduct") \
-    .config("spark.mongodb.output.uri", "mongodb://root:secret@172.20.0.8:27017/mercadolibredb.meliproduct") \
+    .config("spark.mongodb.input.uri", "mongodb://root:secret@172.20.0.2:27017/mercadolibredb.meliproduct") \
+    .config("spark.mongodb.output.uri", "mongodb://root:secret@172.20.0.2:27017/mercadolibredb.meliproduct") \
     .getOrCreate()
 
 # Configurar nivel de registro para mostrar solo errores
@@ -86,30 +114,32 @@ ratings = when(
     (schemaDF.price >= 1000) & (schemaDF.QuantitySold <= 250), 3.5
 ).otherwise(3.0)
 
-finalDF = schemaDF.filter(schemaDF.RegistrationDate > "2010").withColumn("Free shipping?",
-                                                                         when((schemaDF.price >= 25000),
-                                                                              lit("Your shipment arrives today")) \
-                                                                         .when((schemaDF.price >= 15000) & \
-                                                                               (schemaDF.price < 25000),
-                                                                               lit("Your shipment arrives tomorrow"))
-                                                                         .when((schemaDF.price >= 5000) & \
-                                                                               (schemaDF.price <= 3500),
-                                                                               lit("It arrives in a few days")) \
-                                                                         .otherwise(
-                                                                             lit("You have to pay the shipping"))) \
-    .withColumn("Store ratings", ratings)
+finalDF = schemaDF.withColumn("Free shipping?",
+        when((schemaDF.price >= 25000),
+        lit("Your shipment arrives today")) \
+        .when((schemaDF.price >= 15000) & \
+        (schemaDF.price < 25000),
+        lit("Your shipment arrives tomorrow"))
+        .when((schemaDF.price >= 5000) & \
+        (schemaDF.price <= 3500),
+        lit("It arrives in a few days")) \
+        .otherwise(
+        lit("You have to pay the shipping"))) \
+        .withColumn("Store ratings", ratings)
 
 # Escribir los objetos JSON en MongoDB como un flujo
 query = finalDF \
     .writeStream \
     .trigger(processingTime='5 seconds') \
+    .option("truncate", False) \
+    .option("numRows", 50) \
     .outputMode("update") \
     .format("console") \
     .start()
 
 # Enviar cada fila del DataFrame de transmisión a la función writeToMongo como RDD
 queryToMongo = finalDF.writeStream.foreachBatch(writeToMongo).start()
-queryToMongo.awaitTermination()
 
 # Espere a que termine la transmisión
-query.awaitTermination()
+stop_stream_query(query, 50)
+stop_stream_query(queryToMongo, 50)

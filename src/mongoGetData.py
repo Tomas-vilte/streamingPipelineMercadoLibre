@@ -3,7 +3,7 @@ from loggerBase import log
 
 
 
-def getDataOfMongo(limit:int, database: str, coleccion: str, host: str = 'localhost', port: int = 27017) -> dict:
+def getDataOfMongo(limit:int, database: str, coleccion: str, host: str = 'mongodb://root:secret@172.20.0.2', port: int = 27017) -> dict:
     """
     :param limit: Limite de registros a devolver.
     :param database: Nombre de la base de datos de mongoDB.
@@ -22,11 +22,11 @@ def getDataOfMongo(limit:int, database: str, coleccion: str, host: str = 'localh
         # Obteniendo la colección especificada
         collection = db.get_collection(coleccion)
         # Obteniendo los registros limitados de la colección
-        data = collection.find({}).limit(limit=limit)
+        data = collection
+        for document in data.find({}).limit(limit=limit):
+            print(document)
     except Exception as e:
         # Registrando un error en caso de que ocurra alguno
         log.error(f'Hubo un error al obtener los datos: {e}')
 
-    # Devolviendo los datos obtenidos
     return data
-

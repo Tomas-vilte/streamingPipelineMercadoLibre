@@ -1,0 +1,698 @@
+[2023-01-29T07:52:17.979+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Streaming_pipeline_meli.consumer_data_of_topic manual__2023-01-27T18:49:27.597637+00:00 [queued]>
+[2023-01-29T07:52:17.988+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Streaming_pipeline_meli.consumer_data_of_topic manual__2023-01-27T18:49:27.597637+00:00 [queued]>
+[2023-01-29T07:52:17.988+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-29T07:52:17.988+0000] {taskinstance.py:1284} INFO - Starting attempt 29 of 34
+[2023-01-29T07:52:17.988+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-29T07:52:18.002+0000] {taskinstance.py:1304} INFO - Executing <Task(SparkSubmitOperator): consumer_data_of_topic> on 2023-01-27 18:49:27.597637+00:00
+[2023-01-29T07:52:18.007+0000] {standard_task_runner.py:55} INFO - Started process 10656 to run task
+[2023-01-29T07:52:18.009+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Streaming_pipeline_meli', 'consumer_data_of_topic', 'manual__2023-01-27T18:49:27.597637+00:00', '--job-id', '1193', '--raw', '--subdir', 'DAGS_FOLDER/streamPipeline.py', '--cfg-path', '/tmp/tmpbjwkqaq6']
+[2023-01-29T07:52:18.010+0000] {standard_task_runner.py:83} INFO - Job 1193: Subtask consumer_data_of_topic
+[2023-01-29T07:52:18.060+0000] {task_command.py:389} INFO - Running <TaskInstance: Streaming_pipeline_meli.consumer_data_of_topic manual__2023-01-27T18:49:27.597637+00:00 [running]> on host 15c99fd3082a
+[2023-01-29T07:52:18.118+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Streaming_pipeline_meli
+AIRFLOW_CTX_TASK_ID=consumer_data_of_topic
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-27T18:49:27.597637+00:00
+AIRFLOW_CTX_TRY_NUMBER=29
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-27T18:49:27.597637+00:00
+[2023-01-29T07:52:18.125+0000] {base.py:73} INFO - Using connection ID 'spark_default' for task execution.
+[2023-01-29T07:52:18.126+0000] {spark_submit.py:344} INFO - Spark-Submit cmd: spark-submit --master spark://tomi-H310:7077 --packages org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.3,org.mongodb.spark:mongo-spark-connector_2.12:3.0.1 --name arrow-spark --queue root.default /opt/***/dags/consumerSpark.py
+[2023-01-29T07:52:18.225+0000] {spark_submit.py:495} INFO - /home/***/.local/lib/python3.7/site-packages/pyspark/bin/load-spark-env.sh: line 68: ps: command not found
+[2023-01-29T07:52:19.629+0000] {spark_submit.py:495} INFO - :: loading settings :: url = jar:file:/home/***/.local/lib/python3.7/site-packages/pyspark/jars/ivy-2.5.0.jar!/org/apache/ivy/core/settings/ivysettings.xml
+[2023-01-29T07:52:19.686+0000] {spark_submit.py:495} INFO - Ivy Default Cache set to: /home/***/.ivy2/cache
+[2023-01-29T07:52:19.686+0000] {spark_submit.py:495} INFO - The jars for the packages stored in: /home/***/.ivy2/jars
+[2023-01-29T07:52:19.691+0000] {spark_submit.py:495} INFO - org.apache.spark#spark-sql-kafka-0-10_2.12 added as a dependency
+[2023-01-29T07:52:19.691+0000] {spark_submit.py:495} INFO - org.mongodb.spark#mongo-spark-connector_2.12 added as a dependency
+[2023-01-29T07:52:19.692+0000] {spark_submit.py:495} INFO - :: resolving dependencies :: org.apache.spark#spark-submit-parent-8701a605-6760-4450-b28d-c876e80e830b;1.0
+[2023-01-29T07:52:19.692+0000] {spark_submit.py:495} INFO - confs: [default]
+[2023-01-29T07:52:19.878+0000] {spark_submit.py:495} INFO - found org.apache.spark#spark-sql-kafka-0-10_2.12;3.1.3 in central
+[2023-01-29T07:52:19.965+0000] {spark_submit.py:495} INFO - found org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.1.3 in central
+[2023-01-29T07:52:20.036+0000] {spark_submit.py:495} INFO - found org.apache.kafka#kafka-clients;2.6.0 in central
+[2023-01-29T07:52:20.116+0000] {spark_submit.py:495} INFO - found com.github.luben#zstd-jni;1.4.8-1 in central
+[2023-01-29T07:52:20.145+0000] {spark_submit.py:495} INFO - found org.lz4#lz4-java;1.7.1 in central
+[2023-01-29T07:52:20.180+0000] {spark_submit.py:495} INFO - found org.xerial.snappy#snappy-java;1.1.8.2 in central
+[2023-01-29T07:52:20.220+0000] {spark_submit.py:495} INFO - found org.slf4j#slf4j-api;1.7.30 in central
+[2023-01-29T07:52:20.240+0000] {spark_submit.py:495} INFO - found org.spark-project.spark#unused;1.0.0 in central
+[2023-01-29T07:52:20.259+0000] {spark_submit.py:495} INFO - found org.apache.commons#commons-pool2;2.6.2 in central
+[2023-01-29T07:52:20.298+0000] {spark_submit.py:495} INFO - found org.mongodb.spark#mongo-spark-connector_2.12;3.0.1 in central
+[2023-01-29T07:52:20.331+0000] {spark_submit.py:495} INFO - found org.mongodb#mongodb-driver-sync;4.0.5 in central
+[2023-01-29T07:52:20.341+0000] {spark_submit.py:495} INFO - found org.mongodb#bson;4.0.5 in central
+[2023-01-29T07:52:20.355+0000] {spark_submit.py:495} INFO - found org.mongodb#mongodb-driver-core;4.0.5 in central
+[2023-01-29T07:52:20.378+0000] {spark_submit.py:495} INFO - :: resolution report :: resolve 672ms :: artifacts dl 14ms
+[2023-01-29T07:52:20.378+0000] {spark_submit.py:495} INFO - :: modules in use:
+[2023-01-29T07:52:20.379+0000] {spark_submit.py:495} INFO - com.github.luben#zstd-jni;1.4.8-1 from central in [default]
+[2023-01-29T07:52:20.379+0000] {spark_submit.py:495} INFO - org.apache.commons#commons-pool2;2.6.2 from central in [default]
+[2023-01-29T07:52:20.379+0000] {spark_submit.py:495} INFO - org.apache.kafka#kafka-clients;2.6.0 from central in [default]
+[2023-01-29T07:52:20.379+0000] {spark_submit.py:495} INFO - org.apache.spark#spark-sql-kafka-0-10_2.12;3.1.3 from central in [default]
+[2023-01-29T07:52:20.379+0000] {spark_submit.py:495} INFO - org.apache.spark#spark-token-provider-kafka-0-10_2.12;3.1.3 from central in [default]
+[2023-01-29T07:52:20.379+0000] {spark_submit.py:495} INFO - org.lz4#lz4-java;1.7.1 from central in [default]
+[2023-01-29T07:52:20.379+0000] {spark_submit.py:495} INFO - org.mongodb#bson;4.0.5 from central in [default]
+[2023-01-29T07:52:20.379+0000] {spark_submit.py:495} INFO - org.mongodb#mongodb-driver-core;4.0.5 from central in [default]
+[2023-01-29T07:52:20.379+0000] {spark_submit.py:495} INFO - org.mongodb#mongodb-driver-sync;4.0.5 from central in [default]
+[2023-01-29T07:52:20.380+0000] {spark_submit.py:495} INFO - org.mongodb.spark#mongo-spark-connector_2.12;3.0.1 from central in [default]
+[2023-01-29T07:52:20.380+0000] {spark_submit.py:495} INFO - org.slf4j#slf4j-api;1.7.30 from central in [default]
+[2023-01-29T07:52:20.380+0000] {spark_submit.py:495} INFO - org.spark-project.spark#unused;1.0.0 from central in [default]
+[2023-01-29T07:52:20.380+0000] {spark_submit.py:495} INFO - org.xerial.snappy#snappy-java;1.1.8.2 from central in [default]
+[2023-01-29T07:52:20.380+0000] {spark_submit.py:495} INFO - ---------------------------------------------------------------------
+[2023-01-29T07:52:20.380+0000] {spark_submit.py:495} INFO - |                  |            modules            ||   artifacts   |
+[2023-01-29T07:52:20.380+0000] {spark_submit.py:495} INFO - |       conf       | number| search|dwnlded|evicted|| number|dwnlded|
+[2023-01-29T07:52:20.380+0000] {spark_submit.py:495} INFO - ---------------------------------------------------------------------
+[2023-01-29T07:52:20.381+0000] {spark_submit.py:495} INFO - |      default     |   13  |   0   |   0   |   0   ||   13  |   0   |
+[2023-01-29T07:52:20.381+0000] {spark_submit.py:495} INFO - ---------------------------------------------------------------------
+[2023-01-29T07:52:20.385+0000] {spark_submit.py:495} INFO - :: retrieving :: org.apache.spark#spark-submit-parent-8701a605-6760-4450-b28d-c876e80e830b
+[2023-01-29T07:52:20.385+0000] {spark_submit.py:495} INFO - confs: [default]
+[2023-01-29T07:52:20.393+0000] {spark_submit.py:495} INFO - 0 artifacts copied, 13 already retrieved (0kB/7ms)
+[2023-01-29T07:52:20.727+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:20 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+[2023-01-29T07:52:21.926+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:21 INFO SparkContext: Running Spark version 3.3.1
+[2023-01-29T07:52:21.954+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:21 INFO ResourceUtils: ==============================================================
+[2023-01-29T07:52:21.955+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:21 INFO ResourceUtils: No custom resources configured for spark.driver.
+[2023-01-29T07:52:21.960+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:21 INFO ResourceUtils: ==============================================================
+[2023-01-29T07:52:21.961+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:21 INFO SparkContext: Submitted application: arrow-spark
+[2023-01-29T07:52:21.998+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:21 INFO ResourceProfile: Default ResourceProfile created, executor resources: Map(cores -> name: cores, amount: 1, script: , vendor: , memory -> name: memory, amount: 1024, script: , vendor: , offHeap -> name: offHeap, amount: 0, script: , vendor: ), task resources: Map(cpus -> name: cpus, amount: 1.0)
+[2023-01-29T07:52:22.032+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO ResourceProfile: Limiting resource is cpu
+[2023-01-29T07:52:22.033+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO ResourceProfileManager: Added ResourceProfile id: 0
+[2023-01-29T07:52:22.165+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SecurityManager: Changing view acls to: default
+[2023-01-29T07:52:22.175+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SecurityManager: Changing modify acls to: default
+[2023-01-29T07:52:22.176+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SecurityManager: Changing view acls groups to:
+[2023-01-29T07:52:22.177+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SecurityManager: Changing modify acls groups to:
+[2023-01-29T07:52:22.178+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SecurityManager: SecurityManager: authentication disabled; ui acls disabled; users  with view permissions: Set(default); groups with view permissions: Set(); users  with modify permissions: Set(default); groups with modify permissions: Set()
+[2023-01-29T07:52:22.480+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Utils: Successfully started service 'sparkDriver' on port 37257.
+[2023-01-29T07:52:22.517+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkEnv: Registering MapOutputTracker
+[2023-01-29T07:52:22.539+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkEnv: Registering BlockManagerMaster
+[2023-01-29T07:52:22.556+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO BlockManagerMasterEndpoint: Using org.apache.spark.storage.DefaultTopologyMapper for getting topology information
+[2023-01-29T07:52:22.556+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO BlockManagerMasterEndpoint: BlockManagerMasterEndpoint up
+[2023-01-29T07:52:22.560+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkEnv: Registering BlockManagerMasterHeartbeat
+[2023-01-29T07:52:22.578+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO DiskBlockManager: Created local directory at /tmp/blockmgr-5eaf9b58-13e3-4cd0-ae7e-d1601215fd87
+[2023-01-29T07:52:22.591+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO MemoryStore: MemoryStore started with capacity 434.4 MiB
+[2023-01-29T07:52:22.602+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkEnv: Registering OutputCommitCoordinator
+[2023-01-29T07:52:22.764+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Utils: Successfully started service 'SparkUI' on port 4040.
+[2023-01-29T07:52:22.795+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.3.jar at spark://15c99fd3082a:37257/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.3.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.795+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.mongodb.spark_mongo-spark-connector_2.12-3.0.1.jar at spark://15c99fd3082a:37257/jars/org.mongodb.spark_mongo-spark-connector_2.12-3.0.1.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.795+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.3.jar at spark://15c99fd3082a:37257/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.3.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.795+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.kafka_kafka-clients-2.6.0.jar at spark://15c99fd3082a:37257/jars/org.apache.kafka_kafka-clients-2.6.0.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.795+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar at spark://15c99fd3082a:37257/jars/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.795+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at spark://15c99fd3082a:37257/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.795+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/com.github.luben_zstd-jni-1.4.8-1.jar at spark://15c99fd3082a:37257/jars/com.github.luben_zstd-jni-1.4.8-1.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.795+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar at spark://15c99fd3082a:37257/jars/org.lz4_lz4-java-1.7.1.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.796+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.2.jar at spark://15c99fd3082a:37257/jars/org.xerial.snappy_snappy-java-1.1.8.2.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.796+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar at spark://15c99fd3082a:37257/jars/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.796+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.mongodb_mongodb-driver-sync-4.0.5.jar at spark://15c99fd3082a:37257/jars/org.mongodb_mongodb-driver-sync-4.0.5.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.796+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.mongodb_bson-4.0.5.jar at spark://15c99fd3082a:37257/jars/org.mongodb_bson-4.0.5.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.796+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added JAR file:///home/***/.ivy2/jars/org.mongodb_mongodb-driver-core-4.0.5.jar at spark://15c99fd3082a:37257/jars/org.mongodb_mongodb-driver-core-4.0.5.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.798+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.3.jar at file:///home/***/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.3.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.799+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.3.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.3.jar
+[2023-01-29T07:52:22.815+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.mongodb.spark_mongo-spark-connector_2.12-3.0.1.jar at file:///home/***/.ivy2/jars/org.mongodb.spark_mongo-spark-connector_2.12-3.0.1.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.815+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Utils: Copying /home/***/.ivy2/jars/org.mongodb.spark_mongo-spark-connector_2.12-3.0.1.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.mongodb.spark_mongo-spark-connector_2.12-3.0.1.jar
+[2023-01-29T07:52:22.823+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.3.jar at file:///home/***/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.3.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.823+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.3.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.3.jar
+[2023-01-29T07:52:22.827+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.kafka_kafka-clients-2.6.0.jar at file:///home/***/.ivy2/jars/org.apache.kafka_kafka-clients-2.6.0.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.827+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.kafka_kafka-clients-2.6.0.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.apache.kafka_kafka-clients-2.6.0.jar
+[2023-01-29T07:52:22.835+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar at file:///home/***/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.835+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Utils: Copying /home/***/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.apache.commons_commons-pool2-2.6.2.jar
+[2023-01-29T07:52:22.844+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar at file:///home/***/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.844+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Utils: Copying /home/***/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.spark-project.spark_unused-1.0.0.jar
+[2023-01-29T07:52:22.851+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added file file:///home/***/.ivy2/jars/com.github.luben_zstd-jni-1.4.8-1.jar at file:///home/***/.ivy2/jars/com.github.luben_zstd-jni-1.4.8-1.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.851+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Utils: Copying /home/***/.ivy2/jars/com.github.luben_zstd-jni-1.4.8-1.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/com.github.luben_zstd-jni-1.4.8-1.jar
+[2023-01-29T07:52:22.859+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar at file:///home/***/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.860+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Utils: Copying /home/***/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.lz4_lz4-java-1.7.1.jar
+[2023-01-29T07:52:22.864+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.2.jar at file:///home/***/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.2.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.864+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Utils: Copying /home/***/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.2.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.xerial.snappy_snappy-java-1.1.8.2.jar
+[2023-01-29T07:52:22.873+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar at file:///home/***/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.874+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Utils: Copying /home/***/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.slf4j_slf4j-api-1.7.30.jar
+[2023-01-29T07:52:22.876+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.mongodb_mongodb-driver-sync-4.0.5.jar at file:///home/***/.ivy2/jars/org.mongodb_mongodb-driver-sync-4.0.5.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.877+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Utils: Copying /home/***/.ivy2/jars/org.mongodb_mongodb-driver-sync-4.0.5.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.mongodb_mongodb-driver-sync-4.0.5.jar
+[2023-01-29T07:52:22.880+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.mongodb_bson-4.0.5.jar at file:///home/***/.ivy2/jars/org.mongodb_bson-4.0.5.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.880+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Utils: Copying /home/***/.ivy2/jars/org.mongodb_bson-4.0.5.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.mongodb_bson-4.0.5.jar
+[2023-01-29T07:52:22.887+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO SparkContext: Added file file:///home/***/.ivy2/jars/org.mongodb_mongodb-driver-core-4.0.5.jar at file:///home/***/.ivy2/jars/org.mongodb_mongodb-driver-core-4.0.5.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.888+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Utils: Copying /home/***/.ivy2/jars/org.mongodb_mongodb-driver-core-4.0.5.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.mongodb_mongodb-driver-core-4.0.5.jar
+[2023-01-29T07:52:22.937+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Executor: Starting executor ID driver on host 15c99fd3082a
+[2023-01-29T07:52:22.941+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Executor: Starting executor with user classpath (userClassPathFirst = false): ''
+[2023-01-29T07:52:22.949+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Executor: Fetching file:///home/***/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.3.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.964+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Utils: /home/***/.ivy2/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.3.jar has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.3.jar
+[2023-01-29T07:52:22.972+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Executor: Fetching file:///home/***/.ivy2/jars/org.mongodb_mongodb-driver-sync-4.0.5.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.974+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Utils: /home/***/.ivy2/jars/org.mongodb_mongodb-driver-sync-4.0.5.jar has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.mongodb_mongodb-driver-sync-4.0.5.jar
+[2023-01-29T07:52:22.977+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Executor: Fetching file:///home/***/.ivy2/jars/org.apache.kafka_kafka-clients-2.6.0.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.983+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Utils: /home/***/.ivy2/jars/org.apache.kafka_kafka-clients-2.6.0.jar has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.apache.kafka_kafka-clients-2.6.0.jar
+[2023-01-29T07:52:22.989+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Executor: Fetching file:///home/***/.ivy2/jars/org.mongodb_bson-4.0.5.jar with timestamp 1674978741913
+[2023-01-29T07:52:22.990+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Utils: /home/***/.ivy2/jars/org.mongodb_bson-4.0.5.jar has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.mongodb_bson-4.0.5.jar
+[2023-01-29T07:52:22.997+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:22 INFO Executor: Fetching file:///home/***/.ivy2/jars/com.github.luben_zstd-jni-1.4.8-1.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.003+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /home/***/.ivy2/jars/com.github.luben_zstd-jni-1.4.8-1.jar has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/com.github.luben_zstd-jni-1.4.8-1.jar
+[2023-01-29T07:52:23.006+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Fetching file:///home/***/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.008+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /home/***/.ivy2/jars/org.lz4_lz4-java-1.7.1.jar has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.lz4_lz4-java-1.7.1.jar
+[2023-01-29T07:52:23.017+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Fetching file:///home/***/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.019+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /home/***/.ivy2/jars/org.spark-project.spark_unused-1.0.0.jar has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.spark-project.spark_unused-1.0.0.jar
+[2023-01-29T07:52:23.024+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Fetching file:///home/***/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.2.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.027+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /home/***/.ivy2/jars/org.xerial.snappy_snappy-java-1.1.8.2.jar has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.xerial.snappy_snappy-java-1.1.8.2.jar
+[2023-01-29T07:52:23.047+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Fetching file:///home/***/.ivy2/jars/org.mongodb_mongodb-driver-core-4.0.5.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.049+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /home/***/.ivy2/jars/org.mongodb_mongodb-driver-core-4.0.5.jar has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.mongodb_mongodb-driver-core-4.0.5.jar
+[2023-01-29T07:52:23.055+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Fetching file:///home/***/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.3.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.056+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /home/***/.ivy2/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.3.jar has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.3.jar
+[2023-01-29T07:52:23.063+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Fetching file:///home/***/.ivy2/jars/org.mongodb.spark_mongo-spark-connector_2.12-3.0.1.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.064+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /home/***/.ivy2/jars/org.mongodb.spark_mongo-spark-connector_2.12-3.0.1.jar has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.mongodb.spark_mongo-spark-connector_2.12-3.0.1.jar
+[2023-01-29T07:52:23.067+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Fetching file:///home/***/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.067+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /home/***/.ivy2/jars/org.apache.commons_commons-pool2-2.6.2.jar has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.apache.commons_commons-pool2-2.6.2.jar
+[2023-01-29T07:52:23.071+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Fetching file:///home/***/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.071+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /home/***/.ivy2/jars/org.slf4j_slf4j-api-1.7.30.jar has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.slf4j_slf4j-api-1.7.30.jar
+[2023-01-29T07:52:23.127+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Fetching spark://15c99fd3082a:37257/jars/org.apache.kafka_kafka-clients-2.6.0.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.193+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO TransportClientFactory: Successfully created connection to 15c99fd3082a/172.20.0.4:37257 after 43 ms (0 ms spent in bootstraps)
+[2023-01-29T07:52:23.202+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: Fetching spark://15c99fd3082a:37257/jars/org.apache.kafka_kafka-clients-2.6.0.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp9869260821684122067.tmp
+[2023-01-29T07:52:23.281+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp9869260821684122067.tmp has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.apache.kafka_kafka-clients-2.6.0.jar
+[2023-01-29T07:52:23.292+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Adding file:/tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.apache.kafka_kafka-clients-2.6.0.jar to class loader
+[2023-01-29T07:52:23.293+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Fetching spark://15c99fd3082a:37257/jars/org.mongodb_bson-4.0.5.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.293+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: Fetching spark://15c99fd3082a:37257/jars/org.mongodb_bson-4.0.5.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp2762682982288452258.tmp
+[2023-01-29T07:52:23.297+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp2762682982288452258.tmp has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.mongodb_bson-4.0.5.jar
+[2023-01-29T07:52:23.303+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Adding file:/tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.mongodb_bson-4.0.5.jar to class loader
+[2023-01-29T07:52:23.303+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Fetching spark://15c99fd3082a:37257/jars/org.lz4_lz4-java-1.7.1.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.304+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: Fetching spark://15c99fd3082a:37257/jars/org.lz4_lz4-java-1.7.1.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp5183047902467427293.tmp
+[2023-01-29T07:52:23.319+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp5183047902467427293.tmp has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.lz4_lz4-java-1.7.1.jar
+[2023-01-29T07:52:23.329+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Adding file:/tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.lz4_lz4-java-1.7.1.jar to class loader
+[2023-01-29T07:52:23.329+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Fetching spark://15c99fd3082a:37257/jars/org.spark-project.spark_unused-1.0.0.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.334+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: Fetching spark://15c99fd3082a:37257/jars/org.spark-project.spark_unused-1.0.0.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp10641741387266084056.tmp
+[2023-01-29T07:52:23.336+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp10641741387266084056.tmp has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.spark-project.spark_unused-1.0.0.jar
+[2023-01-29T07:52:23.341+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Adding file:/tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.spark-project.spark_unused-1.0.0.jar to class loader
+[2023-01-29T07:52:23.341+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Fetching spark://15c99fd3082a:37257/jars/org.slf4j_slf4j-api-1.7.30.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.343+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: Fetching spark://15c99fd3082a:37257/jars/org.slf4j_slf4j-api-1.7.30.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp1991276431900542206.tmp
+[2023-01-29T07:52:23.344+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp1991276431900542206.tmp has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.slf4j_slf4j-api-1.7.30.jar
+[2023-01-29T07:52:23.350+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Adding file:/tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.slf4j_slf4j-api-1.7.30.jar to class loader
+[2023-01-29T07:52:23.350+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Fetching spark://15c99fd3082a:37257/jars/org.mongodb.spark_mongo-spark-connector_2.12-3.0.1.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.353+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: Fetching spark://15c99fd3082a:37257/jars/org.mongodb.spark_mongo-spark-connector_2.12-3.0.1.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp14161047412064708579.tmp
+[2023-01-29T07:52:23.358+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp14161047412064708579.tmp has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.mongodb.spark_mongo-spark-connector_2.12-3.0.1.jar
+[2023-01-29T07:52:23.363+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Adding file:/tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.mongodb.spark_mongo-spark-connector_2.12-3.0.1.jar to class loader
+[2023-01-29T07:52:23.364+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Fetching spark://15c99fd3082a:37257/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.3.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.365+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: Fetching spark://15c99fd3082a:37257/jars/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.3.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp12735122329025851795.tmp
+[2023-01-29T07:52:23.368+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp12735122329025851795.tmp has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.3.jar
+[2023-01-29T07:52:23.370+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Adding file:/tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.apache.spark_spark-token-provider-kafka-0-10_2.12-3.1.3.jar to class loader
+[2023-01-29T07:52:23.370+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Fetching spark://15c99fd3082a:37257/jars/org.mongodb_mongodb-driver-sync-4.0.5.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.372+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: Fetching spark://15c99fd3082a:37257/jars/org.mongodb_mongodb-driver-sync-4.0.5.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp6067678392953174402.tmp
+[2023-01-29T07:52:23.374+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp6067678392953174402.tmp has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.mongodb_mongodb-driver-sync-4.0.5.jar
+[2023-01-29T07:52:23.380+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Adding file:/tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.mongodb_mongodb-driver-sync-4.0.5.jar to class loader
+[2023-01-29T07:52:23.381+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Fetching spark://15c99fd3082a:37257/jars/org.apache.commons_commons-pool2-2.6.2.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.382+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: Fetching spark://15c99fd3082a:37257/jars/org.apache.commons_commons-pool2-2.6.2.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp6200859291603840707.tmp
+[2023-01-29T07:52:23.384+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp6200859291603840707.tmp has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.apache.commons_commons-pool2-2.6.2.jar
+[2023-01-29T07:52:23.388+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Adding file:/tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.apache.commons_commons-pool2-2.6.2.jar to class loader
+[2023-01-29T07:52:23.388+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Fetching spark://15c99fd3082a:37257/jars/org.mongodb_mongodb-driver-core-4.0.5.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.389+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: Fetching spark://15c99fd3082a:37257/jars/org.mongodb_mongodb-driver-core-4.0.5.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp17516582789001453808.tmp
+[2023-01-29T07:52:23.398+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp17516582789001453808.tmp has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.mongodb_mongodb-driver-core-4.0.5.jar
+[2023-01-29T07:52:23.409+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Adding file:/tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.mongodb_mongodb-driver-core-4.0.5.jar to class loader
+[2023-01-29T07:52:23.409+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Fetching spark://15c99fd3082a:37257/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.3.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.411+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: Fetching spark://15c99fd3082a:37257/jars/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.3.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp18337953332304604194.tmp
+[2023-01-29T07:52:23.413+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp18337953332304604194.tmp has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.3.jar
+[2023-01-29T07:52:23.416+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Adding file:/tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.apache.spark_spark-sql-kafka-0-10_2.12-3.1.3.jar to class loader
+[2023-01-29T07:52:23.416+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Fetching spark://15c99fd3082a:37257/jars/com.github.luben_zstd-jni-1.4.8-1.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.420+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: Fetching spark://15c99fd3082a:37257/jars/com.github.luben_zstd-jni-1.4.8-1.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp2615466787892023712.tmp
+[2023-01-29T07:52:23.443+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp2615466787892023712.tmp has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/com.github.luben_zstd-jni-1.4.8-1.jar
+[2023-01-29T07:52:23.473+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Adding file:/tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/com.github.luben_zstd-jni-1.4.8-1.jar to class loader
+[2023-01-29T07:52:23.473+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Fetching spark://15c99fd3082a:37257/jars/org.xerial.snappy_snappy-java-1.1.8.2.jar with timestamp 1674978741913
+[2023-01-29T07:52:23.473+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: Fetching spark://15c99fd3082a:37257/jars/org.xerial.snappy_snappy-java-1.1.8.2.jar to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp702529105848083017.tmp
+[2023-01-29T07:52:23.485+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/fetchFileTemp702529105848083017.tmp has been previously copied to /tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.xerial.snappy_snappy-java-1.1.8.2.jar
+[2023-01-29T07:52:23.492+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Executor: Adding file:/tmp/spark-4ce5b042-5b3b-403a-953a-3e75700d4f35/userFiles-234307c0-b5ef-42cd-bb73-9bda41fc70b5/org.xerial.snappy_snappy-java-1.1.8.2.jar to class loader
+[2023-01-29T07:52:23.504+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO Utils: Successfully started service 'org.apache.spark.network.netty.NettyBlockTransferService' on port 34187.
+[2023-01-29T07:52:23.504+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO NettyBlockTransferService: Server created on 15c99fd3082a:34187
+[2023-01-29T07:52:23.505+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO BlockManager: Using org.apache.spark.storage.RandomBlockReplicationPolicy for block replication policy
+[2023-01-29T07:52:23.518+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO BlockManagerMaster: Registering BlockManager BlockManagerId(driver, 15c99fd3082a, 34187, None)
+[2023-01-29T07:52:23.529+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO BlockManagerMasterEndpoint: Registering block manager 15c99fd3082a:34187 with 434.4 MiB RAM, BlockManagerId(driver, 15c99fd3082a, 34187, None)
+[2023-01-29T07:52:23.529+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO BlockManagerMaster: Registered BlockManager BlockManagerId(driver, 15c99fd3082a, 34187, None)
+[2023-01-29T07:52:23.534+0000] {spark_submit.py:495} INFO - 23/01/29 07:52:23 INFO BlockManager: Initialized BlockManager: BlockManagerId(driver, 15c99fd3082a, 34187, None)
+[2023-01-29T07:52:26.861+0000] {spark_submit.py:495} INFO - 2023-01-29 07:52:26,861 - py4j.java_gateway - INFO - Callback Server Starting
+[2023-01-29T07:52:26.862+0000] {spark_submit.py:495} INFO - 2023-01-29 07:52:26,862 - py4j.java_gateway - INFO - Socket listening on ('127.0.0.1', 43305)
+[2023-01-29T07:52:31.171+0000] {spark_submit.py:495} INFO - 2023-01-29 07:52:31,170 - py4j.clientserver - INFO - Python Server ready to receive messages
+[2023-01-29T07:52:31.177+0000] {spark_submit.py:495} INFO - 2023-01-29 07:52:31,176 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:52:31.548+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:52:31.549+0000] {spark_submit.py:495} INFO - Batch: 0
+[2023-01-29T07:52:31.549+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:52:31.628+0000] {spark_submit.py:495} INFO - +---+-------------+-----+-------------+----------+----------------+------------+-----------------+--------------+-------------+
+[2023-01-29T07:52:31.628+0000] {spark_submit.py:495} INFO - | id|nameOfProduct|price|ProductStatus|SellerName|RegistrationDate|QuantitySold|QuantityAvailable|Free shipping?|Store ratings|
+[2023-01-29T07:52:31.629+0000] {spark_submit.py:495} INFO - +---+-------------+-----+-------------+----------+----------------+------------+-----------------+--------------+-------------+
+[2023-01-29T07:52:31.629+0000] {spark_submit.py:495} INFO - +---+-------------+-----+-------------+----------+----------------+------------+-----------------+--------------+-------------+
+[2023-01-29T07:52:31.629+0000] {spark_submit.py:495} INFO - 
+[2023-01-29T07:52:38.996+0000] {spark_submit.py:495} INFO - 2023-01-29 07:52:38,991 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:52:40.685+0000] {spark_submit.py:495} INFO - 2023-01-29 07:52:40,685 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:52:40.913+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:52:40.914+0000] {spark_submit.py:495} INFO - Batch: 1
+[2023-01-29T07:52:40.914+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:52:41.049+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:52:41.049+0000] {spark_submit.py:495} INFO - |           id|       nameOfProduct|   price|ProductStatus|          SellerName|   RegistrationDate|QuantitySold|QuantityAvailable|      Free shipping?|Store ratings|
+[2023-01-29T07:52:41.049+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:52:41.050+0000] {spark_submit.py:495} INFO - |MLA1157512489|Placa De Video Nv...|124999.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:52:41.050+0000] {spark_submit.py:495} INFO - |MLA1163238194|Placa De Video Am...| 31424.0|          new|       MICYBERCOMPRA|2011-09-13 13:15:53|          50|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:52:41.050+0000] {spark_submit.py:495} INFO - | MLA923635582|Disco Sólido Inte...| 13299.0|          new|DIAMONDSYSTEMSANJ...|2016-04-08 17:21:06|        5000|               50|You have to pay t...|          5.0|
+[2023-01-29T07:52:41.050+0000] {spark_submit.py:495} INFO - | MLA882277177|Capturadora Video...|  2699.0|          new|         BSK-IMPORTS|2019-12-30 23:07:04|         500|               50|You have to pay t...|          3.0|
+[2023-01-29T07:52:41.050+0000] {spark_submit.py:495} INFO - |MLA1148481665|Microprocesador P...| 58899.0|          new|            MALL WEB|2016-05-26 20:28:35|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:52:41.050+0000] {spark_submit.py:495} INFO - |MLA1160204806|Memoria Ram Fury ...| 17399.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         500|              100|Your shipment arr...|          4.5|
+[2023-01-29T07:52:41.050+0000] {spark_submit.py:495} INFO - | MLA923637669|Placa De Video Ge...| 28699.0|          new|         INDIGOTRADE|2018-01-05 19:21:16|         500|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:52:41.051+0000] {spark_submit.py:495} INFO - | MLA844489972|Disco Duro Intern...| 11599.0|          new|           DALECLÍCK|2015-03-16 12:07:23|        5000|              500|You have to pay t...|          5.0|
+[2023-01-29T07:52:41.051+0000] {spark_submit.py:495} INFO - |MLA1157627908|Disco Duro Extern...| 18429.0|          new|   TECNOSTOCK.COM.AR|2019-12-12 15:09:43|          25|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:52:41.051+0000] {spark_submit.py:495} INFO - |MLA1149343157|Microprocesador P...| 36529.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           0|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:52:41.051+0000] {spark_submit.py:495} INFO - |MLA1160178907|Memoria Ram Fury ...| 25799.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         500|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:52:41.051+0000] {spark_submit.py:495} INFO - |MLA1302136118|Disco Duro Intern...| 18271.0|          new|DIAMONDSYSTEMSANJ...|2016-04-08 17:21:06|         150|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:52:41.051+0000] {spark_submit.py:495} INFO - |MLA1183925519|Placa De Video Nv...|299999.0|          new|ESTUDIOSMPSRLESTU...|2020-11-29 18:36:32|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:52:41.051+0000] {spark_submit.py:495} INFO - |MLA1314590445|Disco Sólido Inte...|  7799.0|          new|       ELECTRO-SHOWS|2010-03-26 01:08:16|         250|              250|You have to pay t...|          4.5|
+[2023-01-29T07:52:41.051+0000] {spark_submit.py:495} INFO - |MLA1221192372|Disco Duro Extern...| 27899.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         250|              100|Your shipment arr...|          4.5|
+[2023-01-29T07:52:41.052+0000] {spark_submit.py:495} INFO - |MLA1294240592|Procesador Intel ...| 24043.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           4|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:52:41.052+0000] {spark_submit.py:495} INFO - |MLA1272836523|Disco Duro Intern...| 16999.0|          new|        TIENDA DELTA|2011-09-15 21:48:50|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:52:41.052+0000] {spark_submit.py:495} INFO - |MLA1301642528|Placa De Video Nv...|134999.0|          new|     ITS-COMPUTACION|2012-10-18 20:37:49|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:52:41.052+0000] {spark_submit.py:495} INFO - | MLA902808321|Procesador Gamer ...| 23699.0|          new|            MALL WEB|2016-05-26 20:28:35|         500|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:52:41.052+0000] {spark_submit.py:495} INFO - |MLA1163233412|Placa De Video Nv...| 34659.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           4|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:52:41.053+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:52:41.053+0000] {spark_submit.py:495} INFO - only showing top 20 rows
+[2023-01-29T07:52:41.053+0000] {spark_submit.py:495} INFO - 
+[2023-01-29T07:52:53.020+0000] {spark_submit.py:495} INFO - 2023-01-29 07:52:53,020 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:52:53.878+0000] {spark_submit.py:495} INFO - 2023-01-29 07:52:53,878 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:52:55.679+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:52:55.679+0000] {spark_submit.py:495} INFO - Batch: 2
+[2023-01-29T07:52:55.680+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:52:55.711+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:52:55.712+0000] {spark_submit.py:495} INFO - |           id|       nameOfProduct|   price|ProductStatus|          SellerName|   RegistrationDate|QuantitySold|QuantityAvailable|      Free shipping?|Store ratings|
+[2023-01-29T07:52:55.712+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:52:55.712+0000] {spark_submit.py:495} INFO - |MLA1157512489|Placa De Video Nv...|124999.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:52:55.712+0000] {spark_submit.py:495} INFO - |MLA1163238194|Placa De Video Am...| 31424.0|          new|       MICYBERCOMPRA|2011-09-13 13:15:53|          50|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:52:55.713+0000] {spark_submit.py:495} INFO - | MLA923635582|Disco Sólido Inte...| 13299.0|          new|DIAMONDSYSTEMSANJ...|2016-04-08 17:21:06|        5000|               50|You have to pay t...|          5.0|
+[2023-01-29T07:52:55.713+0000] {spark_submit.py:495} INFO - | MLA882277177|Capturadora Video...|  2699.0|          new|         BSK-IMPORTS|2019-12-30 23:07:04|         500|               50|You have to pay t...|          3.0|
+[2023-01-29T07:52:55.713+0000] {spark_submit.py:495} INFO - |MLA1148481665|Microprocesador P...| 58899.0|          new|            MALL WEB|2016-05-26 20:28:35|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:52:55.713+0000] {spark_submit.py:495} INFO - |MLA1160204806|Memoria Ram Fury ...| 17399.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         500|              100|Your shipment arr...|          4.5|
+[2023-01-29T07:52:55.713+0000] {spark_submit.py:495} INFO - | MLA923637669|Placa De Video Ge...| 28699.0|          new|         INDIGOTRADE|2018-01-05 19:21:16|         500|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:52:55.713+0000] {spark_submit.py:495} INFO - | MLA844489972|Disco Duro Intern...| 11599.0|          new|           DALECLÍCK|2015-03-16 12:07:23|        5000|              500|You have to pay t...|          5.0|
+[2023-01-29T07:52:55.713+0000] {spark_submit.py:495} INFO - |MLA1157627908|Disco Duro Extern...| 18429.0|          new|   TECNOSTOCK.COM.AR|2019-12-12 15:09:43|          25|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:52:55.713+0000] {spark_submit.py:495} INFO - |MLA1149343157|Microprocesador P...| 36529.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           0|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:52:55.713+0000] {spark_submit.py:495} INFO - |MLA1160178907|Memoria Ram Fury ...| 25799.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         500|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:52:55.714+0000] {spark_submit.py:495} INFO - |MLA1302136118|Disco Duro Intern...| 18271.0|          new|DIAMONDSYSTEMSANJ...|2016-04-08 17:21:06|         150|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:52:55.714+0000] {spark_submit.py:495} INFO - |MLA1183925519|Placa De Video Nv...|299999.0|          new|ESTUDIOSMPSRLESTU...|2020-11-29 18:36:32|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:52:55.714+0000] {spark_submit.py:495} INFO - |MLA1314590445|Disco Sólido Inte...|  7799.0|          new|       ELECTRO-SHOWS|2010-03-26 01:08:16|         250|              250|You have to pay t...|          4.5|
+[2023-01-29T07:52:55.714+0000] {spark_submit.py:495} INFO - |MLA1221192372|Disco Duro Extern...| 27899.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         250|              100|Your shipment arr...|          4.5|
+[2023-01-29T07:52:55.714+0000] {spark_submit.py:495} INFO - |MLA1294240592|Procesador Intel ...| 24043.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           4|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:52:55.714+0000] {spark_submit.py:495} INFO - |MLA1272836523|Disco Duro Intern...| 16999.0|          new|        TIENDA DELTA|2011-09-15 21:48:50|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:52:55.714+0000] {spark_submit.py:495} INFO - |MLA1301642528|Placa De Video Nv...|134999.0|          new|     ITS-COMPUTACION|2012-10-18 20:37:49|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:52:55.714+0000] {spark_submit.py:495} INFO - | MLA902808321|Procesador Gamer ...| 23699.0|          new|            MALL WEB|2016-05-26 20:28:35|         500|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:52:55.714+0000] {spark_submit.py:495} INFO - |MLA1163233412|Placa De Video Nv...| 34659.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           4|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:52:55.714+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:52:55.714+0000] {spark_submit.py:495} INFO - only showing top 20 rows
+[2023-01-29T07:52:55.714+0000] {spark_submit.py:495} INFO - 
+[2023-01-29T07:53:31.304+0000] {spark_submit.py:495} INFO - 2023-01-29 07:53:31,304 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:53:31.675+0000] {spark_submit.py:495} INFO - 2023-01-29 07:53:31,675 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:53:35.212+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:53:35.213+0000] {spark_submit.py:495} INFO - Batch: 3
+[2023-01-29T07:53:35.213+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:53:35.307+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:53:35.307+0000] {spark_submit.py:495} INFO - |           id|       nameOfProduct|   price|ProductStatus|          SellerName|   RegistrationDate|QuantitySold|QuantityAvailable|      Free shipping?|Store ratings|
+[2023-01-29T07:53:35.307+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:53:35.307+0000] {spark_submit.py:495} INFO - |MLA1157512489|Placa De Video Nv...|124999.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:53:35.308+0000] {spark_submit.py:495} INFO - |MLA1163238194|Placa De Video Am...| 31424.0|          new|       MICYBERCOMPRA|2011-09-13 13:15:53|          50|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:53:35.308+0000] {spark_submit.py:495} INFO - | MLA923635582|Disco Sólido Inte...| 13299.0|          new|DIAMONDSYSTEMSANJ...|2016-04-08 17:21:06|        5000|               50|You have to pay t...|          5.0|
+[2023-01-29T07:53:35.308+0000] {spark_submit.py:495} INFO - | MLA882277177|Capturadora Video...|  2699.0|          new|         BSK-IMPORTS|2019-12-30 23:07:04|         500|               50|You have to pay t...|          3.0|
+[2023-01-29T07:53:35.308+0000] {spark_submit.py:495} INFO - |MLA1148481665|Microprocesador P...| 58899.0|          new|            MALL WEB|2016-05-26 20:28:35|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:53:35.308+0000] {spark_submit.py:495} INFO - |MLA1160204806|Memoria Ram Fury ...| 17399.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         500|              100|Your shipment arr...|          4.5|
+[2023-01-29T07:53:35.308+0000] {spark_submit.py:495} INFO - | MLA923637669|Placa De Video Ge...| 28699.0|          new|         INDIGOTRADE|2018-01-05 19:21:16|         500|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:53:35.308+0000] {spark_submit.py:495} INFO - | MLA844489972|Disco Duro Intern...| 11599.0|          new|           DALECLÍCK|2015-03-16 12:07:23|        5000|              500|You have to pay t...|          5.0|
+[2023-01-29T07:53:35.308+0000] {spark_submit.py:495} INFO - |MLA1157627908|Disco Duro Extern...| 18429.0|          new|   TECNOSTOCK.COM.AR|2019-12-12 15:09:43|          25|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:53:35.309+0000] {spark_submit.py:495} INFO - |MLA1149343157|Microprocesador P...| 36529.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           0|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:53:35.309+0000] {spark_submit.py:495} INFO - |MLA1160178907|Memoria Ram Fury ...| 25799.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         500|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:53:35.309+0000] {spark_submit.py:495} INFO - |MLA1302136118|Disco Duro Intern...| 18271.0|          new|DIAMONDSYSTEMSANJ...|2016-04-08 17:21:06|         150|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:53:35.309+0000] {spark_submit.py:495} INFO - |MLA1183925519|Placa De Video Nv...|299999.0|          new|ESTUDIOSMPSRLESTU...|2020-11-29 18:36:32|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:53:35.309+0000] {spark_submit.py:495} INFO - |MLA1314590445|Disco Sólido Inte...|  7799.0|          new|       ELECTRO-SHOWS|2010-03-26 01:08:16|         250|              250|You have to pay t...|          4.5|
+[2023-01-29T07:53:35.309+0000] {spark_submit.py:495} INFO - |MLA1221192372|Disco Duro Extern...| 27899.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         250|              100|Your shipment arr...|          4.5|
+[2023-01-29T07:53:35.309+0000] {spark_submit.py:495} INFO - |MLA1294240592|Procesador Intel ...| 24043.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           4|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:53:35.309+0000] {spark_submit.py:495} INFO - |MLA1272836523|Disco Duro Intern...| 16999.0|          new|        TIENDA DELTA|2011-09-15 21:48:50|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:53:35.310+0000] {spark_submit.py:495} INFO - |MLA1301642528|Placa De Video Nv...|134999.0|          new|     ITS-COMPUTACION|2012-10-18 20:37:49|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:53:35.310+0000] {spark_submit.py:495} INFO - | MLA902808321|Procesador Gamer ...| 23699.0|          new|            MALL WEB|2016-05-26 20:28:35|         500|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:53:35.310+0000] {spark_submit.py:495} INFO - |MLA1163233412|Placa De Video Nv...| 34659.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           4|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:53:35.310+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:53:35.310+0000] {spark_submit.py:495} INFO - only showing top 20 rows
+[2023-01-29T07:53:35.310+0000] {spark_submit.py:495} INFO - 
+[2023-01-29T07:53:57.845+0000] {spark_submit.py:495} INFO - 2023-01-29 07:53:57,845 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:53:58.798+0000] {spark_submit.py:495} INFO - 2023-01-29 07:53:58,798 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:00.245+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:00,244 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:01.775+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:01,775 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:01.795+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:54:01.795+0000] {spark_submit.py:495} INFO - Batch: 4
+[2023-01-29T07:54:01.795+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:54:02.208+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:54:02.208+0000] {spark_submit.py:495} INFO - |           id|       nameOfProduct|   price|ProductStatus|          SellerName|   RegistrationDate|QuantitySold|QuantityAvailable|      Free shipping?|Store ratings|
+[2023-01-29T07:54:02.208+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:54:02.208+0000] {spark_submit.py:495} INFO - |MLA1157512489|Placa De Video Nv...|124999.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:02.208+0000] {spark_submit.py:495} INFO - |MLA1163238194|Placa De Video Am...| 31424.0|          new|       MICYBERCOMPRA|2011-09-13 13:15:53|          50|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:54:02.208+0000] {spark_submit.py:495} INFO - | MLA923635582|Disco Sólido Inte...| 13299.0|          new|DIAMONDSYSTEMSANJ...|2016-04-08 17:21:06|        5000|               50|You have to pay t...|          5.0|
+[2023-01-29T07:54:02.208+0000] {spark_submit.py:495} INFO - | MLA882277177|Capturadora Video...|  2699.0|          new|         BSK-IMPORTS|2019-12-30 23:07:04|         500|               50|You have to pay t...|          3.0|
+[2023-01-29T07:54:02.208+0000] {spark_submit.py:495} INFO - |MLA1148481665|Microprocesador P...| 58899.0|          new|            MALL WEB|2016-05-26 20:28:35|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:02.209+0000] {spark_submit.py:495} INFO - |MLA1160204806|Memoria Ram Fury ...| 17399.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         500|              100|Your shipment arr...|          4.5|
+[2023-01-29T07:54:02.209+0000] {spark_submit.py:495} INFO - | MLA923637669|Placa De Video Ge...| 28699.0|          new|         INDIGOTRADE|2018-01-05 19:21:16|         500|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:54:02.209+0000] {spark_submit.py:495} INFO - | MLA844489972|Disco Duro Intern...| 11599.0|          new|           DALECLÍCK|2015-03-16 12:07:23|        5000|              500|You have to pay t...|          5.0|
+[2023-01-29T07:54:02.209+0000] {spark_submit.py:495} INFO - |MLA1157627908|Disco Duro Extern...| 18429.0|          new|   TECNOSTOCK.COM.AR|2019-12-12 15:09:43|          25|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:54:02.209+0000] {spark_submit.py:495} INFO - |MLA1149343157|Microprocesador P...| 36529.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           0|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:02.209+0000] {spark_submit.py:495} INFO - |MLA1160178907|Memoria Ram Fury ...| 25799.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         500|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:54:02.209+0000] {spark_submit.py:495} INFO - |MLA1302136118|Disco Duro Intern...| 18271.0|          new|DIAMONDSYSTEMSANJ...|2016-04-08 17:21:06|         150|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:54:02.209+0000] {spark_submit.py:495} INFO - |MLA1183925519|Placa De Video Nv...|299999.0|          new|ESTUDIOSMPSRLESTU...|2020-11-29 18:36:32|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:02.209+0000] {spark_submit.py:495} INFO - |MLA1314590445|Disco Sólido Inte...|  7799.0|          new|       ELECTRO-SHOWS|2010-03-26 01:08:16|         250|              250|You have to pay t...|          4.5|
+[2023-01-29T07:54:02.209+0000] {spark_submit.py:495} INFO - |MLA1221192372|Disco Duro Extern...| 27899.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         250|              100|Your shipment arr...|          4.5|
+[2023-01-29T07:54:02.209+0000] {spark_submit.py:495} INFO - |MLA1294240592|Procesador Intel ...| 24043.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           4|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:02.209+0000] {spark_submit.py:495} INFO - |MLA1272836523|Disco Duro Intern...| 16999.0|          new|        TIENDA DELTA|2011-09-15 21:48:50|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:02.209+0000] {spark_submit.py:495} INFO - |MLA1301642528|Placa De Video Nv...|134999.0|          new|     ITS-COMPUTACION|2012-10-18 20:37:49|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:02.209+0000] {spark_submit.py:495} INFO - | MLA902808321|Procesador Gamer ...| 23699.0|          new|            MALL WEB|2016-05-26 20:28:35|         500|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:02.209+0000] {spark_submit.py:495} INFO - |MLA1163233412|Placa De Video Nv...| 34659.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           4|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:02.210+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:54:02.210+0000] {spark_submit.py:495} INFO - only showing top 20 rows
+[2023-01-29T07:54:02.210+0000] {spark_submit.py:495} INFO - 
+[2023-01-29T07:54:02.953+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:02,953 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:03.722+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:03,722 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:04.385+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:04,385 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:04.838+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:04,838 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:05.754+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:05,752 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:05.941+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:54:05.941+0000] {spark_submit.py:495} INFO - Batch: 5
+[2023-01-29T07:54:05.941+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:54:06.159+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:54:06.159+0000] {spark_submit.py:495} INFO - |           id|       nameOfProduct|   price|ProductStatus|          SellerName|   RegistrationDate|QuantitySold|QuantityAvailable|      Free shipping?|Store ratings|
+[2023-01-29T07:54:06.159+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:54:06.159+0000] {spark_submit.py:495} INFO - |MLA1168362675|Memoria Ram Fury ...|26765.64|          new|MARSTECHSRLMARSTE...|2020-08-05 14:27:59|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:06.159+0000] {spark_submit.py:495} INFO - |MLA1288628607|Placa De Video Am...|171519.0|          new|   LAPLATA.NOTEBOOKS|2017-08-03 20:43:24|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:06.159+0000] {spark_submit.py:495} INFO - |MLA1224499067|Fuente De Aliment...|  3999.0|          new|           DALECLÍCK|2015-03-16 12:07:23|         250|               50|You have to pay t...|          3.5|
+[2023-01-29T07:54:06.160+0000] {spark_submit.py:495} INFO - |MLA1157512489|Placa De Video Nv...|124999.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:06.160+0000] {spark_submit.py:495} INFO - |MLA1163238194|Placa De Video Am...| 31424.0|          new|       MICYBERCOMPRA|2011-09-13 13:15:53|          50|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:54:06.160+0000] {spark_submit.py:495} INFO - | MLA923635582|Disco Sólido Inte...| 13299.0|          new|DIAMONDSYSTEMSANJ...|2016-04-08 17:21:06|        5000|               50|You have to pay t...|          5.0|
+[2023-01-29T07:54:06.160+0000] {spark_submit.py:495} INFO - | MLA882277177|Capturadora Video...|  2699.0|          new|         BSK-IMPORTS|2019-12-30 23:07:04|         500|               50|You have to pay t...|          3.0|
+[2023-01-29T07:54:06.160+0000] {spark_submit.py:495} INFO - |MLA1148481665|Microprocesador P...| 58899.0|          new|            MALL WEB|2016-05-26 20:28:35|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:06.160+0000] {spark_submit.py:495} INFO - |MLA1160204806|Memoria Ram Fury ...| 17399.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         500|              100|Your shipment arr...|          4.5|
+[2023-01-29T07:54:06.160+0000] {spark_submit.py:495} INFO - | MLA923637669|Placa De Video Ge...| 28699.0|          new|         INDIGOTRADE|2018-01-05 19:21:16|         500|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:54:06.160+0000] {spark_submit.py:495} INFO - | MLA844489972|Disco Duro Intern...| 11599.0|          new|           DALECLÍCK|2015-03-16 12:07:23|        5000|              500|You have to pay t...|          5.0|
+[2023-01-29T07:54:06.160+0000] {spark_submit.py:495} INFO - |MLA1157627908|Disco Duro Extern...| 18429.0|          new|   TECNOSTOCK.COM.AR|2019-12-12 15:09:43|          25|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:54:06.160+0000] {spark_submit.py:495} INFO - |MLA1149343157|Microprocesador P...| 36529.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           0|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:06.160+0000] {spark_submit.py:495} INFO - |MLA1160178907|Memoria Ram Fury ...| 25799.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         500|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:54:06.160+0000] {spark_submit.py:495} INFO - |MLA1302136118|Disco Duro Intern...| 18271.0|          new|DIAMONDSYSTEMSANJ...|2016-04-08 17:21:06|         150|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:54:06.160+0000] {spark_submit.py:495} INFO - |MLA1183925519|Placa De Video Nv...|299999.0|          new|ESTUDIOSMPSRLESTU...|2020-11-29 18:36:32|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:06.160+0000] {spark_submit.py:495} INFO - |MLA1314590445|Disco Sólido Inte...|  7799.0|          new|       ELECTRO-SHOWS|2010-03-26 01:08:16|         250|              250|You have to pay t...|          4.5|
+[2023-01-29T07:54:06.161+0000] {spark_submit.py:495} INFO - |MLA1221192372|Disco Duro Extern...| 27899.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         250|              100|Your shipment arr...|          4.5|
+[2023-01-29T07:54:06.161+0000] {spark_submit.py:495} INFO - |MLA1294240592|Procesador Intel ...| 24043.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           4|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:06.161+0000] {spark_submit.py:495} INFO - |MLA1272836523|Disco Duro Intern...| 16999.0|          new|        TIENDA DELTA|2011-09-15 21:48:50|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:06.161+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:54:06.161+0000] {spark_submit.py:495} INFO - only showing top 20 rows
+[2023-01-29T07:54:06.161+0000] {spark_submit.py:495} INFO - 
+[2023-01-29T07:54:06.271+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:06,271 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:06.661+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:06,661 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:06.883+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:06,882 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:07.225+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:07,224 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:07.686+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:07,685 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:07.995+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:07,994 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:08.252+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:08,251 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:08.497+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:08,497 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:08.736+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:08,736 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:09.093+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:09,093 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:09.325+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:09,324 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:09.649+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:09,649 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:09.932+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:09,932 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:10.401+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:10,401 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:10.759+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:10,758 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:10.764+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:54:10.764+0000] {spark_submit.py:495} INFO - Batch: 6
+[2023-01-29T07:54:10.764+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:54:10.994+0000] {spark_submit.py:495} INFO - +-------------+--------------------+---------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:54:10.994+0000] {spark_submit.py:495} INFO - |           id|       nameOfProduct|    price|ProductStatus|          SellerName|   RegistrationDate|QuantitySold|QuantityAvailable|      Free shipping?|Store ratings|
+[2023-01-29T07:54:10.995+0000] {spark_submit.py:495} INFO - +-------------+--------------------+---------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:54:10.995+0000] {spark_submit.py:495} INFO - |MLA1314590445|Disco Sólido Inte...|   7799.0|          new|       ELECTRO-SHOWS|2010-03-26 01:08:16|         250|              250|You have to pay t...|          4.5|
+[2023-01-29T07:54:10.995+0000] {spark_submit.py:495} INFO - |MLA1221192372|Disco Duro Extern...|  27899.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         250|              100|Your shipment arr...|          4.5|
+[2023-01-29T07:54:10.995+0000] {spark_submit.py:495} INFO - |MLA1294240592|Procesador Intel ...|  24043.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           4|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:10.995+0000] {spark_submit.py:495} INFO - |MLA1272836523|Disco Duro Intern...|  16999.0|          new|        TIENDA DELTA|2011-09-15 21:48:50|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:10.995+0000] {spark_submit.py:495} INFO - |MLA1301642528|Placa De Video Nv...| 134999.0|          new|     ITS-COMPUTACION|2012-10-18 20:37:49|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:10.995+0000] {spark_submit.py:495} INFO - | MLA902808321|Procesador Gamer ...|  23699.0|          new|            MALL WEB|2016-05-26 20:28:35|         500|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:10.995+0000] {spark_submit.py:495} INFO - |MLA1163233412|Placa De Video Nv...|  34659.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           4|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:10.995+0000] {spark_submit.py:495} INFO - |MLA1140325892|Disco Sólido Inte...|   8339.0|          new|DIAMONDSYSTEMPADUAML|2015-07-01 12:32:22|         500|              250|You have to pay t...|          4.5|
+[2023-01-29T07:54:10.995+0000] {spark_submit.py:495} INFO - |MLA1165029870|Microprocesador P...|  53999.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:10.995+0000] {spark_submit.py:495} INFO - | MLA917698539|Capturadora Video...|   2899.0|          new|         BSK-IMPORTS|2019-12-30 23:07:04|         500|               50|You have to pay t...|          3.0|
+[2023-01-29T07:54:10.995+0000] {spark_submit.py:495} INFO - |MLA1222229742|Placa De Video Nv...|128558.05|          new|MARSTECHSRLMARSTE...|2020-08-05 14:27:59|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:10.996+0000] {spark_submit.py:495} INFO - |MLA1150584684|Fuente De Aliment...|  16890.0|          new|       JORGEVOLUTION|2015-12-03 13:39:36|          25|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:10.996+0000] {spark_submit.py:495} INFO - |MLA1220964588|Procesador Gamer ...|  48065.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:10.996+0000] {spark_submit.py:495} INFO - |MLA1167904832|Fuente Gamer Giga...|  48990.0|          new|        GAUSS ONLINE|2019-03-06 17:27:56|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:10.996+0000] {spark_submit.py:495} INFO - | MLA872881277|Procesador Intel ...|  51099.0|          new|            MALL WEB|2016-05-26 20:28:35|         500|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:10.996+0000] {spark_submit.py:495} INFO - |MLA1168362675|Memoria Ram Fury ...| 26765.64|          new|MARSTECHSRLMARSTE...|2020-08-05 14:27:59|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:10.996+0000] {spark_submit.py:495} INFO - |MLA1288628607|Placa De Video Am...| 171519.0|          new|   LAPLATA.NOTEBOOKS|2017-08-03 20:43:24|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:10.996+0000] {spark_submit.py:495} INFO - |MLA1224499067|Fuente De Aliment...|   3999.0|          new|           DALECLÍCK|2015-03-16 12:07:23|         250|               50|You have to pay t...|          3.5|
+[2023-01-29T07:54:10.996+0000] {spark_submit.py:495} INFO - |MLA1157512489|Placa De Video Nv...| 124999.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:10.996+0000] {spark_submit.py:495} INFO - |MLA1163238194|Placa De Video Am...|  31424.0|          new|       MICYBERCOMPRA|2011-09-13 13:15:53|          50|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:54:10.996+0000] {spark_submit.py:495} INFO - +-------------+--------------------+---------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:54:10.996+0000] {spark_submit.py:495} INFO - only showing top 20 rows
+[2023-01-29T07:54:10.996+0000] {spark_submit.py:495} INFO - 
+[2023-01-29T07:54:11.140+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:11,137 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:11.473+0000] {spark_submit.py:495} INFO - 2023-01-29 07:54:11,472 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:54:15.637+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:54:15.637+0000] {spark_submit.py:495} INFO - Batch: 7
+[2023-01-29T07:54:15.637+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:54:15.679+0000] {spark_submit.py:495} INFO - +-------------+--------------------+---------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:54:15.680+0000] {spark_submit.py:495} INFO - |           id|       nameOfProduct|    price|ProductStatus|          SellerName|   RegistrationDate|QuantitySold|QuantityAvailable|      Free shipping?|Store ratings|
+[2023-01-29T07:54:15.680+0000] {spark_submit.py:495} INFO - +-------------+--------------------+---------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:54:15.680+0000] {spark_submit.py:495} INFO - |MLA1149343157|Microprocesador P...|  36529.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           0|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:15.680+0000] {spark_submit.py:495} INFO - |MLA1160178907|Memoria Ram Fury ...|  25799.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         500|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:54:15.680+0000] {spark_submit.py:495} INFO - |MLA1302136118|Disco Duro Intern...|  18271.0|          new|DIAMONDSYSTEMSANJ...|2016-04-08 17:21:06|         150|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:54:15.680+0000] {spark_submit.py:495} INFO - |MLA1183925519|Placa De Video Nv...| 299999.0|          new|ESTUDIOSMPSRLESTU...|2020-11-29 18:36:32|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:15.680+0000] {spark_submit.py:495} INFO - |MLA1314590445|Disco Sólido Inte...|   7799.0|          new|       ELECTRO-SHOWS|2010-03-26 01:08:16|         250|              250|You have to pay t...|          4.5|
+[2023-01-29T07:54:15.680+0000] {spark_submit.py:495} INFO - |MLA1221192372|Disco Duro Extern...|  27899.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         250|              100|Your shipment arr...|          4.5|
+[2023-01-29T07:54:15.680+0000] {spark_submit.py:495} INFO - |MLA1294240592|Procesador Intel ...|  24043.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           4|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:15.680+0000] {spark_submit.py:495} INFO - |MLA1272836523|Disco Duro Intern...|  16999.0|          new|        TIENDA DELTA|2011-09-15 21:48:50|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:15.680+0000] {spark_submit.py:495} INFO - |MLA1301642528|Placa De Video Nv...| 134999.0|          new|     ITS-COMPUTACION|2012-10-18 20:37:49|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:15.681+0000] {spark_submit.py:495} INFO - | MLA902808321|Procesador Gamer ...|  23699.0|          new|            MALL WEB|2016-05-26 20:28:35|         500|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:15.681+0000] {spark_submit.py:495} INFO - |MLA1163233412|Placa De Video Nv...|  34659.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           4|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:15.681+0000] {spark_submit.py:495} INFO - |MLA1140325892|Disco Sólido Inte...|   8339.0|          new|DIAMONDSYSTEMPADUAML|2015-07-01 12:32:22|         500|              250|You have to pay t...|          4.5|
+[2023-01-29T07:54:15.681+0000] {spark_submit.py:495} INFO - |MLA1165029870|Microprocesador P...|  53999.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:15.681+0000] {spark_submit.py:495} INFO - | MLA917698539|Capturadora Video...|   2899.0|          new|         BSK-IMPORTS|2019-12-30 23:07:04|         500|               50|You have to pay t...|          3.0|
+[2023-01-29T07:54:15.681+0000] {spark_submit.py:495} INFO - |MLA1222229742|Placa De Video Nv...|128558.05|          new|MARSTECHSRLMARSTE...|2020-08-05 14:27:59|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:15.681+0000] {spark_submit.py:495} INFO - |MLA1150584684|Fuente De Aliment...|  16890.0|          new|       JORGEVOLUTION|2015-12-03 13:39:36|          25|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:15.681+0000] {spark_submit.py:495} INFO - |MLA1220964588|Procesador Gamer ...|  48065.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:15.681+0000] {spark_submit.py:495} INFO - |MLA1167904832|Fuente Gamer Giga...|  48990.0|          new|        GAUSS ONLINE|2019-03-06 17:27:56|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:15.682+0000] {spark_submit.py:495} INFO - | MLA872881277|Procesador Intel ...|  51099.0|          new|            MALL WEB|2016-05-26 20:28:35|         500|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:15.682+0000] {spark_submit.py:495} INFO - |MLA1168362675|Memoria Ram Fury ...| 26765.64|          new|MARSTECHSRLMARSTE...|2020-08-05 14:27:59|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:54:15.682+0000] {spark_submit.py:495} INFO - +-------------+--------------------+---------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:54:15.682+0000] {spark_submit.py:495} INFO - only showing top 20 rows
+[2023-01-29T07:54:15.682+0000] {spark_submit.py:495} INFO - 
+[2023-01-29T07:55:09.090+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:09,089 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:09.249+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:09,249 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:09.413+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:09,413 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:09.602+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:09,602 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:09.834+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:09,826 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:10.127+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:10,127 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:10.348+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:55:10.349+0000] {spark_submit.py:495} INFO - Batch: 8
+[2023-01-29T07:55:10.349+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:55:10.405+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:55:10.405+0000] {spark_submit.py:495} INFO - |           id|       nameOfProduct|   price|ProductStatus|          SellerName|   RegistrationDate|QuantitySold|QuantityAvailable|      Free shipping?|Store ratings|
+[2023-01-29T07:55:10.405+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:55:10.405+0000] {spark_submit.py:495} INFO - |MLA1157512489|Placa De Video Nv...|124999.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:10.406+0000] {spark_submit.py:495} INFO - |MLA1163238194|Placa De Video Am...| 31424.0|          new|       MICYBERCOMPRA|2011-09-13 13:15:53|          50|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:55:10.406+0000] {spark_submit.py:495} INFO - | MLA923635582|Disco Sólido Inte...| 13299.0|          new|DIAMONDSYSTEMSANJ...|2016-04-08 17:21:06|        5000|               50|You have to pay t...|          5.0|
+[2023-01-29T07:55:10.406+0000] {spark_submit.py:495} INFO - | MLA882277177|Capturadora Video...|  2699.0|          new|         BSK-IMPORTS|2019-12-30 23:07:04|         500|               50|You have to pay t...|          3.0|
+[2023-01-29T07:55:10.406+0000] {spark_submit.py:495} INFO - |MLA1148481665|Microprocesador P...| 58899.0|          new|            MALL WEB|2016-05-26 20:28:35|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:10.406+0000] {spark_submit.py:495} INFO - |MLA1160204806|Memoria Ram Fury ...| 17399.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         500|              100|Your shipment arr...|          4.5|
+[2023-01-29T07:55:10.406+0000] {spark_submit.py:495} INFO - | MLA923637669|Placa De Video Ge...| 28699.0|          new|         INDIGOTRADE|2018-01-05 19:21:16|         500|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:55:10.406+0000] {spark_submit.py:495} INFO - | MLA844489972|Disco Duro Intern...| 11599.0|          new|           DALECLÍCK|2015-03-16 12:07:23|        5000|              500|You have to pay t...|          5.0|
+[2023-01-29T07:55:10.406+0000] {spark_submit.py:495} INFO - |MLA1157627908|Disco Duro Extern...| 18429.0|          new|   TECNOSTOCK.COM.AR|2019-12-12 15:09:43|          25|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:55:10.411+0000] {spark_submit.py:495} INFO - |MLA1149343157|Microprocesador P...| 36529.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           0|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:10.411+0000] {spark_submit.py:495} INFO - |MLA1160178907|Memoria Ram Fury ...| 25799.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         500|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:55:10.411+0000] {spark_submit.py:495} INFO - |MLA1302136118|Disco Duro Intern...| 18271.0|          new|DIAMONDSYSTEMSANJ...|2016-04-08 17:21:06|         150|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:55:10.411+0000] {spark_submit.py:495} INFO - |MLA1183925519|Placa De Video Nv...|299999.0|          new|ESTUDIOSMPSRLESTU...|2020-11-29 18:36:32|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:10.411+0000] {spark_submit.py:495} INFO - |MLA1314590445|Disco Sólido Inte...|  7799.0|          new|       ELECTRO-SHOWS|2010-03-26 01:08:16|         250|              250|You have to pay t...|          4.5|
+[2023-01-29T07:55:10.412+0000] {spark_submit.py:495} INFO - |MLA1221192372|Disco Duro Extern...| 27899.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         250|              100|Your shipment arr...|          4.5|
+[2023-01-29T07:55:10.412+0000] {spark_submit.py:495} INFO - |MLA1294240592|Procesador Intel ...| 24043.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           4|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:10.412+0000] {spark_submit.py:495} INFO - |MLA1272836523|Disco Duro Intern...| 16999.0|          new|        TIENDA DELTA|2011-09-15 21:48:50|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:10.412+0000] {spark_submit.py:495} INFO - |MLA1301642528|Placa De Video Nv...|134999.0|          new|     ITS-COMPUTACION|2012-10-18 20:37:49|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:10.412+0000] {spark_submit.py:495} INFO - | MLA902808321|Procesador Gamer ...| 23699.0|          new|            MALL WEB|2016-05-26 20:28:35|         500|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:10.412+0000] {spark_submit.py:495} INFO - |MLA1163233412|Placa De Video Nv...| 34659.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           4|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:10.412+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:55:10.412+0000] {spark_submit.py:495} INFO - only showing top 20 rows
+[2023-01-29T07:55:10.412+0000] {spark_submit.py:495} INFO - 
+[2023-01-29T07:55:10.477+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:10,476 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:10.691+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:10,691 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:10.907+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:10,907 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:11.089+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:11,088 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:11.393+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:11,393 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:11.783+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:11,783 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:12.024+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:12,024 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:12.240+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:12,240 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:12.489+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:12,488 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:12.973+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:12,973 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:13.709+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:13,709 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:14.528+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:14,528 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:15.654+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:15,654 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:16.588+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:16,588 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:16.622+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:55:16.623+0000] {spark_submit.py:495} INFO - Batch: 9
+[2023-01-29T07:55:16.623+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:55:16.747+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:55:16.747+0000] {spark_submit.py:495} INFO - |           id|       nameOfProduct|   price|ProductStatus|          SellerName|   RegistrationDate|QuantitySold|QuantityAvailable|      Free shipping?|Store ratings|
+[2023-01-29T07:55:16.747+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:55:16.747+0000] {spark_submit.py:495} INFO - | MLA882277177|Capturadora Video...|  2699.0|          new|         BSK-IMPORTS|2019-12-30 23:07:04|         500|               50|You have to pay t...|          3.0|
+[2023-01-29T07:55:16.747+0000] {spark_submit.py:495} INFO - |MLA1148481665|Microprocesador P...| 58899.0|          new|            MALL WEB|2016-05-26 20:28:35|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:16.747+0000] {spark_submit.py:495} INFO - |MLA1160204806|Memoria Ram Fury ...| 17399.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         500|              100|Your shipment arr...|          4.5|
+[2023-01-29T07:55:16.747+0000] {spark_submit.py:495} INFO - | MLA923637669|Placa De Video Ge...| 28699.0|          new|         INDIGOTRADE|2018-01-05 19:21:16|         500|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:55:16.747+0000] {spark_submit.py:495} INFO - | MLA844489972|Disco Duro Intern...| 11599.0|          new|           DALECLÍCK|2015-03-16 12:07:23|        5000|              500|You have to pay t...|          5.0|
+[2023-01-29T07:55:16.747+0000] {spark_submit.py:495} INFO - |MLA1157627908|Disco Duro Extern...| 18429.0|          new|   TECNOSTOCK.COM.AR|2019-12-12 15:09:43|          25|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:55:16.747+0000] {spark_submit.py:495} INFO - |MLA1149343157|Microprocesador P...| 36529.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           0|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:16.747+0000] {spark_submit.py:495} INFO - |MLA1160178907|Memoria Ram Fury ...| 25799.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         500|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:55:16.748+0000] {spark_submit.py:495} INFO - |MLA1302136118|Disco Duro Intern...| 18271.0|          new|DIAMONDSYSTEMSANJ...|2016-04-08 17:21:06|         150|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:55:16.748+0000] {spark_submit.py:495} INFO - |MLA1183925519|Placa De Video Nv...|299999.0|          new|ESTUDIOSMPSRLESTU...|2020-11-29 18:36:32|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:16.748+0000] {spark_submit.py:495} INFO - |MLA1314590445|Disco Sólido Inte...|  7799.0|          new|       ELECTRO-SHOWS|2010-03-26 01:08:16|         250|              250|You have to pay t...|          4.5|
+[2023-01-29T07:55:16.748+0000] {spark_submit.py:495} INFO - |MLA1221192372|Disco Duro Extern...| 27899.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         250|              100|Your shipment arr...|          4.5|
+[2023-01-29T07:55:16.748+0000] {spark_submit.py:495} INFO - |MLA1294240592|Procesador Intel ...| 24043.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           4|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:16.748+0000] {spark_submit.py:495} INFO - |MLA1272836523|Disco Duro Intern...| 16999.0|          new|        TIENDA DELTA|2011-09-15 21:48:50|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:16.748+0000] {spark_submit.py:495} INFO - |MLA1301642528|Placa De Video Nv...|134999.0|          new|     ITS-COMPUTACION|2012-10-18 20:37:49|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:16.748+0000] {spark_submit.py:495} INFO - | MLA902808321|Procesador Gamer ...| 23699.0|          new|            MALL WEB|2016-05-26 20:28:35|         500|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:16.748+0000] {spark_submit.py:495} INFO - |MLA1163233412|Placa De Video Nv...| 34659.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           4|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:16.748+0000] {spark_submit.py:495} INFO - |MLA1140325892|Disco Sólido Inte...|  8339.0|          new|DIAMONDSYSTEMPADUAML|2015-07-01 12:32:22|         500|              250|You have to pay t...|          4.5|
+[2023-01-29T07:55:16.748+0000] {spark_submit.py:495} INFO - |MLA1165029870|Microprocesador P...| 53999.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:16.748+0000] {spark_submit.py:495} INFO - | MLA917698539|Capturadora Video...|  2899.0|          new|         BSK-IMPORTS|2019-12-30 23:07:04|         500|               50|You have to pay t...|          3.0|
+[2023-01-29T07:55:16.748+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:55:16.748+0000] {spark_submit.py:495} INFO - only showing top 20 rows
+[2023-01-29T07:55:16.749+0000] {spark_submit.py:495} INFO - 
+[2023-01-29T07:55:17.195+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:17,195 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:17.561+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:17,561 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:17.811+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:17,810 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:18.006+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:18,006 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:18.221+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:18,221 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:18.495+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:18,494 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:18.732+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:18,731 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:18.961+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:18,960 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:19.193+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:19,193 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:19.449+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:19,448 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:19.670+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:19,670 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:19.966+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:19,966 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:20.257+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:20,257 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:20.512+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:55:20.512+0000] {spark_submit.py:495} INFO - Batch: 10
+[2023-01-29T07:55:20.513+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:55:20.585+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:20,585 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:20.711+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:55:20.711+0000] {spark_submit.py:495} INFO - |           id|       nameOfProduct|   price|ProductStatus|          SellerName|   RegistrationDate|QuantitySold|QuantityAvailable|      Free shipping?|Store ratings|
+[2023-01-29T07:55:20.711+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:55:20.711+0000] {spark_submit.py:495} INFO - |MLA1163238194|Placa De Video Am...| 31424.0|          new|       MICYBERCOMPRA|2011-09-13 13:15:53|          50|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:55:20.711+0000] {spark_submit.py:495} INFO - | MLA923635582|Disco Sólido Inte...| 13299.0|          new|DIAMONDSYSTEMSANJ...|2016-04-08 17:21:06|        5000|               50|You have to pay t...|          5.0|
+[2023-01-29T07:55:20.712+0000] {spark_submit.py:495} INFO - | MLA882277177|Capturadora Video...|  2699.0|          new|         BSK-IMPORTS|2019-12-30 23:07:04|         500|               50|You have to pay t...|          3.0|
+[2023-01-29T07:55:20.712+0000] {spark_submit.py:495} INFO - |MLA1148481665|Microprocesador P...| 58899.0|          new|            MALL WEB|2016-05-26 20:28:35|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:20.712+0000] {spark_submit.py:495} INFO - |MLA1160204806|Memoria Ram Fury ...| 17399.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         500|              100|Your shipment arr...|          4.5|
+[2023-01-29T07:55:20.712+0000] {spark_submit.py:495} INFO - | MLA923637669|Placa De Video Ge...| 28699.0|          new|         INDIGOTRADE|2018-01-05 19:21:16|         500|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:55:20.712+0000] {spark_submit.py:495} INFO - | MLA844489972|Disco Duro Intern...| 11599.0|          new|           DALECLÍCK|2015-03-16 12:07:23|        5000|              500|You have to pay t...|          5.0|
+[2023-01-29T07:55:20.712+0000] {spark_submit.py:495} INFO - |MLA1157627908|Disco Duro Extern...| 18429.0|          new|   TECNOSTOCK.COM.AR|2019-12-12 15:09:43|          25|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:55:20.712+0000] {spark_submit.py:495} INFO - |MLA1149343157|Microprocesador P...| 36529.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           0|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:20.712+0000] {spark_submit.py:495} INFO - |MLA1160178907|Memoria Ram Fury ...| 25799.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         500|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:55:20.712+0000] {spark_submit.py:495} INFO - |MLA1302136118|Disco Duro Intern...| 18271.0|          new|DIAMONDSYSTEMSANJ...|2016-04-08 17:21:06|         150|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:55:20.712+0000] {spark_submit.py:495} INFO - |MLA1183925519|Placa De Video Nv...|299999.0|          new|ESTUDIOSMPSRLESTU...|2020-11-29 18:36:32|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:20.712+0000] {spark_submit.py:495} INFO - |MLA1314590445|Disco Sólido Inte...|  7799.0|          new|       ELECTRO-SHOWS|2010-03-26 01:08:16|         250|              250|You have to pay t...|          4.5|
+[2023-01-29T07:55:20.712+0000] {spark_submit.py:495} INFO - |MLA1221192372|Disco Duro Extern...| 27899.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         250|              100|Your shipment arr...|          4.5|
+[2023-01-29T07:55:20.712+0000] {spark_submit.py:495} INFO - |MLA1294240592|Procesador Intel ...| 24043.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           4|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:20.713+0000] {spark_submit.py:495} INFO - |MLA1272836523|Disco Duro Intern...| 16999.0|          new|        TIENDA DELTA|2011-09-15 21:48:50|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:20.713+0000] {spark_submit.py:495} INFO - |MLA1301642528|Placa De Video Nv...|134999.0|          new|     ITS-COMPUTACION|2012-10-18 20:37:49|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:20.713+0000] {spark_submit.py:495} INFO - | MLA902808321|Procesador Gamer ...| 23699.0|          new|            MALL WEB|2016-05-26 20:28:35|         500|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:20.713+0000] {spark_submit.py:495} INFO - |MLA1163233412|Placa De Video Nv...| 34659.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           4|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:20.713+0000] {spark_submit.py:495} INFO - |MLA1140325892|Disco Sólido Inte...|  8339.0|          new|DIAMONDSYSTEMPADUAML|2015-07-01 12:32:22|         500|              250|You have to pay t...|          4.5|
+[2023-01-29T07:55:20.713+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:55:20.713+0000] {spark_submit.py:495} INFO - only showing top 20 rows
+[2023-01-29T07:55:20.713+0000] {spark_submit.py:495} INFO - 
+[2023-01-29T07:55:20.866+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:20,866 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:21.108+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:21,107 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:21.297+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:21,297 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:21.558+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:21,555 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:21.783+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:21,783 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:22.032+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:22,032 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:22.216+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:22,215 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:22.387+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:22,387 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:22.557+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:22,557 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:22.730+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:22,730 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:22.932+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:22,931 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:23.104+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:23,104 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:23.264+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:23,264 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:23.435+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:23,435 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:23.601+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:23,601 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:23.766+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:23,766 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:23.960+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:23,960 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:24.120+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:24,120 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:24.295+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:24,295 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:24.482+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:24,481 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:24.686+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:24,686 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:24.846+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:24,846 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:24.998+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:24,998 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:25.200+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:25,200 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:25.501+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:25,501 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:25.520+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:55:25.521+0000] {spark_submit.py:495} INFO - Batch: 11
+[2023-01-29T07:55:25.521+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:55:25.645+0000] {spark_submit.py:495} INFO - +-------------+--------------------+---------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:55:25.645+0000] {spark_submit.py:495} INFO - |           id|       nameOfProduct|    price|ProductStatus|          SellerName|   RegistrationDate|QuantitySold|QuantityAvailable|      Free shipping?|Store ratings|
+[2023-01-29T07:55:25.645+0000] {spark_submit.py:495} INFO - +-------------+--------------------+---------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:55:25.645+0000] {spark_submit.py:495} INFO - | MLA902808321|Procesador Gamer ...|  23699.0|          new|            MALL WEB|2016-05-26 20:28:35|         500|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:25.646+0000] {spark_submit.py:495} INFO - |MLA1163233412|Placa De Video Nv...|  34659.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           4|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:25.646+0000] {spark_submit.py:495} INFO - |MLA1140325892|Disco Sólido Inte...|   8339.0|          new|DIAMONDSYSTEMPADUAML|2015-07-01 12:32:22|         500|              250|You have to pay t...|          4.5|
+[2023-01-29T07:55:25.646+0000] {spark_submit.py:495} INFO - |MLA1165029870|Microprocesador P...|  53999.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:25.646+0000] {spark_submit.py:495} INFO - | MLA917698539|Capturadora Video...|   2899.0|          new|         BSK-IMPORTS|2019-12-30 23:07:04|         500|               50|You have to pay t...|          3.0|
+[2023-01-29T07:55:25.646+0000] {spark_submit.py:495} INFO - |MLA1222229742|Placa De Video Nv...|128558.05|          new|MARSTECHSRLMARSTE...|2020-08-05 14:27:59|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:25.646+0000] {spark_submit.py:495} INFO - |MLA1150584684|Fuente De Aliment...|  16890.0|          new|       JORGEVOLUTION|2015-12-03 13:39:36|          25|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:25.646+0000] {spark_submit.py:495} INFO - |MLA1220964588|Procesador Gamer ...|  48065.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:25.646+0000] {spark_submit.py:495} INFO - |MLA1167904832|Fuente Gamer Giga...|  48990.0|          new|        GAUSS ONLINE|2019-03-06 17:27:56|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:25.646+0000] {spark_submit.py:495} INFO - | MLA872881277|Procesador Intel ...|  51099.0|          new|            MALL WEB|2016-05-26 20:28:35|         500|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:25.646+0000] {spark_submit.py:495} INFO - |MLA1168362675|Memoria Ram Fury ...| 26765.64|          new|MARSTECHSRLMARSTE...|2020-08-05 14:27:59|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:25.646+0000] {spark_submit.py:495} INFO - |MLA1288628607|Placa De Video Am...| 171519.0|          new|   LAPLATA.NOTEBOOKS|2017-08-03 20:43:24|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:25.647+0000] {spark_submit.py:495} INFO - |MLA1224499067|Fuente De Aliment...|   3999.0|          new|           DALECLÍCK|2015-03-16 12:07:23|         250|               50|You have to pay t...|          3.5|
+[2023-01-29T07:55:25.647+0000] {spark_submit.py:495} INFO - |MLA1157512489|Placa De Video Nv...| 124999.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:25.647+0000] {spark_submit.py:495} INFO - |MLA1163238194|Placa De Video Am...|  31424.0|          new|       MICYBERCOMPRA|2011-09-13 13:15:53|          50|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:55:25.647+0000] {spark_submit.py:495} INFO - | MLA923635582|Disco Sólido Inte...|  13299.0|          new|DIAMONDSYSTEMSANJ...|2016-04-08 17:21:06|        5000|               50|You have to pay t...|          5.0|
+[2023-01-29T07:55:25.647+0000] {spark_submit.py:495} INFO - | MLA882277177|Capturadora Video...|   2699.0|          new|         BSK-IMPORTS|2019-12-30 23:07:04|         500|               50|You have to pay t...|          3.0|
+[2023-01-29T07:55:25.647+0000] {spark_submit.py:495} INFO - |MLA1148481665|Microprocesador P...|  58899.0|          new|            MALL WEB|2016-05-26 20:28:35|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:25.647+0000] {spark_submit.py:495} INFO - |MLA1160204806|Memoria Ram Fury ...|  17399.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         500|              100|Your shipment arr...|          4.5|
+[2023-01-29T07:55:25.647+0000] {spark_submit.py:495} INFO - | MLA923637669|Placa De Video Ge...|  28699.0|          new|         INDIGOTRADE|2018-01-05 19:21:16|         500|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:55:25.647+0000] {spark_submit.py:495} INFO - +-------------+--------------------+---------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:55:25.647+0000] {spark_submit.py:495} INFO - only showing top 20 rows
+[2023-01-29T07:55:25.647+0000] {spark_submit.py:495} INFO - 
+[2023-01-29T07:55:25.725+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:25,725 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:25.889+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:25,889 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:26.073+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:26,072 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:26.218+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:26,218 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:26.432+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:26,432 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:26.772+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:26,772 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:27.373+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:27,372 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:27.685+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:27,685 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:28.001+0000] {spark_submit.py:495} INFO - 2023-01-29 07:55:28,000 - py4j.clientserver - INFO - Received command c on object id p0
+[2023-01-29T07:55:30.743+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:55:30.744+0000] {spark_submit.py:495} INFO - Batch: 12
+[2023-01-29T07:55:30.746+0000] {spark_submit.py:495} INFO - -------------------------------------------
+[2023-01-29T07:55:30.824+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:55:30.825+0000] {spark_submit.py:495} INFO - |           id|       nameOfProduct|   price|ProductStatus|          SellerName|   RegistrationDate|QuantitySold|QuantityAvailable|      Free shipping?|Store ratings|
+[2023-01-29T07:55:30.825+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:55:30.825+0000] {spark_submit.py:495} INFO - |MLA1167904832|Fuente Gamer Giga...| 48990.0|          new|        GAUSS ONLINE|2019-03-06 17:27:56|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:30.825+0000] {spark_submit.py:495} INFO - | MLA872881277|Procesador Intel ...| 51099.0|          new|            MALL WEB|2016-05-26 20:28:35|         500|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:30.825+0000] {spark_submit.py:495} INFO - |MLA1168362675|Memoria Ram Fury ...|26765.64|          new|MARSTECHSRLMARSTE...|2020-08-05 14:27:59|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:30.825+0000] {spark_submit.py:495} INFO - |MLA1288628607|Placa De Video Am...|171519.0|          new|   LAPLATA.NOTEBOOKS|2017-08-03 20:43:24|           5|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:30.825+0000] {spark_submit.py:495} INFO - |MLA1224499067|Fuente De Aliment...|  3999.0|          new|           DALECLÍCK|2015-03-16 12:07:23|         250|               50|You have to pay t...|          3.5|
+[2023-01-29T07:55:30.825+0000] {spark_submit.py:495} INFO - |MLA1157512489|Placa De Video Nv...|124999.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:30.825+0000] {spark_submit.py:495} INFO - |MLA1163238194|Placa De Video Am...| 31424.0|          new|       MICYBERCOMPRA|2011-09-13 13:15:53|          50|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:55:30.825+0000] {spark_submit.py:495} INFO - | MLA923635582|Disco Sólido Inte...| 13299.0|          new|DIAMONDSYSTEMSANJ...|2016-04-08 17:21:06|        5000|               50|You have to pay t...|          5.0|
+[2023-01-29T07:55:30.826+0000] {spark_submit.py:495} INFO - | MLA882277177|Capturadora Video...|  2699.0|          new|         BSK-IMPORTS|2019-12-30 23:07:04|         500|               50|You have to pay t...|          3.0|
+[2023-01-29T07:55:30.826+0000] {spark_submit.py:495} INFO - |MLA1148481665|Microprocesador P...| 58899.0|          new|            MALL WEB|2016-05-26 20:28:35|         150|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:30.826+0000] {spark_submit.py:495} INFO - |MLA1160204806|Memoria Ram Fury ...| 17399.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         500|              100|Your shipment arr...|          4.5|
+[2023-01-29T07:55:30.826+0000] {spark_submit.py:495} INFO - | MLA923637669|Placa De Video Ge...| 28699.0|          new|         INDIGOTRADE|2018-01-05 19:21:16|         500|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:55:30.826+0000] {spark_submit.py:495} INFO - | MLA844489972|Disco Duro Intern...| 11599.0|          new|           DALECLÍCK|2015-03-16 12:07:23|        5000|              500|You have to pay t...|          5.0|
+[2023-01-29T07:55:30.826+0000] {spark_submit.py:495} INFO - |MLA1157627908|Disco Duro Extern...| 18429.0|          new|   TECNOSTOCK.COM.AR|2019-12-12 15:09:43|          25|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:55:30.826+0000] {spark_submit.py:495} INFO - |MLA1149343157|Microprocesador P...| 36529.0|          new|      PCREGISTRADAOK|2020-11-02 13:17:33|           0|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:30.826+0000] {spark_submit.py:495} INFO - |MLA1160178907|Memoria Ram Fury ...| 25799.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         500|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:55:30.826+0000] {spark_submit.py:495} INFO - |MLA1302136118|Disco Duro Intern...| 18271.0|          new|DIAMONDSYSTEMSANJ...|2016-04-08 17:21:06|         150|               50|Your shipment arr...|          4.5|
+[2023-01-29T07:55:30.826+0000] {spark_submit.py:495} INFO - |MLA1183925519|Placa De Video Nv...|299999.0|          new|ESTUDIOSMPSRLESTU...|2020-11-29 18:36:32|          50|                1|Your shipment arr...|          4.5|
+[2023-01-29T07:55:30.826+0000] {spark_submit.py:495} INFO - |MLA1314590445|Disco Sólido Inte...|  7799.0|          new|       ELECTRO-SHOWS|2010-03-26 01:08:16|         250|              250|You have to pay t...|          4.5|
+[2023-01-29T07:55:30.827+0000] {spark_submit.py:495} INFO - |MLA1221192372|Disco Duro Extern...| 27899.0|          new|    OVERHARD DIGITAL|2015-01-08 12:19:41|         250|              100|Your shipment arr...|          4.5|
+[2023-01-29T07:55:30.827+0000] {spark_submit.py:495} INFO - +-------------+--------------------+--------+-------------+--------------------+-------------------+------------+-----------------+--------------------+-------------+
+[2023-01-29T07:55:30.827+0000] {spark_submit.py:495} INFO - only showing top 20 rows
+[2023-01-29T07:55:30.827+0000] {spark_submit.py:495} INFO - 
+[2023-01-29T08:02:15.933+0000] {local_task_job.py:207} WARNING - Recorded pid 16683 does not match the current pid 10656
+[2023-01-29T08:02:15.935+0000] {process_utils.py:133} INFO - Sending Signals.SIGTERM to group 10656. PIDs of all processes in the group: [10657, 10710, 10656]
+[2023-01-29T08:02:15.935+0000] {process_utils.py:84} INFO - Sending the signal Signals.SIGTERM to group 10656
+[2023-01-29T08:02:15.936+0000] {taskinstance.py:1483} ERROR - Received SIGTERM. Terminating subprocesses.
+[2023-01-29T08:02:15.936+0000] {spark_submit.py:620} INFO - Sending kill signal to spark-submit
+[2023-01-29T08:02:15.954+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 157, in execute
+    self._hook.submit(self._application)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 414, in submit
+    self._process_spark_submit_log(iter(self._submit_sp.stdout))  # type: ignore
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 463, in _process_spark_submit_log
+    for line in itr:
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1485, in signal_handler
+    raise AirflowException("Task received SIGTERM signal")
+airflow.exceptions.AirflowException: Task received SIGTERM signal
+[2023-01-29T08:02:15.965+0000] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=Streaming_pipeline_meli, task_id=consumer_data_of_topic, execution_date=20230127T184927, start_date=20230129T080212, end_date=20230129T080215
+[2023-01-29T08:02:15.993+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 1193 for task consumer_data_of_topic (Task received SIGTERM signal; 10656)
+[2023-01-29T08:02:16.075+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=10656, status='terminated', exitcode=1, started='07:52:17') (10656) terminated with exit code 1
+[2023-01-29T08:02:16.076+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=10710, status='terminated', started='07:52:20') (10710) terminated with exit code None
+[2023-01-29T08:02:16.076+0000] {process_utils.py:79} INFO - Process psutil.Process(pid=10657, status='terminated', started='07:52:17') (10657) terminated with exit code None
