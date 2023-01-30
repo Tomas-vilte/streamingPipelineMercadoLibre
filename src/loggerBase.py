@@ -1,6 +1,6 @@
 import logging as log
 
-log_file = '/home/tomi/streaming_pipeline/logs/capaDatos.log'
+log_file = '/home/tomi/streamingPipelineMercadoLibre/logs/capaDatos.log'
 log.basicConfig(level=log.INFO,
                 format='%(asctime)s - %(levelname)s - %(module)s - %(message)s',
                 datefmt='%Y-%m-%d',

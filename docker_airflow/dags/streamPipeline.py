@@ -21,7 +21,7 @@ default_args = {
 with DAG(
         dag_id='Streaming_pipeline_meli',
         default_args=default_args,
-        description='Ejeccucion de producer',
+        description='Ejeccucion del pipeline',
         start_date=datetime(2023, 1, 17),
         schedule=None,
         catchup=False
