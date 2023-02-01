@@ -70,7 +70,7 @@ with DAG(
         task_id='Status_info_postgres',
         python_callable=statusPostgres,
         op_kwargs={
-            'host': 'mydatabase.cnfp6axcdse9.us-east-1.rds.amazonaws.com',
+            'host': 'you host',
             'port': 5432,
             'database': 'meliAnalytics',
             'user': 'postgres',
