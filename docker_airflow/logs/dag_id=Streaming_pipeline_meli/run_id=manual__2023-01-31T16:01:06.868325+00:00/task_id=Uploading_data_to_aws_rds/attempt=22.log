@@ -1,0 +1,27 @@
+[2023-01-31T20:33:35.368+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Streaming_pipeline_meli.Uploading_data_to_aws_rds manual__2023-01-31T16:01:06.868325+00:00 [queued]>
+[2023-01-31T20:33:35.377+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Streaming_pipeline_meli.Uploading_data_to_aws_rds manual__2023-01-31T16:01:06.868325+00:00 [queued]>
+[2023-01-31T20:33:35.377+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T20:33:35.377+0000] {taskinstance.py:1284} INFO - Starting attempt 22 of 27
+[2023-01-31T20:33:35.377+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T20:33:35.389+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): Uploading_data_to_aws_rds> on 2023-01-31 16:01:06.868325+00:00
+[2023-01-31T20:33:35.393+0000] {standard_task_runner.py:55} INFO - Started process 21544 to run task
+[2023-01-31T20:33:35.395+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Streaming_pipeline_meli', 'Uploading_data_to_aws_rds', 'manual__2023-01-31T16:01:06.868325+00:00', '--job-id', '1335', '--raw', '--subdir', 'DAGS_FOLDER/streamPipeline.py', '--cfg-path', '/tmp/tmpb8xuy6ta']
+[2023-01-31T20:33:35.395+0000] {standard_task_runner.py:83} INFO - Job 1335: Subtask Uploading_data_to_aws_rds
+[2023-01-31T20:33:35.443+0000] {task_command.py:389} INFO - Running <TaskInstance: Streaming_pipeline_meli.Uploading_data_to_aws_rds manual__2023-01-31T16:01:06.868325+00:00 [running]> on host 15c99fd3082a
+[2023-01-31T20:33:35.503+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Streaming_pipeline_meli
+AIRFLOW_CTX_TASK_ID=Uploading_data_to_aws_rds
+AIRFLOW_CTX_EXECUTION_DATE=2023-01-31T16:01:06.868325+00:00
+AIRFLOW_CTX_TRY_NUMBER=22
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-01-31T16:01:06.868325+00:00
+[2023-01-31T20:33:35.504+0000] {loadDataToRds.py:8} INFO - Conexion exitosa a la base de datos de aws rds: None
+[2023-01-31T20:33:35.504+0000] {loadDataToRds.py:19} ERROR - Ocurrio un error al subir los datos a aws rds: connection to server on socket "/var/run/postgresql/.s.PGSQL.5432" failed: No such file or directory
+	Is the server running locally and accepting connections on that socket?
+
+[2023-01-31T20:33:35.504+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-01-31T20:33:35.512+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=Streaming_pipeline_meli, task_id=Uploading_data_to_aws_rds, execution_date=20230131T160106, start_date=20230131T203335, end_date=20230131T203335
+[2023-01-31T20:33:35.526+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-01-31T20:33:35.542+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

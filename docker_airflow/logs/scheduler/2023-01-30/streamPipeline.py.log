@@ -6712,3 +6712,129 @@ AttributeError: 'str' object has no attribute 'dag_id'
 [2023-01-30T23:08:10.073+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:08:10.073+0000] {dag.py:2676} INFO - Sync 1 DAGs
 [2023-01-30T23:08:10.094+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:08:10.094+0000] {dag.py:3427} INFO - Setting next_dagrun for Streaming_pipeline_meli to None, run_after=None
 [2023-01-30T23:08:10.108+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.161 seconds
+[2023-01-30T23:08:40.207+0000] {processor.py:153} INFO - Started process (PID=27209) to work on /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:08:40.208+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-01-30T23:08:40.209+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:08:40.209+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:08:40.287+0000] {processor.py:753} INFO - DAG(s) dict_keys(['Streaming_pipeline_meli']) retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:08:40.318+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:08:40.318+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-30T23:08:40.348+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:08:40.348+0000] {dag.py:3427} INFO - Setting next_dagrun for Streaming_pipeline_meli to None, run_after=None
+[2023-01-30T23:08:40.365+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.161 seconds
+[2023-01-30T23:09:10.444+0000] {processor.py:153} INFO - Started process (PID=27238) to work on /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:09:10.445+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-01-30T23:09:10.446+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:09:10.446+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:09:10.530+0000] {processor.py:753} INFO - DAG(s) dict_keys(['Streaming_pipeline_meli']) retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:09:10.560+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:09:10.560+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-30T23:09:10.582+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:09:10.582+0000] {dag.py:3427} INFO - Setting next_dagrun for Streaming_pipeline_meli to None, run_after=None
+[2023-01-30T23:09:10.606+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.168 seconds
+[2023-01-30T23:09:40.741+0000] {processor.py:153} INFO - Started process (PID=27264) to work on /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:09:40.743+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-01-30T23:09:40.744+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:09:40.744+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:09:40.845+0000] {processor.py:753} INFO - DAG(s) dict_keys(['Streaming_pipeline_meli']) retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:09:40.877+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:09:40.877+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-30T23:09:40.900+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:09:40.900+0000] {dag.py:3427} INFO - Setting next_dagrun for Streaming_pipeline_meli to None, run_after=None
+[2023-01-30T23:09:40.917+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.187 seconds
+[2023-01-30T23:10:10.985+0000] {processor.py:153} INFO - Started process (PID=27302) to work on /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:10:10.987+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-01-30T23:10:10.989+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:10:10.988+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:10:11.079+0000] {processor.py:753} INFO - DAG(s) dict_keys(['Streaming_pipeline_meli']) retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:10:11.109+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:10:11.109+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-30T23:10:11.130+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:10:11.130+0000] {dag.py:3427} INFO - Setting next_dagrun for Streaming_pipeline_meli to None, run_after=None
+[2023-01-30T23:10:11.145+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.171 seconds
+[2023-01-30T23:10:41.316+0000] {processor.py:153} INFO - Started process (PID=27326) to work on /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:10:41.318+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-01-30T23:10:41.321+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:10:41.320+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:10:41.408+0000] {processor.py:753} INFO - DAG(s) dict_keys(['Streaming_pipeline_meli']) retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:10:41.439+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:10:41.439+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-30T23:10:41.460+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:10:41.460+0000] {dag.py:3427} INFO - Setting next_dagrun for Streaming_pipeline_meli to None, run_after=None
+[2023-01-30T23:10:41.475+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.169 seconds
+[2023-01-30T23:11:11.535+0000] {processor.py:153} INFO - Started process (PID=27362) to work on /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:11:11.536+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-01-30T23:11:11.537+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:11:11.537+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:11:11.610+0000] {processor.py:753} INFO - DAG(s) dict_keys(['Streaming_pipeline_meli']) retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:11:11.643+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:11:11.643+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-30T23:11:11.665+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:11:11.665+0000] {dag.py:3427} INFO - Setting next_dagrun for Streaming_pipeline_meli to None, run_after=None
+[2023-01-30T23:11:11.682+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.148 seconds
+[2023-01-30T23:11:41.863+0000] {processor.py:153} INFO - Started process (PID=27387) to work on /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:11:41.865+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-01-30T23:11:41.866+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:11:41.866+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:11:41.961+0000] {processor.py:753} INFO - DAG(s) dict_keys(['Streaming_pipeline_meli']) retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:11:41.993+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:11:41.992+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-30T23:11:42.016+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:11:42.016+0000] {dag.py:3427} INFO - Setting next_dagrun for Streaming_pipeline_meli to None, run_after=None
+[2023-01-30T23:11:42.032+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.178 seconds
+[2023-01-30T23:12:12.203+0000] {processor.py:153} INFO - Started process (PID=27425) to work on /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:12:12.204+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-01-30T23:12:12.205+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:12:12.205+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:12:12.284+0000] {processor.py:753} INFO - DAG(s) dict_keys(['Streaming_pipeline_meli']) retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:12:12.312+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:12:12.312+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-30T23:12:12.334+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:12:12.333+0000] {dag.py:3427} INFO - Setting next_dagrun for Streaming_pipeline_meli to None, run_after=None
+[2023-01-30T23:12:12.351+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.153 seconds
+[2023-01-30T23:12:42.463+0000] {processor.py:153} INFO - Started process (PID=27450) to work on /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:12:42.472+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-01-30T23:12:42.473+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:12:42.473+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:12:42.582+0000] {processor.py:753} INFO - DAG(s) dict_keys(['Streaming_pipeline_meli']) retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:12:42.623+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:12:42.623+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-30T23:12:42.651+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:12:42.651+0000] {dag.py:3427} INFO - Setting next_dagrun for Streaming_pipeline_meli to None, run_after=None
+[2023-01-30T23:12:42.671+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.246 seconds
+[2023-01-30T23:13:12.696+0000] {processor.py:153} INFO - Started process (PID=27487) to work on /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:13:12.696+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-01-30T23:13:12.697+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:13:12.697+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:13:12.772+0000] {processor.py:753} INFO - DAG(s) dict_keys(['Streaming_pipeline_meli']) retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:13:12.802+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:13:12.802+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-30T23:13:12.823+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:13:12.823+0000] {dag.py:3427} INFO - Setting next_dagrun for Streaming_pipeline_meli to None, run_after=None
+[2023-01-30T23:13:12.838+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.148 seconds
+[2023-01-30T23:13:43.060+0000] {processor.py:153} INFO - Started process (PID=27512) to work on /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:13:43.061+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-01-30T23:13:43.062+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:13:43.062+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:13:43.147+0000] {processor.py:753} INFO - DAG(s) dict_keys(['Streaming_pipeline_meli']) retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:13:43.179+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:13:43.178+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-30T23:13:43.212+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:13:43.212+0000] {dag.py:3427} INFO - Setting next_dagrun for Streaming_pipeline_meli to None, run_after=None
+[2023-01-30T23:13:43.230+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.176 seconds
+[2023-01-30T23:14:13.441+0000] {processor.py:153} INFO - Started process (PID=27549) to work on /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:14:13.444+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-01-30T23:14:13.446+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:14:13.446+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:14:13.536+0000] {processor.py:753} INFO - DAG(s) dict_keys(['Streaming_pipeline_meli']) retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:14:13.566+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:14:13.566+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-30T23:14:13.587+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:14:13.587+0000] {dag.py:3427} INFO - Setting next_dagrun for Streaming_pipeline_meli to None, run_after=None
+[2023-01-30T23:14:13.602+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.171 seconds
+[2023-01-30T23:14:43.775+0000] {processor.py:153} INFO - Started process (PID=27573) to work on /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:14:43.776+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-01-30T23:14:43.776+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:14:43.776+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:14:43.849+0000] {processor.py:753} INFO - DAG(s) dict_keys(['Streaming_pipeline_meli']) retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:14:43.879+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:14:43.879+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-30T23:14:43.900+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:14:43.900+0000] {dag.py:3427} INFO - Setting next_dagrun for Streaming_pipeline_meli to None, run_after=None
+[2023-01-30T23:14:43.934+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.162 seconds
+[2023-01-30T23:15:14.095+0000] {processor.py:153} INFO - Started process (PID=27610) to work on /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:15:14.097+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-01-30T23:15:14.098+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:15:14.097+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:15:14.183+0000] {processor.py:753} INFO - DAG(s) dict_keys(['Streaming_pipeline_meli']) retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:15:14.213+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:15:14.213+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-30T23:15:14.235+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:15:14.235+0000] {dag.py:3427} INFO - Setting next_dagrun for Streaming_pipeline_meli to None, run_after=None
+[2023-01-30T23:15:14.250+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.159 seconds
+[2023-01-30T23:15:44.290+0000] {processor.py:153} INFO - Started process (PID=27636) to work on /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:15:44.293+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-01-30T23:15:44.295+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:15:44.295+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:15:44.386+0000] {processor.py:753} INFO - DAG(s) dict_keys(['Streaming_pipeline_meli']) retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:15:44.416+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:15:44.416+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-30T23:15:44.438+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:15:44.438+0000] {dag.py:3427} INFO - Setting next_dagrun for Streaming_pipeline_meli to None, run_after=None
+[2023-01-30T23:15:44.452+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.173 seconds
+[2023-01-30T23:16:14.591+0000] {processor.py:153} INFO - Started process (PID=27673) to work on /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:16:14.593+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-01-30T23:16:14.595+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:16:14.594+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:16:14.680+0000] {processor.py:753} INFO - DAG(s) dict_keys(['Streaming_pipeline_meli']) retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:16:14.709+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:16:14.709+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-30T23:16:14.731+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:16:14.731+0000] {dag.py:3427} INFO - Setting next_dagrun for Streaming_pipeline_meli to None, run_after=None
+[2023-01-30T23:16:14.747+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.166 seconds
+[2023-01-30T23:16:44.822+0000] {processor.py:153} INFO - Started process (PID=27698) to work on /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:16:44.825+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-01-30T23:16:44.827+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:16:44.827+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:16:44.949+0000] {processor.py:753} INFO - DAG(s) dict_keys(['Streaming_pipeline_meli']) retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:16:44.980+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:16:44.980+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-30T23:16:45.002+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:16:45.002+0000] {dag.py:3427} INFO - Setting next_dagrun for Streaming_pipeline_meli to None, run_after=None
+[2023-01-30T23:16:45.019+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.208 seconds
+[2023-01-30T23:17:15.097+0000] {processor.py:153} INFO - Started process (PID=27735) to work on /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:17:15.098+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-01-30T23:17:15.099+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:17:15.099+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:17:15.178+0000] {processor.py:753} INFO - DAG(s) dict_keys(['Streaming_pipeline_meli']) retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-01-30T23:17:15.210+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:17:15.210+0000] {dag.py:2676} INFO - Sync 1 DAGs
+[2023-01-30T23:17:15.232+0000] {logging_mixin.py:137} INFO - [2023-01-30T23:17:15.232+0000] {dag.py:3427} INFO - Setting next_dagrun for Streaming_pipeline_meli to None, run_after=None
+[2023-01-30T23:17:15.249+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.156 seconds

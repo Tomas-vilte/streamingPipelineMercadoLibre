@@ -1,3 +1,4 @@
+import datetime
 import time
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
@@ -28,7 +29,7 @@ def writeToMongo(df, bacthId):
     try:
         df.write \
             .format("mongo") \
-            .option("uri", "mongodb://root:secret@172.20.0.2:27017") \
+            .option("uri", "mongodb://root:secret@172.20.0.7:27017") \
             .option("database", "mercadolibredb") \
             .option("collection", "meliproduct") \
             .mode("append") \
@@ -56,7 +57,7 @@ def stop_stream_query(query, wait_time):
         if not data_avail and not trigger_active and msg != "Initializing sources":
             print('Stopping query...')
             query.stop() # Detener la consulta
-        time.sleep(0.5) # Esperar 0.5 segundos
+        time.sleep(30) # Esperar 0.5 segundos
 
     # Esperar la terminación de la consulta
     print('Awaiting termination...')
@@ -67,8 +68,8 @@ def stop_stream_query(query, wait_time):
 spark = SparkSession \
     .builder \
     .master("local[*]") \
-    .config("spark.mongodb.input.uri", "mongodb://root:secret@172.20.0.2:27017/mercadolibredb.meliproduct") \
-    .config("spark.mongodb.output.uri", "mongodb://root:secret@172.20.0.2:27017/mercadolibredb.meliproduct") \
+    .config("spark.mongodb.input.uri", "mongodb://root:secret@172.20.0.7:27017/mercadolibredb.meliproduct") \
+    .config("spark.mongodb.output.uri", "mongodb://root:secret@172.20.0.7:27017/mercadolibredb.meliproduct") \
     .getOrCreate()
 
 # Configurar nivel de registro para mostrar solo errores
@@ -141,5 +142,5 @@ query = finalDF \
 queryToMongo = finalDF.writeStream.foreachBatch(writeToMongo).start()
 
 # Espere a que termine la transmisión
-stop_stream_query(query, 50)
-stop_stream_query(queryToMongo, 50)
+stop_stream_query(query, 30)
+stop_stream_query(queryToMongo, 30)
