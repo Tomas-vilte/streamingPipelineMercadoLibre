@@ -2,9 +2,17 @@ import psycopg2
 from loggerBase import log
 
 class DataUploader:
+    """
+        Clase para subir datos a una base de datos PostgreSQL
+    """
     def __init__(self, host, port, dbname, user, password):
         """
-        Constructor that initializes the connection to RDS
+        Constructor que inicializa la conexión a AWS RDS
+        :param host: el nombre de host o dirección IP de la base de datos
+        :param port: el número de puerto para la base de datos
+        :param dbname: el nombre de la base de datos
+        :param user: el nombre de usuario para conectarse a la base de datos
+        :param password: la contraseña para el nombre de usuario
         """
         try:
             log.info(f'Conexion exitosa a la base de datos: {dbname}')
@@ -20,6 +28,10 @@ class DataUploader:
             log.error(f'Hubo un error al conectarse a la base de datos: {e}')
 
     def upload_data(self, data):
+        """
+        Método para subir datos a la base de datos
+        :param data: los datos a cargar
+        """
         try:
             log.info('Cargando datos a la base de datos...')
             for item in data:
@@ -47,7 +59,7 @@ class DataUploader:
 
     def __del__(self):
         """
-        Destructor that closes the cursor and connection
+        Destructor que cierra el cursor y la conexión.
         """
 
         self.cur.close()

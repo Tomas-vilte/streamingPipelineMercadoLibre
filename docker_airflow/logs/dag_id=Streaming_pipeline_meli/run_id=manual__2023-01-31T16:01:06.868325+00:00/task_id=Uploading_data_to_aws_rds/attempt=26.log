@@ -1,0 +1,64 @@
+[2023-01-31T20:58:55.647+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Streaming_pipeline_meli.Uploading_data_to_aws_rds manual__2023-01-31T16:01:06.868325+00:00 [queued]>
+[2023-01-31T20:58:55.666+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Streaming_pipeline_meli.Uploading_data_to_aws_rds manual__2023-01-31T16:01:06.868325+00:00 [queued]>
+[2023-01-31T20:58:55.667+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T20:58:55.667+0000] {taskinstance.py:1284} INFO - Starting attempt 26 of 31
+[2023-01-31T20:58:55.667+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-01-31T20:58:55.720+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): Uploading_data_to_aws_rds> on 2023-01-31 16:01:06.868325+00:00
+[2023-01-31T20:58:55.724+0000] {standard_task_runner.py:55} INFO - Started process 25641 to run task
+[2023-01-31T20:58:55.727+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Streaming_pipeline_meli', 'Uploading_data_to_aws_rds', 'manual__2023-01-31T16:01:06.868325+00:00', '--job-id', '1345', '--raw', '--subdir', 'DAGS_FOLDER/streamPipeline.py', '--cfg-path', '/tmp/tmpodmespwq']
+[2023-01-31T20:58:55.728+0000] {standard_task_runner.py:83} INFO - Job 1345: Subtask Uploading_data_to_aws_rds
+[2023-01-31T20:58:55.845+0000] {task_command.py:389} INFO - Running <TaskInstance: Streaming_pipeline_meli.Uploading_data_to_aws_rds manual__2023-01-31T16:01:06.868325+00:00 [running]> on host 15c99fd3082a
+[2023-01-31T20:58:55.885+0000] {abstractoperator.py:596} ERROR - Exception rendering Jinja template for task 'Uploading_data_to_aws_rds', field 'op_kwargs'. Template: {'host': 'mydatabase.cnfp6axcdse9.us-east-1.rds.amazonaws.com', 'port': 5432, 'database': 'meliAnalytics', 'user': 'postgres', 'password': '***', 'data': Collection(Database(MongoClient(host=['172.20.0.7:27017'], document_class=dict, tz_aware=False, connect=True), 'mercadolibredb'), 'meliproduct')}
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 589, in _do_render_template_fields
+    seen_oids,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 659, in render_template
+    return {k: self.render_template(v, context, jinja_env, oids) for k, v in value.items()}
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 659, in <dictcomp>
+    return {k: self.render_template(v, context, jinja_env, oids) for k, v in value.items()}
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 664, in render_template
+    self._render_nested_template_fields(value, context, jinja_env, oids)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 682, in _render_nested_template_fields
+    self._do_render_template_fields(value, nested_template_fields, context, jinja_env, seen_oids)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 75, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 574, in _do_render_template_fields
+    for attr_name in template_fields:
+  File "/home/airflow/.local/lib/python3.7/site-packages/pymongo/collection.py", line 3801, in __next__
+    raise TypeError("'Collection' object is not iterable")
+TypeError: 'Collection' object is not iterable
+[2023-01-31T20:58:55.888+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1378, in _run_raw_task
+    self._execute_task_with_callbacks(context, test_mode)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 1497, in _execute_task_with_callbacks
+    task_orig = self.render_templates(context=context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 2119, in render_templates
+    original_task.render_template_fields(context)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/baseoperator.py", line 1196, in render_template_fields
+    self._do_render_template_fields(self, self.template_fields, context, jinja_env, set())
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 75, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 589, in _do_render_template_fields
+    seen_oids,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 659, in render_template
+    return {k: self.render_template(v, context, jinja_env, oids) for k, v in value.items()}
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 659, in <dictcomp>
+    return {k: self.render_template(v, context, jinja_env, oids) for k, v in value.items()}
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 664, in render_template
+    self._render_nested_template_fields(value, context, jinja_env, oids)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 682, in _render_nested_template_fields
+    self._do_render_template_fields(value, nested_template_fields, context, jinja_env, seen_oids)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 75, in wrapper
+    return func(*args, session=session, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/abstractoperator.py", line 574, in _do_render_template_fields
+    for attr_name in template_fields:
+  File "/home/airflow/.local/lib/python3.7/site-packages/pymongo/collection.py", line 3801, in __next__
+    raise TypeError("'Collection' object is not iterable")
+TypeError: 'Collection' object is not iterable
+[2023-01-31T20:58:55.896+0000] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=Streaming_pipeline_meli, task_id=Uploading_data_to_aws_rds, execution_date=20230131T160106, start_date=20230131T205855, end_date=20230131T205855
+[2023-01-31T20:58:55.913+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 1345 for task Uploading_data_to_aws_rds ('Collection' object is not iterable; 25641)
+[2023-01-31T20:58:55.952+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-01-31T20:58:55.969+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check
