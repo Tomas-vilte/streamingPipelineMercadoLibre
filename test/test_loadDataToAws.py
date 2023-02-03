@@ -18,7 +18,7 @@ class TestDataUploader(unittest.TestCase):
 
         # Crear una instancia de la clase DataUploader, conectándose a la base de datos especificada
         self.database = DataUploader(
-            host='mydatabase.cnfp6axcdse9.us-east-1.rds.amazonaws.com',
+            host='your host',
             port=5432,
             dbname='meliAnalytics',
             user='postgres',
