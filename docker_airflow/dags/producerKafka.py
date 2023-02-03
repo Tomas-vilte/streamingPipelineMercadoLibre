@@ -1,10 +1,12 @@
 import json
+from typing import Any
 from loggin import log
 import requests
 from kafka import KafkaProducer
 
 
-def runKafkaProducer():
+def runKafkaProducer() -> list[dict[str, Any]]:
+    datos = []
     try:
         producer = KafkaProducer(bootstrap_servers=['172.17.0.1:9092'],
                                  value_serializer=lambda x:
@@ -16,14 +18,16 @@ def runKafkaProducer():
     api_url = 'https://api.mercadolibre.com/sites/MLA/search?category=MLA3794'
     response = requests.get(api_url)
 
+    # Verifica si la respuesta es un código de estado 200
+    if response.status_code != 200:
+        log.error(f'La URL de la api es inválida: {response.status_code}')
+        raise Exception('La url de la api es invalida')
     # Inicializa un contador de resultados
     results_count = 0
+    api_count = f'https://api.mercadolibre.com/sites/MLA/search?category=MLA3794&offset={results_count}'
 
     # Crea un bucle while para verificar si se ha agregado un nuevo producto
     while True:
-        # Hace la solicitud HTTP a la API de Meli
-        api_url = f'https://api.mercadolibre.com/sites/MLA/search?category=MLA3794&offset={results_count}'
-
         # Obtiene los resultados de la respuesta JSON
         results = response.json()["results"]
 
@@ -39,8 +43,9 @@ def runKafkaProducer():
                 "QuantitySold": item["sold_quantity"],
                 "QuantityAvailable": item["available_quantity"],
             }
-            producer.send('myTopic', data)
-            print(data)
+            datos.append(data)
+            producer.send('myTopic', datos)
+            print(datos)
         # Incrementa el contador de resultados en la cantidad de resultados obtenidos
         results_count += len(results)
 
@@ -51,3 +56,8 @@ def runKafkaProducer():
     # Cierra el productor de Kafka
         producer.close()
         log.info(f'Producer cerrado: {producer}')
+
+    return datos
+
+if __name__ == '__main__':
+    runKafkaProducer()
