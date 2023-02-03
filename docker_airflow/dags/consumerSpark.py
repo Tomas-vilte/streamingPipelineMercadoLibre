@@ -1,4 +1,3 @@
-import datetime
 import time
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
@@ -57,7 +56,7 @@ def stop_stream_query(query, wait_time):
         if not data_avail and not trigger_active and msg != "Initializing sources":
             print('Stopping query...')
             query.stop() # Detener la consulta
-        time.sleep(30) # Esperar 0.5 segundos
+        time.sleep(30) # Espera 30 segundos
 
     # Esperar la terminación de la consulta
     print('Awaiting termination...')
