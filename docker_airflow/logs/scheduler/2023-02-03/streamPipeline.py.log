@@ -22601,3 +22601,803 @@ Traceback (most recent call last):
 TypeError: 'type' object is not subscriptable
 [2023-02-03T23:34:33.129+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
 [2023-02-03T23:34:33.144+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.096 seconds
+[2023-02-03T23:35:03.270+0000] {processor.py:153} INFO - Started process (PID=26041) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:35:03.271+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:35:03.272+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:35:03.272+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:35:03.347+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:35:03.346+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:35:03.347+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:35:03.362+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.099 seconds
+[2023-02-03T23:35:33.506+0000] {processor.py:153} INFO - Started process (PID=26065) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:35:33.508+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:35:33.509+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:35:33.509+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:35:33.585+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:35:33.584+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:35:33.585+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:35:33.600+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.106 seconds
+[2023-02-03T23:36:03.693+0000] {processor.py:153} INFO - Started process (PID=26103) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:36:03.694+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:36:03.694+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:36:03.694+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:36:03.762+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:36:03.761+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:36:03.762+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:36:03.778+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.088 seconds
+[2023-02-03T23:36:33.973+0000] {processor.py:153} INFO - Started process (PID=26128) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:36:33.975+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:36:33.977+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:36:33.977+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:36:34.060+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:36:34.060+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:36:34.061+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:36:34.074+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.111 seconds
+[2023-02-03T23:37:04.191+0000] {processor.py:153} INFO - Started process (PID=26165) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:37:04.193+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:37:04.194+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:37:04.194+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:37:04.272+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:37:04.271+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:37:04.272+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:37:04.287+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.101 seconds
+[2023-02-03T23:37:34.451+0000] {processor.py:153} INFO - Started process (PID=26190) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:37:34.453+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:37:34.456+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:37:34.455+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:37:34.574+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:37:34.573+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:37:34.574+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:37:34.589+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.148 seconds
+[2023-02-03T23:38:04.653+0000] {processor.py:153} INFO - Started process (PID=26228) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:38:04.654+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:38:04.655+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:38:04.655+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:38:04.733+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:38:04.733+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:38:04.734+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:38:04.747+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.098 seconds
+[2023-02-03T23:38:34.966+0000] {processor.py:153} INFO - Started process (PID=26252) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:38:34.967+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:38:34.968+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:38:34.967+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:38:35.044+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:38:35.043+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:38:35.044+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:38:35.058+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.101 seconds
+[2023-02-03T23:39:05.172+0000] {processor.py:153} INFO - Started process (PID=26288) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:39:05.175+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:39:05.176+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:39:05.176+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:39:05.257+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:39:05.257+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:39:05.258+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:39:05.272+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.113 seconds
+[2023-02-03T23:39:35.407+0000] {processor.py:153} INFO - Started process (PID=26313) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:39:35.408+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:39:35.408+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:39:35.408+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:39:35.479+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:39:35.478+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:39:35.479+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:39:35.497+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.095 seconds
+[2023-02-03T23:40:05.644+0000] {processor.py:153} INFO - Started process (PID=26349) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:40:05.647+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:40:05.649+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:40:05.648+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:40:05.727+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:40:05.727+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:40:05.728+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:40:05.742+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.108 seconds
+[2023-02-03T23:40:35.859+0000] {processor.py:153} INFO - Started process (PID=26374) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:40:35.862+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:40:35.864+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:40:35.863+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:40:35.945+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:40:35.944+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:40:35.945+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:40:35.960+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.103 seconds
+[2023-02-03T23:41:06.135+0000] {processor.py:153} INFO - Started process (PID=26411) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:41:06.136+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:41:06.137+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:41:06.137+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:41:06.210+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:41:06.209+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:41:06.210+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:41:06.225+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.098 seconds
+[2023-02-03T23:41:36.309+0000] {processor.py:153} INFO - Started process (PID=26435) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:41:36.310+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:41:36.310+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:41:36.310+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:41:36.384+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:41:36.383+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:41:36.384+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:41:36.403+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.096 seconds
+[2023-02-03T23:42:06.596+0000] {processor.py:153} INFO - Started process (PID=26471) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:42:06.955+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:42:06.956+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:42:06.956+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:42:07.253+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:42:07.252+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:42:07.253+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:42:07.275+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.688 seconds
+[2023-02-03T23:42:37.445+0000] {processor.py:153} INFO - Started process (PID=26496) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:42:37.445+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:42:37.446+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:42:37.446+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:42:37.516+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:42:37.515+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:42:37.516+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:42:37.532+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.090 seconds
+[2023-02-03T23:43:07.638+0000] {processor.py:153} INFO - Started process (PID=26531) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:43:07.639+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:43:07.641+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:43:07.640+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:43:07.755+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:43:07.754+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:43:07.757+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:43:07.777+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.142 seconds
+[2023-02-03T23:43:37.935+0000] {processor.py:153} INFO - Started process (PID=26555) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:43:37.937+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:43:37.940+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:43:37.939+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:43:38.030+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:43:38.029+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:43:38.030+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:43:38.045+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.123 seconds
+[2023-02-03T23:44:08.130+0000] {processor.py:153} INFO - Started process (PID=26589) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:44:08.142+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:44:08.143+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:44:08.143+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:44:08.328+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:44:08.327+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:44:08.329+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:44:08.346+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.219 seconds
+[2023-02-03T23:44:38.411+0000] {processor.py:153} INFO - Started process (PID=26617) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:44:38.413+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:44:38.416+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:44:38.416+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:44:38.502+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:44:38.501+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:44:38.502+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:44:38.518+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.119 seconds
+[2023-02-03T23:45:08.585+0000] {processor.py:153} INFO - Started process (PID=26643) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:45:08.586+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:45:08.587+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:45:08.587+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:45:08.683+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:45:08.682+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:45:08.684+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:45:08.711+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.129 seconds
+[2023-02-03T23:45:38.897+0000] {processor.py:153} INFO - Started process (PID=26680) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:45:38.899+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:45:38.901+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:45:38.901+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:45:38.982+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:45:38.982+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:45:38.982+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:45:38.997+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.110 seconds
+[2023-02-03T23:46:09.090+0000] {processor.py:153} INFO - Started process (PID=26714) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:46:09.091+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:46:09.091+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:46:09.091+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:46:09.163+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:46:09.162+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:46:09.163+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:46:09.180+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.093 seconds
+[2023-02-03T23:46:39.370+0000] {processor.py:153} INFO - Started process (PID=26742) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:46:39.370+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:46:39.371+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:46:39.371+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:46:39.441+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:46:39.440+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:46:39.442+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:46:39.456+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.089 seconds
+[2023-02-03T23:47:09.555+0000] {processor.py:153} INFO - Started process (PID=26774) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:47:09.555+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:47:09.556+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:47:09.556+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:47:09.629+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:47:09.629+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:47:09.631+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:47:09.647+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.094 seconds
+[2023-02-03T23:47:39.806+0000] {processor.py:153} INFO - Started process (PID=26803) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:47:39.807+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:47:39.809+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:47:39.809+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:47:39.876+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:47:39.875+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:47:39.876+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:47:39.892+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.089 seconds
+[2023-02-03T23:48:10.007+0000] {processor.py:153} INFO - Started process (PID=26835) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:48:10.008+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:48:10.008+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:48:10.008+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:48:10.081+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:48:10.081+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:48:10.082+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:48:10.099+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.094 seconds
+[2023-02-03T23:48:40.259+0000] {processor.py:153} INFO - Started process (PID=26865) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:48:40.260+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:48:40.260+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:48:40.260+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:48:40.324+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:48:40.324+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:48:40.325+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:48:40.340+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.083 seconds
+[2023-02-03T23:49:10.464+0000] {processor.py:153} INFO - Started process (PID=26897) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:49:10.470+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:49:10.470+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:49:10.470+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:49:10.572+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:49:10.572+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:49:10.574+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:49:10.595+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.134 seconds
+[2023-02-03T23:49:40.712+0000] {processor.py:153} INFO - Started process (PID=26926) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:49:40.713+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:49:40.713+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:49:40.713+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:49:40.778+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:49:40.778+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:49:40.779+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:49:40.794+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.086 seconds
+[2023-02-03T23:50:10.947+0000] {processor.py:153} INFO - Started process (PID=26957) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:50:10.948+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:50:10.949+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:50:10.948+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:50:11.022+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:50:11.021+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:50:11.023+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:50:11.039+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.094 seconds
+[2023-02-03T23:50:41.190+0000] {processor.py:153} INFO - Started process (PID=26986) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:50:41.193+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:50:41.195+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:50:41.195+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:50:41.280+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:50:41.279+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:50:41.280+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:50:41.294+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.115 seconds
+[2023-02-03T23:51:11.426+0000] {processor.py:153} INFO - Started process (PID=27011) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:51:11.426+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:51:11.437+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:51:11.427+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:51:11.514+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:51:11.513+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:51:11.514+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:51:11.528+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.105 seconds
+[2023-02-03T23:51:41.675+0000] {processor.py:153} INFO - Started process (PID=27047) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:51:41.681+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:51:41.682+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:51:41.681+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:51:41.750+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:51:41.750+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:51:41.751+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:51:41.766+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.095 seconds
+[2023-02-03T23:52:11.883+0000] {processor.py:153} INFO - Started process (PID=27071) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:52:11.884+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:52:11.885+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:52:11.885+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:52:11.961+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:52:11.960+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:52:11.961+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:52:11.976+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.096 seconds
+[2023-02-03T23:52:42.147+0000] {processor.py:153} INFO - Started process (PID=27109) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:52:42.150+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:52:42.152+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:52:42.152+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:52:42.260+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:52:42.260+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:52:42.261+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:52:42.275+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.138 seconds
+[2023-02-03T23:53:12.371+0000] {processor.py:153} INFO - Started process (PID=27134) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:53:12.373+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:53:12.375+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:53:12.375+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:53:12.455+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:53:12.455+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:53:12.456+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:53:12.470+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.110 seconds
+[2023-02-03T23:53:42.634+0000] {processor.py:153} INFO - Started process (PID=27171) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:53:42.636+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:53:42.640+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:53:42.639+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:53:42.721+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:53:42.720+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:53:42.721+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:53:42.736+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.114 seconds
+[2023-02-03T23:54:12.866+0000] {processor.py:153} INFO - Started process (PID=27196) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:54:12.868+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:54:12.870+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:54:12.870+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:54:12.955+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:54:12.954+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:54:12.955+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:54:12.968+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.113 seconds
+[2023-02-03T23:54:43.105+0000] {processor.py:153} INFO - Started process (PID=27234) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:54:43.106+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:54:43.117+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:54:43.117+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:54:43.193+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:54:43.192+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:54:43.193+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:54:43.208+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.106 seconds
+[2023-02-03T23:55:13.344+0000] {processor.py:153} INFO - Started process (PID=27259) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:55:13.346+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:55:13.348+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:55:13.347+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:55:13.429+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:55:13.428+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:55:13.429+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:55:13.444+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.111 seconds
+[2023-02-03T23:55:43.589+0000] {processor.py:153} INFO - Started process (PID=27296) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:55:43.592+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:55:43.595+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:55:43.594+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:55:43.681+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:55:43.680+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:55:43.681+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:55:43.697+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.118 seconds
+[2023-02-03T23:56:13.826+0000] {processor.py:153} INFO - Started process (PID=27321) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:56:13.828+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:56:13.830+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:56:13.829+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:56:13.914+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:56:13.914+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:56:13.915+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:56:13.931+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.116 seconds
+[2023-02-03T23:56:44.100+0000] {processor.py:153} INFO - Started process (PID=27359) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:56:44.103+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:56:44.106+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:56:44.105+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:56:44.189+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:56:44.188+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:56:44.189+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:56:44.204+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.114 seconds
+[2023-02-03T23:57:14.310+0000] {processor.py:153} INFO - Started process (PID=27384) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:57:14.311+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:57:14.312+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:57:14.312+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:57:14.391+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:57:14.391+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:57:14.392+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:57:14.407+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.104 seconds
+[2023-02-03T23:57:44.605+0000] {processor.py:153} INFO - Started process (PID=27421) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:57:44.606+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:57:44.608+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:57:44.607+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:57:44.683+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:57:44.682+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:57:44.683+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:57:44.698+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.099 seconds
+[2023-02-03T23:58:14.828+0000] {processor.py:153} INFO - Started process (PID=27446) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:58:14.829+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:58:14.830+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:58:14.830+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:58:14.898+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:58:14.897+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:58:14.898+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:58:14.914+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.089 seconds
+[2023-02-03T23:58:45.092+0000] {processor.py:153} INFO - Started process (PID=27483) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:58:45.093+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:58:45.093+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:58:45.093+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:58:45.162+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:58:45.161+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:58:45.162+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:58:45.178+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.088 seconds
+[2023-02-03T23:59:15.298+0000] {processor.py:153} INFO - Started process (PID=27507) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:59:15.299+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:59:15.299+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:59:15.299+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:59:15.366+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:59:15.365+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:59:15.366+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:59:15.384+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.088 seconds
+[2023-02-03T23:59:45.550+0000] {processor.py:153} INFO - Started process (PID=27544) to work on /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:59:45.552+0000] {processor.py:743} INFO - Processing file /opt/airflow/dags/streamPipeline.py for tasks to queue
+[2023-02-03T23:59:45.555+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:59:45.554+0000] {dagbag.py:538} INFO - Filling up the DagBag from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:59:45.634+0000] {logging_mixin.py:137} INFO - [2023-02-03T23:59:45.634+0000] {dagbag.py:343} ERROR - Failed to import: /opt/airflow/dags/streamPipeline.py
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/dagbag.py", line 339, in parse
+    loader.exec_module(new_module)
+  File "<frozen importlib._bootstrap_external>", line 728, in exec_module
+  File "<frozen importlib._bootstrap>", line 219, in _call_with_frames_removed
+  File "/opt/airflow/dags/streamPipeline.py", line 9, in <module>
+    from producerKafka import runKafkaProducer
+  File "/opt/airflow/dags/producerKafka.py", line 8, in <module>
+    def runKafkaProducer() -> list[dict[str, Any]]:
+TypeError: 'type' object is not subscriptable
+[2023-02-03T23:59:45.635+0000] {processor.py:755} WARNING - No viable dags retrieved from /opt/airflow/dags/streamPipeline.py
+[2023-02-03T23:59:45.649+0000] {processor.py:175} INFO - Processing /opt/airflow/dags/streamPipeline.py took 0.110 seconds
