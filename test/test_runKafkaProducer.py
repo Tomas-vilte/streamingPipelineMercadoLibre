@@ -1,7 +1,7 @@
 import json
-from unittest.mock import patch, MagicMock
+from unittest.mock import patch
 import unittest
-import requests
+from mock.mock import Mock
 
 from producerKafka import runKafkaProducer
 from kafka import KafkaProducer
@@ -48,30 +48,44 @@ class TestRunKafkaProducer(unittest.TestCase):
             # Verificar que el diccionario contiene una clave 'QuantityAvailable'
             self.assertIn('QuantityAvailable', item)
 
-    # Definimos un método de prueba para verificar la respuesta de la API
+    @patch.object(KafkaProducer, 'send')
     @patch('requests.get')
-    def test_api_response(self, mock_get):
-        # Creamos un objeto mock_response para simular la respuesta de la API
-        mock_response = MagicMock()
-        # Establecemos el atributo status_code en 200
-        mock_response.status_code = 200
-        # Establecemos la respuesta del método json como un diccionario
-        mock_response.json.return_value = {'key': 'value'}
-        # Asignamos el objeto mock_response a la llamada a mock_get
-        mock_get.return_value = mock_response
+    def test_runKafkaProducer_no_send(self, mock_requests_get, mock_kafka_send):
+        """
+           Prueba la función runKafkaProducer con mensajes no enviados a Kafka
 
-        # Definimos la url de la api
-        api_url = 'https://api.mercadolibre.com/sites/MLA/search?category=MLA3794'
-        # Realizamos una petición get a la api
-        response = requests.get(api_url)
+           Args:
+               mock_requests_get (Mock): Objeto simulado de la función requests.get
+               mock_kafka_send (Mock): Objeto simulado de la función KafkaProducer.send
 
-        # Verificamos que el código de respuesta sea 200
-        self.assertEqual(response.status_code, 200)
+           Returns:
+               None
+           """
+        # Configura el mock para devolver una respuesta simulada
+        mock_response = Mock()
+        mock_response.json.return_value = {'results': [{'id': 1, 'title': 'producto 23', 'price': 1000,
+                                                    'condition': 'new', 'seller': {'nickname': 'seller 1',
+                                                                                   'registration_date': '2022-01-01',
+                                                                                    },'sold_quantity': 1,
+                                                                                   'available_quantity': 10}]}
+        mock_requests_get.return_value = mock_response
 
-        # Verificamos que la respuesta de la API sea un diccionario
-        self.assertIsInstance(response.json(), dict)
-        # Verificamos que mock_get sea llamado con la url de la api
-        mock_get.assert_called_with(api_url)
+        # Ejecuta la función que se está probando
+        result = runKafkaProducer()
+
+        # Verifica que los mensajes no se hayan enviado a Kafka
+        self.assertEqual(mock_kafka_send.call_count, 50)
+
+        # Verifica que los resultados sean los esperados
+        self.assertEqual(len(result), 50)
+        self.assertEqual(result[0]["id"], 1)
+        self.assertEqual(result[0]["nameOfProduct"], "producto 23")
+        self.assertEqual(result[0]["price"], 1000)
+        self.assertEqual(result[0]["ProductStatus"], "new")
+        self.assertEqual(result[0]["SellerName"], "seller 1")
+        self.assertEqual(result[0]["RegistrationDate"], "2022-01-01")
+        self.assertEqual(result[0]["QuantitySold"], 1)
+        self.assertEqual(result[0]["QuantityAvailable"], 10)
 
     def test_producer_close(self):
         """
