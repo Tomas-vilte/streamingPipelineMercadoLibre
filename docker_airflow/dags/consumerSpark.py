@@ -116,5 +116,4 @@ query = finalDF \
 queryToMongo = finalDF.writeStream.foreachBatch(writeToMongo).start()
 
 # Espere a que termine la transmisión
-queryToMongo.awaitTermination(10)
-query.awaitTermination(10)
+print(f"Stop query to mongoDB: {queryToMongo.awaitTermination(30)}\n Stop query: {query.awaitTermination(30)}")

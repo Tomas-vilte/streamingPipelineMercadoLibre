@@ -1,0 +1,48 @@
+[2023-02-08T20:02:06.690+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Streaming_pipeline_meli.Status_info_postgres manual__2023-02-08T20:00:43.261953+00:00 [queued]>
+[2023-02-08T20:02:06.703+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Streaming_pipeline_meli.Status_info_postgres manual__2023-02-08T20:00:43.261953+00:00 [queued]>
+[2023-02-08T20:02:06.704+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-08T20:02:06.704+0000] {taskinstance.py:1284} INFO - Starting attempt 2 of 7
+[2023-02-08T20:02:06.704+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-08T20:02:06.727+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): Status_info_postgres> on 2023-02-08 20:00:43.261953+00:00
+[2023-02-08T20:02:06.733+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Streaming_pipeline_meli', 'Status_info_postgres', 'manual__2023-02-08T20:00:43.261953+00:00', '--job-id', '1379', '--raw', '--subdir', 'DAGS_FOLDER/streamPipeline.py', '--cfg-path', '/tmp/tmp0eh82q8k']
+[2023-02-08T20:02:06.731+0000] {standard_task_runner.py:55} INFO - Started process 1638 to run task
+[2023-02-08T20:02:06.734+0000] {standard_task_runner.py:83} INFO - Job 1379: Subtask Status_info_postgres
+[2023-02-08T20:02:06.822+0000] {task_command.py:389} INFO - Running <TaskInstance: Streaming_pipeline_meli.Status_info_postgres manual__2023-02-08T20:00:43.261953+00:00 [running]> on host b55acaa82944
+[2023-02-08T20:02:06.892+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Streaming_pipeline_meli
+AIRFLOW_CTX_TASK_ID=Status_info_postgres
+AIRFLOW_CTX_EXECUTION_DATE=2023-02-08T20:00:43.261953+00:00
+AIRFLOW_CTX_TRY_NUMBER=2
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-02-08T20:00:43.261953+00:00
+[2023-02-08T20:02:08.088+0000] {postgresStatus.py:25} INFO - Conexion exitosa a la base de datos de aws rds: meliAnalytics
+[2023-02-08T20:02:08.088+0000] {python.py:177} INFO - Done. Returned value was: (True, <connection object at 0x7f5ea7b3f830; dsn: 'user=postgres password=xxx dbname=meliAnalytics host=mydatabase.cnfp6axcdse9.us-east-1.rds.amazonaws.com port=5432', closed: 0>)
+[2023-02-08T20:02:08.093+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 72, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/taskinstance.py", line 2301, in xcom_push
+    session=session,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/session.py", line 72, in wrapper
+    return func(*args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/xcom.py", line 240, in set
+    map_index=map_index,
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/models/xcom.py", line 627, in serialize_value
+    return json.dumps(value, cls=XComEncoder).encode("UTF-8")
+  File "/usr/local/lib/python3.7/json/__init__.py", line 238, in dumps
+    **kw).encode(obj)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/json.py", line 176, in encode
+    return super().encode(o)
+  File "/usr/local/lib/python3.7/json/encoder.py", line 199, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/local/lib/python3.7/json/encoder.py", line 257, in iterencode
+    return _iterencode(o, 0)
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/utils/json.py", line 153, in default
+    CLASSNAME: o.__module__ + "." + o.__class__.__qualname__,
+AttributeError: 'psycopg2.extensions.connection' object has no attribute '__module__'
+[2023-02-08T20:02:08.108+0000] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=Streaming_pipeline_meli, task_id=Status_info_postgres, execution_date=20230208T200043, start_date=20230208T200206, end_date=20230208T200208
+[2023-02-08T20:02:08.119+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 1379 for task Status_info_postgres ('psycopg2.extensions.connection' object has no attribute '__module__'; 1638)
+[2023-02-08T20:02:08.159+0000] {local_task_job.py:159} INFO - Task exited with return code 1
+[2023-02-08T20:02:08.182+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

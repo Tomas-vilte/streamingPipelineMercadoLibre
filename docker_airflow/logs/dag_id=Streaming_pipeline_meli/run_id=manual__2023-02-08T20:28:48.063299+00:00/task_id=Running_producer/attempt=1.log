@@ -1,0 +1,27 @@
+[2023-02-08T20:28:50.518+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Streaming_pipeline_meli.Running_producer manual__2023-02-08T20:28:48.063299+00:00 [queued]>
+[2023-02-08T20:28:50.545+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Streaming_pipeline_meli.Running_producer manual__2023-02-08T20:28:48.063299+00:00 [queued]>
+[2023-02-08T20:28:50.546+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-08T20:28:50.546+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 6
+[2023-02-08T20:28:50.546+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-08T20:28:50.588+0000] {taskinstance.py:1304} INFO - Executing <Task(BashOperator): Running_producer> on 2023-02-08 20:28:48.063299+00:00
+[2023-02-08T20:28:50.592+0000] {standard_task_runner.py:55} INFO - Started process 6391 to run task
+[2023-02-08T20:28:50.600+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Streaming_pipeline_meli', 'Running_producer', 'manual__2023-02-08T20:28:48.063299+00:00', '--job-id', '1428', '--raw', '--subdir', 'DAGS_FOLDER/streamPipeline.py', '--cfg-path', '/tmp/tmpxl13mv0e']
+[2023-02-08T20:28:50.600+0000] {standard_task_runner.py:83} INFO - Job 1428: Subtask Running_producer
+[2023-02-08T20:28:50.725+0000] {task_command.py:389} INFO - Running <TaskInstance: Streaming_pipeline_meli.Running_producer manual__2023-02-08T20:28:48.063299+00:00 [running]> on host b55acaa82944
+[2023-02-08T20:28:50.868+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Streaming_pipeline_meli
+AIRFLOW_CTX_TASK_ID=Running_producer
+AIRFLOW_CTX_EXECUTION_DATE=2023-02-08T20:28:48.063299+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-02-08T20:28:48.063299+00:00
+[2023-02-08T20:28:50.869+0000] {subprocess.py:63} INFO - Tmp dir root location: 
+ /tmp
+[2023-02-08T20:28:50.869+0000] {subprocess.py:75} INFO - Running command: ['/bin/bash', '-c', 'sleep 60']
+[2023-02-08T20:28:50.879+0000] {subprocess.py:86} INFO - Output:
+[2023-02-08T20:29:50.883+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2023-02-08T20:29:50.911+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=Streaming_pipeline_meli, task_id=Running_producer, execution_date=20230208T202848, start_date=20230208T202850, end_date=20230208T202950
+[2023-02-08T20:29:50.943+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-02-08T20:29:50.973+0000] {taskinstance.py:2582} INFO - 1 downstream tasks scheduled from follow-on schedule check
