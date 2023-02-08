@@ -23,7 +23,7 @@ def statusPostgres(user:str, password:str, host:str, database:str, port: int) ->
             password=password
         )
         log.info(f'Conexion exitosa a la base de datos de aws rds: {database}')
-        return True, conn
+        return True
     except psycopg2.Error as error:
         log.error(f'Ocurrio un error al conectarse a la base de datos de aws rds: {error}')
         return False, error

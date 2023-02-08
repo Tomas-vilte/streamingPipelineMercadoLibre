@@ -1,0 +1,27 @@
+[2023-02-08T20:12:06.494+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Streaming_pipeline_meli.Uploading_data_to_aws_rds manual__2023-02-08T20:11:03.001186+00:00 [queued]>
+[2023-02-08T20:12:06.505+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Streaming_pipeline_meli.Uploading_data_to_aws_rds manual__2023-02-08T20:11:03.001186+00:00 [queued]>
+[2023-02-08T20:12:06.505+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-08T20:12:06.505+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 6
+[2023-02-08T20:12:06.505+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-08T20:12:06.517+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): Uploading_data_to_aws_rds> on 2023-02-08 20:11:03.001186+00:00
+[2023-02-08T20:12:06.524+0000] {standard_task_runner.py:55} INFO - Started process 3105 to run task
+[2023-02-08T20:12:06.529+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Streaming_pipeline_meli', 'Uploading_data_to_aws_rds', 'manual__2023-02-08T20:11:03.001186+00:00', '--job-id', '1395', '--raw', '--subdir', 'DAGS_FOLDER/streamPipeline.py', '--cfg-path', '/tmp/tmp9pp_evp7']
+[2023-02-08T20:12:06.530+0000] {standard_task_runner.py:83} INFO - Job 1395: Subtask Uploading_data_to_aws_rds
+[2023-02-08T20:12:06.584+0000] {task_command.py:389} INFO - Running <TaskInstance: Streaming_pipeline_meli.Uploading_data_to_aws_rds manual__2023-02-08T20:11:03.001186+00:00 [running]> on host b55acaa82944
+[2023-02-08T20:12:06.651+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Streaming_pipeline_meli
+AIRFLOW_CTX_TASK_ID=Uploading_data_to_aws_rds
+AIRFLOW_CTX_EXECUTION_DATE=2023-02-08T20:11:03.001186+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-02-08T20:11:03.001186+00:00
+[2023-02-08T20:12:06.672+0000] {getDataOfMongo.py:28} INFO - Conexion exitosa a la base de datos: mercadolibredb
+[2023-02-08T20:12:06.673+0000] {getDataOfMongo.py:38} INFO - Obteniendo coleccion: meliproduct
+[2023-02-08T20:12:06.673+0000] {loadDataToRds.py:20} INFO - Conexion exitosa a la base de datos: meliAnalytics
+[2023-02-08T20:12:07.867+0000] {loadDataToRds.py:38} INFO - Cargando datos a la base de datos...
+[2023-02-08T20:12:07.867+0000] {python.py:177} INFO - Done. Returned value was: None
+[2023-02-08T20:12:07.875+0000] {taskinstance.py:1327} INFO - Marking task as SUCCESS. dag_id=Streaming_pipeline_meli, task_id=Uploading_data_to_aws_rds, execution_date=20230208T201103, start_date=20230208T201206, end_date=20230208T201207
+[2023-02-08T20:12:07.902+0000] {local_task_job.py:159} INFO - Task exited with return code 0
+[2023-02-08T20:12:07.917+0000] {taskinstance.py:2582} INFO - 0 downstream tasks scheduled from follow-on schedule check

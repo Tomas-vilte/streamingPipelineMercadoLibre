@@ -46,7 +46,7 @@ with DAG(
     producerRunning = BashOperator(
         task_id='Running_producer',
         dag=dag,
-        bash_command='sleep 30'
+        bash_command='sleep 60'
     )
     # Tarea 4: envío de datos al tema de Kafka mediante una función de python
     producerTask = PythonOperator(
@@ -84,15 +84,16 @@ with DAG(
         dag=dag,
         python_callable=uploadData
     )
+    # Tarea 9: Inicializa el stream pipeline
+    initStreamingPipeline = EmptyOperator(
+        task_id="Initialize_streaming_pipeline",
+        dag=dag
+    )
+    # Tarea 10: Inicializa las tareas
+    initTasks = EmptyOperator(
+        task_id="Initialize_the_tasks",
+        dag=dag
+    )
 
-chain(
-    consumerRunning,
-    sparkConsumer
-)
-
-chain(producerRunning,
-      producerTask)
-
-chain(
-    startingCharge, [mongoInfo, postgresInfo], loadDataToAws
-)
+chain(initTasks, initStreamingPipeline, [producerRunning, consumerRunning], [producerTask, sparkConsumer],
+      startingCharge, [mongoInfo, postgresInfo], loadDataToAws)
