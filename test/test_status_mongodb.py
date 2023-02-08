@@ -1,5 +1,4 @@
 import unittest
-
 from mongoStatus import statusMongo
 
 class TestStatusMongo(unittest.TestCase):
@@ -7,8 +6,8 @@ class TestStatusMongo(unittest.TestCase):
         try:
             result = statusMongo()
             self.assertTrue(result)
-            self.assertIsNotNone(result)
-
+            #self.assertFalse(result)
+            self.assertRaises(Exception)
         except Exception as error:
             self.fail(f'Prueba fallida con error: {error}')
 
