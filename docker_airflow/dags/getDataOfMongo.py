@@ -1,5 +1,5 @@
 from pymongo import MongoClient
-from src.loggerBase import log
+from loggin import log
 
 
 def getDataOfMongo(limit: int, database: str, coleccion: str, host: str = 'mongodb://root:secret@172.20.0.8', port: int = 27017) -> list:

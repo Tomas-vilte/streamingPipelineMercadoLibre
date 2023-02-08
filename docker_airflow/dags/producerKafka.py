@@ -1,11 +1,9 @@
-from typing import Any
-
 import requests
 from kafka import KafkaProducer
 import json
 
 
-def runKafkaProducer() -> list[dict[str, Any]]:
+def runKafkaProducer() -> list:
     datos = []
     producer = KafkaProducer(bootstrap_servers=['172.17.0.1:9092'],
                              value_serializer=lambda x: json.dumps(x).encode('utf-8'))

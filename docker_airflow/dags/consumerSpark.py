@@ -28,7 +28,7 @@ def writeToMongo(df, bacthId):
     try:
         df.write \
             .format("mongo") \
-            .option("uri", "mongodb://root:secret@172.20.0.7:27017") \
+            .option("uri", "mongodb://root:secret@172.20.0.8:27017") \
             .option("database", "mercadolibredb") \
             .option("collection", "meliproduct") \
             .mode("append") \
@@ -36,39 +36,14 @@ def writeToMongo(df, bacthId):
     except Exception as e:
         logger.error(f'Error al escribir en Mongo: {e}')
 
-def stop_stream_query(query, wait_time):
-    """
-    Detiene una consulta de transmisión en ejecución en Apache Spark.
-
-    Parameters:
-    query (spark.sql.streaming.StreamingQuery): La consulta de transmisión a detener.
-    wait_time (int): El tiempo de espera para la terminación de la consulta (en segundos).
-
-    Returns:
-    None
-    """
-    # Mientras la consulta esté activa
-    while query.isActive:
-        msg = query.status['message']
-        data_avail = query.status['isDataAvailable']
-        trigger_active = query.status['isTriggerActive']
-        # Si no hay datos disponibles y el trigger no está activo y el mensaje no es "Inicializando fuentes"
-        if not data_avail and not trigger_active and msg != "Initializing sources":
-            print('Stopping query...')
-            query.stop() # Detener la consulta
-        time.sleep(30) # Espera 30 segundos
-
-    # Esperar la terminación de la consulta
-    print('Awaiting termination...')
-    query.awaitTermination(wait_time) # Esperar wait_time segundos para la terminación
-
 
 # Crear sesión de Spark
 spark = SparkSession \
     .builder \
     .master("local[*]") \
-    .config("spark.mongodb.input.uri", "mongodb://root:secret@172.20.0.7:27017/mercadolibredb.meliproduct") \
-    .config("spark.mongodb.output.uri", "mongodb://root:secret@172.20.0.7:27017/mercadolibredb.meliproduct") \
+    .config("spark.mongodb.input.uri", "mongodb://root:secret@172.20.0.8:27017/mercadolibredb.meliproduct") \
+    .config("spark.mongodb.output.uri", "mongodb://root:secret@172.20.0.8:27017/mercadolibredb.meliproduct") \
+    .config('spark.jars.packages', "org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.3,org.mongodb.spark:mongo-spark-connector_2.12:3.0.1") \
     .getOrCreate()
 
 # Configurar nivel de registro para mostrar solo errores
@@ -141,5 +116,5 @@ query = finalDF \
 queryToMongo = finalDF.writeStream.foreachBatch(writeToMongo).start()
 
 # Espere a que termine la transmisión
-stop_stream_query(query, 30)
-stop_stream_query(queryToMongo, 30)
+queryToMongo.awaitTermination(10)
+query.awaitTermination(10)

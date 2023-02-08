@@ -15,4 +15,4 @@ def statusMongo() -> True or False:
         return True, db_list
     except Exception as error:
         log.error(f"Error al conectar a mongoDB: {error}")
-        return False, error
+        raise Exception(f'Error al conectar a mongoDB: {error}')
