@@ -2,7 +2,8 @@ from pymongo import MongoClient
 from loggin import log
 
 
-def getDataOfMongo(limit: int, database: str, coleccion: str, host: str = 'mongodb://root:secret@172.20.0.8', port: int = 27017) -> list:
+# Acordate de cambiar el host al correcto.
+def getDataOfMongo(limit: int, database: str, coleccion: str, host: str = 'mongodb://root:secret@172.22.0.8', port: int = 27017) -> list:
     """
     :param limit: Limite de registros a devolver.
     :param database: Nombre de la base de datos de mongoDB.

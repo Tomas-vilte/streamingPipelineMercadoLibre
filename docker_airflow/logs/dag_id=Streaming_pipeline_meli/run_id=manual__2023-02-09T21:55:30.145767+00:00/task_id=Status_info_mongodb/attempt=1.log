@@ -1,0 +1,57 @@
+[2023-02-09T21:57:19.035+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Streaming_pipeline_meli.Status_info_mongodb manual__2023-02-09T21:55:30.145767+00:00 [queued]>
+[2023-02-09T21:57:19.046+0000] {taskinstance.py:1087} INFO - Dependencies all met for <TaskInstance: Streaming_pipeline_meli.Status_info_mongodb manual__2023-02-09T21:55:30.145767+00:00 [queued]>
+[2023-02-09T21:57:19.046+0000] {taskinstance.py:1283} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-09T21:57:19.046+0000] {taskinstance.py:1284} INFO - Starting attempt 1 of 6
+[2023-02-09T21:57:19.046+0000] {taskinstance.py:1285} INFO - 
+--------------------------------------------------------------------------------
+[2023-02-09T21:57:19.060+0000] {taskinstance.py:1304} INFO - Executing <Task(PythonOperator): Status_info_mongodb> on 2023-02-09 21:55:30.145767+00:00
+[2023-02-09T21:57:19.068+0000] {standard_task_runner.py:55} INFO - Started process 1102 to run task
+[2023-02-09T21:57:19.071+0000] {standard_task_runner.py:82} INFO - Running: ['***', 'tasks', 'run', 'Streaming_pipeline_meli', 'Status_info_mongodb', 'manual__2023-02-09T21:55:30.145767+00:00', '--job-id', '1508', '--raw', '--subdir', 'DAGS_FOLDER/streamPipeline.py', '--cfg-path', '/tmp/tmp1cfxe9y9']
+[2023-02-09T21:57:19.072+0000] {standard_task_runner.py:83} INFO - Job 1508: Subtask Status_info_mongodb
+[2023-02-09T21:57:19.127+0000] {task_command.py:389} INFO - Running <TaskInstance: Streaming_pipeline_meli.Status_info_mongodb manual__2023-02-09T21:55:30.145767+00:00 [running]> on host b0a2a9b8da88
+[2023-02-09T21:57:19.192+0000] {taskinstance.py:1513} INFO - Exporting the following env vars:
+AIRFLOW_CTX_DAG_OWNER=***
+AIRFLOW_CTX_DAG_ID=Streaming_pipeline_meli
+AIRFLOW_CTX_TASK_ID=Status_info_mongodb
+AIRFLOW_CTX_EXECUTION_DATE=2023-02-09T21:55:30.145767+00:00
+AIRFLOW_CTX_TRY_NUMBER=1
+AIRFLOW_CTX_DAG_RUN_ID=manual__2023-02-09T21:55:30.145767+00:00
+[2023-02-09T21:57:49.234+0000] {mongoStatus.py:17} ERROR - Error al conectar a mongoDB: 172.20.0.8:27017: timed out, Timeout: 30s, Topology Description: <TopologyDescription id: 63e56c3f3594458e37a56928, topology_type: Unknown, servers: [<ServerDescription ('172.20.0.8', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('172.20.0.8:27017: timed out')>]>
+[2023-02-09T21:57:49.235+0000] {taskinstance.py:1772} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/opt/airflow/dags/mongoStatus.py", line 12, in statusMongo
+    db_list = client.server_info()
+  File "/home/airflow/.local/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1806, in server_info
+    "buildinfo", read_preference=ReadPreference.PRIMARY, session=session
+  File "/home/airflow/.local/lib/python3.7/site-packages/pymongo/_csot.py", line 105, in csot_wrapper
+    return func(self, *args, **kwargs)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pymongo/database.py", line 805, in command
+    with self.__client._socket_for_reads(read_preference, session) as (
+  File "/home/airflow/.local/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1296, in _socket_for_reads
+    server = self._select_server(read_preference, session)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pymongo/mongo_client.py", line 1257, in _select_server
+    server = topology.select_server(server_selector)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pymongo/topology.py", line 272, in select_server
+    server = self._select_server(selector, server_selection_timeout, address)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pymongo/topology.py", line 261, in _select_server
+    servers = self.select_servers(selector, server_selection_timeout, address)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pymongo/topology.py", line 223, in select_servers
+    server_descriptions = self._select_servers_loop(selector, server_timeout, address)
+  File "/home/airflow/.local/lib/python3.7/site-packages/pymongo/topology.py", line 240, in _select_servers_loop
+    % (self._error_message(selector), timeout, self.description)
+pymongo.errors.ServerSelectionTimeoutError: 172.20.0.8:27017: timed out, Timeout: 30s, Topology Description: <TopologyDescription id: 63e56c3f3594458e37a56928, topology_type: Unknown, servers: [<ServerDescription ('172.20.0.8', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('172.20.0.8:27017: timed out')>]>
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 175, in execute
+    return_value = self.execute_callable()
+  File "/home/airflow/.local/lib/python3.7/site-packages/airflow/operators/python.py", line 192, in execute_callable
+    return self.python_callable(*self.op_args, **self.op_kwargs)
+  File "/opt/airflow/dags/mongoStatus.py", line 18, in statusMongo
+    raise Exception(f'Error al conectar a mongoDB: {error}')
+Exception: Error al conectar a mongoDB: 172.20.0.8:27017: timed out, Timeout: 30s, Topology Description: <TopologyDescription id: 63e56c3f3594458e37a56928, topology_type: Unknown, servers: [<ServerDescription ('172.20.0.8', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('172.20.0.8:27017: timed out')>]>
+[2023-02-09T21:57:49.264+0000] {taskinstance.py:1327} INFO - Marking task as UP_FOR_RETRY. dag_id=Streaming_pipeline_meli, task_id=Status_info_mongodb, execution_date=20230209T215530, start_date=20230209T215719, end_date=20230209T215749
+[2023-02-09T21:57:49.307+0000] {standard_task_runner.py:105} ERROR - Failed to execute job 1508 for task Status_info_mongodb (Error al conectar a mongoDB: 172.20.0.8:27017: timed out, Timeout: 30s, Topology Description: <TopologyDescription id: 63e56c3f3594458e37a56928, topology_type: Unknown, servers: [<ServerDescription ('172.20.0.8', 27017) server_type: Unknown, rtt: None, error=NetworkTimeout('172.20.0.8:27017: timed out')>]>; 1102)
+[2023-02-09T21:57:49.374+0000] {local_task_job.py:159} INFO - Task exited with return code 1
