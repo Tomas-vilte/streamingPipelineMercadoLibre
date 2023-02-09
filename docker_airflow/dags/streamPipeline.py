@@ -9,6 +9,7 @@ from airflow.providers.apache.spark.operators.spark_submit import SparkSubmitOpe
 from producerKafka import runKafkaProducer
 from postgresStatus import statusPostgres
 from loadDataToRds import uploadData
+from great_expectations_provider.operators.great_expectations import GreatExpectationsOperator
 
 
 default_args = {
@@ -46,7 +47,7 @@ with DAG(
     producerRunning = BashOperator(
         task_id='Running_producer',
         dag=dag,
-        bash_command='sleep 60'
+        bash_command='sleep 45'
     )
     # Tarea 4: envío de datos al tema de Kafka mediante una función de python
     producerTask = PythonOperator(
@@ -70,11 +71,11 @@ with DAG(
         task_id='Status_info_postgres',
         python_callable=statusPostgres,
         op_kwargs={
-            'host': 'Your aws host',
-            'port': 'your port',
-            'database': 'your database',
-            'user': 'you user',
-            'password': 'you password'
+            'host': 'mydatabase.cnfp6axcdse9.us-east-1.rds.amazonaws.com',
+            'port': 5432,
+            'database': 'meliAnalytics',
+            'user': 'postgres',
+            'password': 'postgres'
         },
         dag=dag
     )
@@ -94,6 +95,13 @@ with DAG(
         task_id="Initialize_the_tasks",
         dag=dag
     )
+    test_validation = GreatExpectationsOperator(
+        task_id="Test_data_validation",
+        data_context_root_dir="/opt/airflow/dags/great_expectations",
+        checkpoint_name="my_checkpoint",
+        return_json_dict=True,
+        dag=dag
+    )
 
 chain(initTasks, initStreamingPipeline, [producerRunning, consumerRunning], [producerTask, sparkConsumer],
-      startingCharge, [mongoInfo, postgresInfo], loadDataToAws)
+      startingCharge, [mongoInfo, postgresInfo], test_validation, loadDataToAws)

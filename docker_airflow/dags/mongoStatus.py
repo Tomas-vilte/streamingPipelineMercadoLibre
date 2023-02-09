@@ -7,7 +7,7 @@ def statusMongo() -> True or False:
     # Si usas las credenciales te quedaria asi la url: mongodb://tuUsuario:tuContraseña@localhost:27017 o direccion ip.
     # !Otra cosa importante! Si vas a usar mongodb con o sin docker, y airflow en local esto funciona, pero si vas a usar
     # airflow con docker, tenes que agregar el container de mongoDB a la red de airflow para que funcione.
-    client = MongoClient("mongodb://root:secret@172.20.0.8:27017")
+    client = MongoClient("mongodb://root:secret@172.22.0.8:27017")
     try:
         db_list = client.server_info()
         log.info("Conexion exitosa a mongoDB")

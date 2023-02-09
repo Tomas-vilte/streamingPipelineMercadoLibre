@@ -1,4 +1,3 @@
-import time
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import *
 import logging
@@ -28,7 +27,7 @@ def writeToMongo(df, bacthId):
     try:
         df.write \
             .format("mongo") \
-            .option("uri", "mongodb://root:secret@172.20.0.8:27017") \
+            .option("uri", "mongodb://root:secret@172.22.0.8:27017") \
             .option("database", "mercadolibredb") \
             .option("collection", "meliproduct") \
             .mode("append") \
@@ -41,8 +40,8 @@ def writeToMongo(df, bacthId):
 spark = SparkSession \
     .builder \
     .master("local[*]") \
-    .config("spark.mongodb.input.uri", "mongodb://root:secret@172.20.0.8:27017/mercadolibredb.meliproduct") \
-    .config("spark.mongodb.output.uri", "mongodb://root:secret@172.20.0.8:27017/mercadolibredb.meliproduct") \
+    .config("spark.mongodb.input.uri", "mongodb://root:secret@172.22.0.8:27017/mercadolibredb.meliproduct") \
+    .config("spark.mongodb.output.uri", "mongodb://root:secret@172.22.0.8:27017/mercadolibredb.meliproduct") \
     .config('spark.jars.packages', "org.apache.spark:spark-sql-kafka-0-10_2.12:3.1.3,org.mongodb.spark:mongo-spark-connector_2.12:3.0.1") \
     .getOrCreate()
 
@@ -116,4 +115,4 @@ query = finalDF \
 queryToMongo = finalDF.writeStream.foreachBatch(writeToMongo).start()
 
 # Espere a que termine la transmisión
-print(f"Stop query to mongoDB: {queryToMongo.awaitTermination(30)}\n Stop query: {query.awaitTermination(30)}")
+print(f"Stop query to mongoDB: {queryToMongo.awaitTermination(35)}\n Stop query: {query.awaitTermination(35)}")
