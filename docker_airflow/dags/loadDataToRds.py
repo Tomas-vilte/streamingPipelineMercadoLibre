@@ -75,5 +75,5 @@ def uploadData():
     # Obteniendo los datos de MongoDB
     client = getDataOfMongo(limit=50, database='mercadolibredb', coleccion='meliproduct')
     # Cargando los datos obtenidos en una base de datos PostgreSQL
-    database = DataUploader(host='mydatabase.cnfp6axcdse9.us-east-1.rds.amazonaws.com', port=5432, dbname='meliAnalytics', user='postgres', password='postgres')
+    database = DataUploader(host='you host', port='you port', dbname='you database', user='you user', password='you password')
     database.upload_data(client)
